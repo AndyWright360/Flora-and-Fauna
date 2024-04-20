@@ -46,7 +46,7 @@
 
 <body>
     <header class="header-container fixed-top">
-        <div class="search-container">
+        <div class="search-container d-none d-lg-flex">
             <form method="GET" action="">
                 <div class="search-bar">
                     <button class="search-btn" type="submit">
@@ -59,7 +59,7 @@
                 </div>
             </form>
         </div>
-        <div class="logo-container">
+        <div class="logo-container d-none d-md-flex">
             <a href="{% url 'home' %}" id="logo-link">
                 <img class="logo-img" src="../media/logo-mini.png" alt="logo">
                 <div class="logo-text">
@@ -68,7 +68,7 @@
                 </div>
             </a>
         </div>
-        <div class="user-container">
+        <div class="user-container d-none d-lg-flex">
             <div class="icon-container">
                 <ul class="list-inline list-unstyled text-center mb-0">
                     <li class="list-inline-item dropdown">

@@ -208,3 +208,22 @@ a:hover {
     color: var(--white);
     margin: 0;
 }
+
+/*---------- Media Queries ----------*/
+
+@media (max-width: 991.5px) {
+    .header-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .nav-container {
+        justify-self: start;
+        grid-area: 1 / 1 / 2 / 2;
+        display: flex;
+    }
+
+    .logo-container {
+        padding-bottom: 20px;
+    }
+}

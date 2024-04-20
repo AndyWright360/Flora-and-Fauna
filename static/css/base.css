@@ -1,0 +1,158 @@
+/*---------- Root Variables ----------*/
+
+:root {
+    /* Colours */
+    --light-green: #A0E9CC;
+    --green: #27493B;
+    --dark-green: #13251E;
+    --white: #FBFBF2;
+    --dark-blue: #101036;
+    --blue: #BDB9FA;
+}
+
+/*---------- Global Styles ----------*/
+
+body {
+    font-family: 'Ovo', sans-serif;
+}
+
+header {
+    background-color: var(--white);
+    color: var(--green);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*---------- Containers ----------*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 45px 35px;
+    width: 100%;
+    padding: 20px 20px 0;
+}
+
+.search-container {
+    justify-self: start;
+    width: 100%;
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.user-container {
+    justify-self: end;
+    width: 100%;
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    justify-content: end;
+}
+
+/*---------- Header ----------*/
+
+.logo-img {
+    height: 55px;
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.logo-heading {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+}
+
+#logo-link {
+    display: flex;
+    color: var(--green);
+    height: fit-content;
+}
+
+.logo-text {
+    height: fit-content;
+    display: inline-block;
+}
+
+.search-bar {
+    border: 4px double var(--light-green);
+    display: inline-flex;
+    border-radius: 20px;
+    transition: border-style 0.3s ease;
+}
+
+.search-btn {
+    border-radius: 20px 0 0 20px;
+    color: var(--green);
+    background-color: #fff;
+    padding: 4px 10px;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-input {
+    border-radius: 0 20px 20px 0;
+    color: var(--green);
+    padding: 4px;
+    border: none;
+}
+
+.search-bar:focus-within {
+    border-style: solid;
+}
+
+.search-btn:hover {
+    background-color: var(--light-green);
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.icon-container {
+    width: fit-content;
+    height: fit-content;
+}
+
+.icon-container a {
+    color: var(--green);
+}
+
+.icon-container a:hover {
+    color: var(--dark-green);
+}
+
+.lg-icon {
+    font-size: 26px;
+}
+
+.dropdown-menu {
+    background-color: var(--white);
+    border: 4px double var(--light-green);
+    border-radius: .25rem;
+}
+
+.dropdown-item {
+    font-size: 18px;
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-green);
+}

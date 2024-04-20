@@ -100,7 +100,7 @@ a:hover {
     display: inline-block;
 }
 
-/*--- Searchbar ---*/
+/*--- Search Bar ---*/
 
 .search-bar {
     border: 4px double var(--light-green);
@@ -123,6 +123,7 @@ a:hover {
     color: var(--green);
     padding: 4px;
     border: none;
+    width: 100%;
 }
 
 .search-bar:focus-within {
@@ -135,6 +136,11 @@ a:hover {
 
 .search-input:focus {
     outline: none;
+}
+
+.search-dropdown {
+    display: flex;
+    justify-content: center;
 }
 
 /*--- User Icons ---*/
@@ -161,6 +167,7 @@ a:hover {
     border: 4px double var(--light-green);
     border-radius: 25px;
     overflow: hidden;
+    max-width: fit-content;
 }
 
 .dropdown-item {
@@ -197,16 +204,18 @@ a:hover {
 #delivery-banner {
     display: flex;
     width: 100%;
-    height: 35px;
+    min-height: 35px;
     grid-area: 3 / 1 / 4 / 4;
     background-color: var(--green);
     align-items: center;
     justify-content: center;
+    padding: 0 20px;
 }
 
 .delivery-font {
     color: var(--white);
     margin: 0;
+    text-align: center;
 }
 
 /*---------- Media Queries ----------*/
@@ -219,11 +228,25 @@ a:hover {
 
     .nav-container {
         justify-self: start;
-        grid-area: 1 / 1 / 2 / 2;
+        grid-area: 1 / 1 / 2 / 4;
         display: flex;
     }
 
     .logo-container {
         padding-bottom: 20px;
+    }
+
+    #delivery-banner {
+        grid-area: 2 / 1 / 3 / 4;
+    }
+
+    .nav-link {
+        padding: .5rem;
+    }
+
+    .search-bar {
+        width: 60%;
+        min-width: 240px;
+        max-width: 400px;
     }
 }

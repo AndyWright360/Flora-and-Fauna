@@ -185,11 +185,6 @@ a:hover {
     color: var(--dark-green) !important;
 }
 
-/* Credit: Vladimir Rodkin https://jsfiddle.net/VovanR/2ao5b22h/ */
-.dropdown-menu-center {
-    right: auto;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
+.navbar-nav {
+    column-gap: 30px;
 }

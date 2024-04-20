@@ -27,7 +27,7 @@ a:hover {
 
 /*---------- Containers ----------*/
 
-.grid-container {
+.nav-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto 45px 35px;
@@ -61,6 +61,8 @@ a:hover {
 
 /*---------- Header ----------*/
 
+/*--- Logo ---*/
+
 .logo-img {
     height: 55px;
     width: auto;
@@ -90,6 +92,8 @@ a:hover {
     height: fit-content;
     display: inline-block;
 }
+
+/*--- Searchbar ---*/
 
 .search-bar {
     border: 4px double var(--light-green);
@@ -125,6 +129,8 @@ a:hover {
 .search-input:focus {
     outline: none;
 }
+
+/*--- User Icons ---*/
 
 .icon-container {
     width: fit-content;

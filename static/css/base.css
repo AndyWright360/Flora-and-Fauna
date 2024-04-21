@@ -245,20 +245,39 @@ a:hover {
 /*---------- Home Page ----------*/
 
 .hero-container {
-    background: url('/media/hero.webp') no-repeat center center fixed;
+    background: url('/media/hero.webp') no-repeat center center;
     background-size: cover;
 }
 
 .home-content {
-    padding: 40px;
+    padding: 80px;
+    max-width: 680px;
+    color: var(--dark-blue);
 }
 
 .home-heading {
-    font-size: 24px;
+    font-size: 42px;
+    margin: 0;
+    padding-bottom: 40px;
 }
 
 .home-text {
-    font-size: 16px;
+    font-size: 22px;
+}
+
+.shop-now-button {
+    display: block;
+    font-size: 38px;
+    padding-top: 20px;
+    color: var(--dark-blue);
+    width: fit-content;
+    border-bottom: double 4px var(--dark-blue);
+}
+
+.shop-now-button:hover {
+    font-weight: bold;
+    border-bottom: solid 4px var(--dark-blue);
+    color: var(--dark-blue);
 }
 
 /*---------- Footer ----------*/
@@ -315,6 +334,27 @@ a:hover {
     .header-spacer {
         padding-top: 130px;
     }
+
+    .hero-container {
+        background-position-x: 65%;
+    }
+
+    .home-content {
+        padding: 80px 40px;
+        max-width: 480px;
+    }
+
+    .home-heading {
+        font-size: 36px;
+    }
+
+    .home-text {
+        font-size: 18px;
+    }
+
+    .shop-now-button {
+        font-size: 26px;
+    }
 }
 
 @media (max-width: 767.5px) {
@@ -332,5 +372,26 @@ a:hover {
     
     .footer-icon {
         font-size: 30px;
+    }
+
+    .hero-container {
+        background-position-y: top;
+        background-position-x: -350px;
+        background-attachment: fixed;
+    }
+
+    .home-heading {
+        font-size: 26px;
+    }
+
+    .shop-now-button {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 499.5px) {
+    .home-content {
+        padding: 80px 20px;
+        max-width: 360px;
     }
 }

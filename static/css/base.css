@@ -3,7 +3,7 @@
 :root {
     /* Colours */
     --light-green: #A0E9CC;
-    --green: #27493B;
+    --green: #194C31;
     --dark-green: #13251E;
     --white: #FBFBF2;
     --dark-blue: #101036;
@@ -141,6 +141,7 @@ a:hover {
 .search-dropdown {
     display: flex;
     justify-content: center;
+    width: 100vw;
 }
 
 /*--- User Icons ---*/

@@ -2,12 +2,12 @@
 
 :root {
     /* Colours */
-    --light-green: #A0E9CC;
+    --light-green: #C4E2B6;
     --green: #194C31;
     --dark-green: #13251E;
     --white: #FBFBF2;
     --dark-blue: #101036;
-    --blue: #BDB9FA;
+    --blue: #93B7DA;
 }
 
 /*---------- Global Styles ----------*/
@@ -83,6 +83,10 @@ a:hover {
 
 .header-spacer {
     padding-top: 172px;
+}
+
+.light-green-bg {
+    background-color: var(--light-green);
 }
 
 .dark-blue-bg {
@@ -278,6 +282,88 @@ a:hover {
     font-weight: bold;
     border-bottom: solid 4px var(--dark-blue);
     color: var(--dark-blue);
+}
+
+/*---------- Product Card ----------*/
+
+.product-card {
+    border: 5px double var(--green);
+    border-radius: 38px;
+    background-color: var(--white);
+    color: var(--dark-green);
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-footer {
+    background-color: var(--white);
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.product-img {
+    width: 90%;
+    height: auto;
+    margin: 13.088px auto 0 auto;
+    border-radius: 25px 25px 0 0;
+}
+
+.product-category {
+    width: 90%;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    background-color: gold;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 0 0 25px 25px;
+}
+
+.product-name {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 5% 3px;
+}
+
+.product-rating {
+    font-size: 20px;
+    margin: 0 5% 5px;
+    display: inline-block;
+    width: 90%;
+    text-align: center;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 18px;
+}
+
+.product-info p {
+    margin: 0;
+}
+
+.product-btn {
+    border: 4px double var(--dark-blue);
+    background-color: var(--blue);
+    color: var(--dark-blue);
+    display: inline-block;
+    padding: 3px 0;
+    width: 80px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    text-transform: uppercase;
+}
+
+.product-btn:hover {
+    color: var(--dark-blue);
+    border: 4px solid var(--dark-blue);
 }
 
 /*---------- Footer ----------*/

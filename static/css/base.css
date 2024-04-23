@@ -39,7 +39,26 @@ a:hover {
     color: var(--white);
 }
 
+.page-heading {
+    margin: 0 0 30px 0;
+    font-size: 38px;
+    position: relative;
+}
+
+.underline {
+    width: 280px;
+    height: auto;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 /*---------- Containers ----------*/
+
+.page-container {
+    padding: 40px 0;
+}
 
 .header-container {
     display: grid;
@@ -292,6 +311,8 @@ a:hover {
     background-color: var(--white);
     color: var(--dark-green);
     overflow: hidden;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .card-body {
@@ -308,7 +329,7 @@ a:hover {
 .product-img {
     width: 90%;
     height: auto;
-    margin: 13.088px auto 0 auto;
+    margin: 5% auto 0 auto;
     border-radius: 25px 25px 0 0;
 }
 
@@ -353,9 +374,9 @@ a:hover {
     color: var(--dark-blue);
     display: inline-block;
     padding: 3px 0;
-    width: 80px;
+    width: 75px;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
     border-radius: 15px;
     text-transform: uppercase;

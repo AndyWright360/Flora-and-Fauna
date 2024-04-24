@@ -13,30 +13,32 @@
         <div class="col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
             <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 product-card">
-                        <img class="img-fluid product-img" src="../media/honey-cleanser.jpg" alt="Honey Cleanser">
-                        <div class="card-body">
-                            <p class="product-category">Honey Harmoney</p>
-                            <p class="product-name">Mattifying Moisturiser</p>
-                            <span class="product-rating">
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
-                            <span class="product-info">
-                                <p>£49.99</p>
-                                <p>30ml</p>
-                            </span>
-                        </div>
-                        <div class="card-footer">
-                            <a class="product-btn add-btn" href="">Add</a>
-                            <a class="product-btn view-btn" href="">View</a>
+                {% for product in products %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pt-5">
+                        <div class="card h-100 product-card">
+                            <img class="img-fluid product-img" src="/media/{{ product.image }}" alt="{{ product.name }}">
+                            <div class="card-body">
+                                <p class="product-category">{{ product.category.friendly_name }}</p>
+                                <p class="product-name">{{ product.name }}</p>
+                                <span class="product-rating">
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-info">
+                                    <p>£{{ product.price }}</p>
+                                    <p>{{ product.size }}</p>
+                                </span>
+                            </div>
+                            <div class="card-footer">
+                                <a class="product-btn add-btn" href="">Add</a>
+                                <a class="product-btn view-btn" href="{% url 'product_detail' product.id %}">View</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

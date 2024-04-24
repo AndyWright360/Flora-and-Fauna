@@ -30,7 +30,8 @@ class Product(models.Model):
     description = models.TextField()
     ingredients = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.IntegerField(choices=RATING_CHOICES)
+    size = models.CharField(max_length=254)
+    rating = models.IntegerField(choices=RATING_CHOICES, null=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):

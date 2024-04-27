@@ -1,11 +1,12 @@
 from django.contrib import admin
-from .models import Product, Category
+from .models import Product, Range
 
 
 class ProductAdmin(admin.ModelAdmin):
 
     list_display = (
         'name',
+        'range',
         'category',
         'price',
         'size',
@@ -18,7 +19,7 @@ class ProductAdmin(admin.ModelAdmin):
     ordering = ('name',)
 
 
-class CategoryAdmin(admin.ModelAdmin):
+class RangeAdmin(admin.ModelAdmin):
 
     list_display = (
         'friendly_name',
@@ -27,4 +28,4 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Product, ProductAdmin)
-admin.site.register(Category, CategoryAdmin)
+admin.site.register(Range, RangeAdmin)

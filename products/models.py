@@ -1,10 +1,7 @@
 from django.db import models
 
 
-class Category(models.Model):
-
-    class Meta:
-        verbose_name_plural = 'Categories'
+class Range(models.Model):
 
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
@@ -25,8 +22,9 @@ class Product(models.Model):
         (5, '5 Stars'),
     )
 
-    category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True, blank=True)
+    range = models.ForeignKey('Range', on_delete=models.SET_NULL, null=True, blank=True)
     name = models.CharField(max_length=254)
+    category = models.CharField(max_length=254)
     description = models.TextField()
     ingredients = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)

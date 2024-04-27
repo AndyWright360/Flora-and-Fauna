@@ -348,6 +348,7 @@ a:hover {
     font-size: 18px;
     font-weight: bold;
     margin: 10px 5% 3px;
+    min-height: 54px;
 }
 
 .product-rating {

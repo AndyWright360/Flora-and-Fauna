@@ -2,45 +2,78 @@
 {% load static %}
 
 {% block content %}
-<div class="page-container light-green-bg">
-    <div class="row">
-        <div class="col text-center">
-            <h2 class="page-heading">Products</h2>
-            <img class="underline" src="../media/underline.webp">
+    <div class="page-container light-green-bg">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="page-heading">Products</h2>
+                <img class="underline" src="../media/underline.webp">
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-10 offset-1">
-            <div class="row mt-1 mb-2"></div>
-            <div class="row">
-                {% for product in products %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pt-5">
-                        <div class="card h-100 product-card">
-                            <img class="img-fluid product-img" src="/media/{{ product.image }}" alt="{{ product.name }}">
-                            <div class="card-body">
-                                <p class="product-category">{{ product.range.friendly_name }}</p>
-                                <p class="product-name">{{ product.name }}</p>
-                                <span class="product-rating">
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </span>
-                                <span class="product-info">
-                                    <p>£{{ product.price }}</p>
-                                    <p>{{ product.size }}</p>
-                                </span>
-                            </div>
-                            <div class="card-footer">
-                                <a class="product-btn add-btn" href="">Add</a>
-                                <a class="product-btn view-btn" href="{% url 'product_detail' product.id %}">View</a>
-                            </div>
+        <div class="row">
+            <div class="col-10 offset-1">
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                <option value="range_asc" {% if current_sorting == 'range_asc' %}selected{% endif %}>Range (A-Z)</option>
+                                <option value="range_desc" {% if current_sorting == 'range_desc' %}selected{% endif %}>Range (Z-A)</option>
+                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                            </select>
                         </div>
                     </div>
-                {% endfor %}
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            {% if search_term or range or current_sorting != 'None_None' %}
+                                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                            {% endif %}
+                            {{ products|length }} Products{% if search_term %} found for
+                            <strong>"{{ search_term }}"</strong>{% endif %}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    {% for product in products %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pt-5">
+                            <div class="card h-100 product-card">
+                                <img class="img-fluid product-img" src="/media/{{ product.image }}" alt="{{ product.name }}">
+                                <div class="card-body">
+                                    {% if product.range %}
+                                        <p class="product-range">
+                                            <a href="{% url 'products' %}?range={{ product.range.name }}">
+                                                {{ product.range.friendly_name }}
+                                            </a>
+                                        </p>
+                                    {% endif %}
+                                    <p class="product-name">{{ product.name }}</p>
+                                    <span class="product-rating">
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </span>
+                                    <span class="product-info">
+                                        <p>£{{ product.price }}</p>
+                                        <p>{{ product.size }}</p>
+                                    </span>
+                                </div>
+                                <div class="card-footer">
+                                    <a class="product-btn add-btn" href="">Add</a>
+                                    <a class="product-btn view-btn" href="{% url 'product_detail' product.id %}">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
-</div>
 {% endblock %}

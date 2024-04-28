@@ -414,23 +414,23 @@ a:hover {
     border-style: solid;
 }
 
-.add-btn {
+.green-btn {
     border: 4px double var(--green);
     background-color: var(--light-green);
     color: var(--green);
 }
 
-.add-btn:hover {
+.green-btn:hover {
     color: var(--green);
 }
 
-.view-btn {
+.blue-btn {
     border: 4px double var(--dark-blue);
     background-color: var(--blue);
     color: var(--dark-blue);
 }
 
-.view-btn:hover {
+.blue-btn:hover {
     color: var(--dark-blue);
 }
 

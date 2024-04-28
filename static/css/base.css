@@ -47,6 +47,10 @@ a:hover {
     color: var(--white);
 }
 
+.green-font {
+    color: var(--green);
+}
+
 .page-heading {
     margin: 0 0 10px 0;
     font-size: 38px;
@@ -118,6 +122,21 @@ a:hover {
 
 .dark-blue-bg {
     background-color: var(--dark-blue);
+}
+
+/*---------- Input Fields ----------*/
+
+.input-field {
+    border: 4px double var(--green);
+    height: fit-content;
+    border-radius: 10px;
+    color: var(--dark-green);
+}
+
+.input-field:focus {
+    border: 4px solid var(--green);
+    outline: none;
+    box-shadow: none;
 }
 
 /*---------- Header ----------*/
@@ -307,7 +326,7 @@ a:hover {
 
 .shop-now-button:hover {
     font-weight: bold;
-    border-style: solid;
+    border-bottom-style: solid;
     color: var(--dark-blue);
 }
 
@@ -352,39 +371,6 @@ a:hover {
 
 .product-range a:hover {
     font-weight: bold;
-}
-
-.aloe-revive {
-    background-color: var(--aloe);
-    color: var(--dark-aloe);
-}
-
-.aloe-revive a {
-    color: var(--dark-aloe);
-}
-
-.eternal-rose {
-    background-color: var(--rose);
-}
-
-.eternal-rose a {
-    color: var(--dark-rose);
-}
-
-.honey-harmony {
-    background-color: var(--honey);
-}
-
-.honey-harmony a {
-    color: var(--dark-honey);
-}
-
-.clear-willow {
-    background-color: var(--willow);
-}
-
-.clear-willow a {
-    color: var(--dark-willow);
 }
 
 .product-name {
@@ -446,6 +432,53 @@ a:hover {
 
 .view-btn:hover {
     color: var(--dark-blue);
+}
+
+/*--- Product Range Banner ---*/
+
+.aloe-revive {
+    background-color: var(--aloe);
+    color: var(--dark-aloe);
+}
+
+.aloe-revive a {
+    color: var(--dark-aloe);
+}
+
+.eternal-rose {
+    background-color: var(--rose);
+}
+
+.eternal-rose a {
+    color: var(--dark-rose);
+}
+
+.honey-harmony {
+    background-color: var(--honey);
+}
+
+.honey-harmony a {
+    color: var(--dark-honey);
+}
+
+.clear-willow {
+    background-color: var(--willow);
+}
+
+.clear-willow a {
+    color: var(--dark-willow);
+}
+
+/*--- Product Search Results ---*/
+
+.products-link {
+    color: var(--dark-green);
+    font-weight: bold;
+}
+
+.products-link:hover {
+    color: var(--dark-green);
+    border-bottom: 3px double var(--dark-green);
 }
 
 /*---------- Product Detail ----------*/

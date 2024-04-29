@@ -539,6 +539,13 @@ a:hover {
     color: var(--dark-blue);
 }
 
+/*---------- Update Bag Links ----------*/
+
+.update-link,
+.remove-link {
+    cursor: pointer;
+}
+
 /*---------- Media Queries ----------*/
 
 @media (max-width: 991.5px) {

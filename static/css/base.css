@@ -542,7 +542,7 @@ a:hover {
 /*---------- Update Bag Links ----------*/
 
 .update-link,
-.remove-link {
+.remove-item {
     cursor: pointer;
 }
 

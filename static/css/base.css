@@ -484,7 +484,7 @@ a:hover {
 /*---------- Product Detail ----------*/
 
 .detail-name {
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .detail-img {
@@ -515,7 +515,7 @@ a:hover {
 
 .decrement-qty,
 .increment-qty {
-    background-color: white;
+    background-color: #fff;
     border: none;
     padding: 0 15px;
     color: var(--dark-green);
@@ -530,6 +530,39 @@ a:hover {
 .decrement-qty:disabled {
     color: var(--aloe);
     pointer-events: none;
+}
+
+.favorite-btn {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    font-size: 28px;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+}
+
+.shop-btn {
+    padding: 4px 10px;
+    border-radius: 12px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.add-to-bag-btn {
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-top: 28px;
+}
+
+.shop-btn:hover,
+.add-to-bag-btn:hover {
+    border-style: solid;
+}
+
+.anchor-point {
+    position: relative;
 }
 
 /* Chrome, Safari, Edge, Opera */

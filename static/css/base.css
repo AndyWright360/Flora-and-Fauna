@@ -124,6 +124,12 @@ a:hover {
     background-color: var(--dark-blue);
 }
 
+.white-container {
+    background-color: var(--white);
+    border: 4px double var(--green);
+    border-radius: 25px;
+}
+
 /*---------- Input Fields ----------*/
 
 .input-field {

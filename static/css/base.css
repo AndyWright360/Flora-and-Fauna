@@ -132,6 +132,11 @@ a:hover {
 
 /*---------- Input Fields ----------*/
 
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 .input-field {
     border: 4px double var(--green);
     height: fit-content;
@@ -140,7 +145,7 @@ a:hover {
 }
 
 .input-field:focus {
-    border: 4px solid var(--green);
+    border-style: 4px solid var(--green);
     outline: none;
     box-shadow: none;
 }

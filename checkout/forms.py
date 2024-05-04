@@ -37,3 +37,8 @@ class OrderForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
+
+        # Set required attribute to False for non-required fields
+        self.fields['street_address2'].required = False
+        self.fields['postcode'].required = False
+        self.fields['county'].required = False

@@ -5,9 +5,9 @@ from products.models import Product, Range
 
 
 class TestCheckoutViews(TestCase):
-    """ Tests for checkout app views """
 
     def setUp(self):
+        """ Creates test objects for Checkout app """
 
         self.range_test = Range.objects.create(
             name="test_range",
@@ -35,6 +35,7 @@ class TestCheckoutViews(TestCase):
             street_address2="Test Address 2",
             town_or_city="Test City",
             county="Test County",
+            postcode="TE57 0NE",
             country="GB",
         )
 

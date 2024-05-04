@@ -3,7 +3,7 @@ from products.models import Range, Product
 
 
 class TestBagViews(TestCase):
-    """ Tests for bag page views """
+    """ Tests for bag app views """
 
     def setUp(self):
         """ Creates test objects for Bag app """

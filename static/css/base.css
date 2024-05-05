@@ -150,6 +150,16 @@ a:hover {
     box-shadow: none;
 }
 
+select,
+select option {
+  color: var(--dark-green);
+}
+
+select:invalid,
+select option[value=""] {
+  color: #aab7c4 !important;
+}
+
 /*---------- Header ----------*/
 
 /*--- Logo ---*/

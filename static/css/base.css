@@ -41,6 +41,15 @@ a:hover {
     max-width: 1600px;
 }
 
+.default-btn {
+    border-radius: 10px;
+    display: inline-block;
+    padding: 3px 10px;
+    min-width: 100px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 /*---------- Fonts ----------*/
 
 .white-font {
@@ -132,22 +141,24 @@ a:hover {
 
 /*---------- Input Fields ----------*/
 
-.form-control:focus {
-    outline: none;
-    box-shadow: none;
-}
-
+.form-control,
 .input-field {
     border: 4px double var(--green);
-    height: fit-content;
     border-radius: 10px;
     color: var(--dark-green);
+    height: fit-content;
 }
 
+.form-control:focus,
 .input-field:focus {
-    border-style: 4px solid var(--green);
     outline: none;
     box-shadow: none;
+    border-color: var(--green);
+    border-style: solid;
+}
+
+.form-check-input {
+    accent-color: var(--dark-green);
 }
 
 select,
@@ -431,10 +442,6 @@ select option[value=""] {
     text-transform: uppercase;
 }
 
-.product-btn:hover {
-    border-style: solid;
-}
-
 .green-btn {
     border: 4px double var(--green);
     background-color: var(--light-green);
@@ -443,6 +450,7 @@ select option[value=""] {
 
 .green-btn:hover {
     color: var(--green);
+    border-style: solid;
 }
 
 .blue-btn {
@@ -453,6 +461,7 @@ select option[value=""] {
 
 .blue-btn:hover {
     color: var(--dark-blue);
+    border-style: solid;
 }
 
 /*--- Product Range Banner ---*/
@@ -492,12 +501,12 @@ select option[value=""] {
 
 /*--- Product Search Results ---*/
 
-.products-link {
+.underline-link {
     color: var(--dark-green);
     font-weight: bold;
 }
 
-.products-link:hover {
+.underline-link:hover {
     color: var(--dark-green);
     border-bottom: 3px double var(--dark-green);
 }
@@ -513,13 +522,13 @@ select option[value=""] {
     border-radius: 25px;
 }
 
-.form-group {
+#quantity-container {
     border: 4px double var(--green);
     border-radius: 12px;
     overflow: hidden;
 }
 
-.form-group:focus-within {
+#quantity-container:focus-within {
     border-style: solid;
 }
 

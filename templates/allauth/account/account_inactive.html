@@ -4,8 +4,13 @@
 
 {% block head_title %}{% trans "Account Inactive" %}{% endblock %}
 
-{% block content %}
-<h1>{% trans "Account Inactive" %}</h1>
+{% block inner_content %}
+    <div class="row pb-5">
+        <div class="col text-center">
+            <h2 class="page-heading">{% trans "Account Inactive" %}</h2>
+            <img class="underline" src="{{ MEDIA_URL }}underline.webp">
+        </div>
+    </div>
 
-<p>{% trans "This account is inactive." %}</p>
+    <p>{% trans "This account is inactive." %}</p>
 {% endblock %}

@@ -609,6 +609,11 @@ input[type=number] {
 
 /*---------- Profile Form ----------*/
 
+.order-history {
+    max-height: 453px; /* height of profile form + submit button */
+    overflow-y: auto;
+}
+
 #id_default_country,
 #id_default_country option:not(:first-child) {
     color: var(--dark-green);

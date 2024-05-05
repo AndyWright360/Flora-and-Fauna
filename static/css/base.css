@@ -607,6 +607,17 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+/*---------- Profile Form ----------*/
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: var(--dark-green);
+}
+
+#id_default_country option:first-child {
+    color: #636c72;
+}
+
 /*---------- Footer ----------*/
 
 .footer-logo {

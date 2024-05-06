@@ -5,6 +5,7 @@ from django.utils import timezone
 
 from .models import Review
 from products.models import Product
+from django.contrib.auth.models import User
 from .forms import ReviewForm
 
 @login_required()
@@ -13,12 +14,14 @@ def add_review(request, product_id):
     Add a review for a product.
     """
     product = get_object_or_404(Product, pk=product_id)
+    user = User.objects.get(username=request.user)
+
     if request.method == "POST":
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save()
             review.product = product
-            review.user_profile = request.user.profile
+            review.user = user
             review.created_on = timezone.now().date()
             review.save()
             messages.success(request, "Your review has been submitted.")

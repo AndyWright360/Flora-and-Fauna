@@ -19,17 +19,6 @@
                     <form class="px-3 px-md-5 pt-4" method="POST" action="{% url 'add_review' product.id %}">
                         {% csrf_token %}
                         {{ form|crispy }}
-                        <div>
-                            <p class="m-0">Your Rating *</p>
-                            <div>
-                                <span>&#9733;</span>
-                                <span>&#9733;</span>
-                                <span>&#9733;</span>
-                                <span>&#9733;</span>
-                                <span>&#9733;</span>
-                            </div>
-                        </div>
-
                         <div class="d-flex justify-content-center justify-content-md-end mt-5">
                             <a class="default-btn green-btn mr-2" href="{% url 'product_detail' product.id %}">Cancel</a>
                             <button class="default-btn blue-btn ml-2" type="submit">Submit</button>
@@ -39,4 +28,21 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#div_id_rating .form-check input').change(function() {
+                var checkedIndex = $(this).parent().index();
+                $('#div_id_rating .form-check label').each(function(index) {
+                    if (index <= checkedIndex) {
+                        $(this).css('color', '#f70');
+                    } else {
+                        $(this).css('color', '');
+                    }
+                });
+            });
+        });
+    </script>
 {% endblock %}

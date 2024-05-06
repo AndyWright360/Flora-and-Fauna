@@ -163,12 +163,12 @@ a:hover {
 
 select,
 select option {
-  color: var(--dark-green);
+    color: var(--dark-green);
 }
 
 select:invalid,
 select option[value=""] {
-  color: #aab7c4 !important;
+    color: #aab7c4 !important;
 }
 
 /*---------- Images ----------*/
@@ -561,7 +561,7 @@ select option[value=""] {
     color: var(--dark-green);
 }
 
-.decrement-qty:hover ,
+.decrement-qty:hover,
 .increment-qty:hover {
     background-color: var(--light-green);
     transition: background-color 0.3s ease-in-out;
@@ -608,19 +608,19 @@ select option[value=""] {
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 /*---------- Profile Form ----------*/
 
 .order-history {
-    max-height: 453px; /* height of profile form + submit button */
+    max-height: 453px;  /* height of profile form + submit button */
     overflow-y: auto;
 }
 
@@ -631,6 +631,59 @@ input[type=number] {
 
 #id_default_country option:first-child {
     color: #636c72;
+}
+
+/*---Star Rating---*/
+
+/*
+Below code for Star Rating system
+Credit: Madannes https://jsfiddle.net/madannes/r3s1jx4y/
+*/
+
+.form-check {
+    float: left;
+    border: none;
+}
+.form-check:not(:checked) > input {
+    position: absolute;
+    left: -9999px;
+    clip: rect(0, 0, 0, 0);
+}
+.form-check:not(:checked) > label {
+    float: right;
+    width: 1em;
+    padding: 0 .1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 200%;
+    line-height: 1.2;
+    color: #ddd;
+}
+
+.form-check:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.form-check > input:checked ~ label {
+    color: #f70;
+}
+
+.form-check:not(:checked) > label:hover,
+.form-check:not(:checked) > label:hover ~ label {
+    color: gold;
+}
+
+.form-check > input:checked + label:hover,
+.form-check > input:checked + label:hover ~ label,
+.form-check > input:checked ~ label:hover,
+.form-check > input:checked ~ label:hover ~ label,
+.form-check > label:hover ~ input:checked ~ label {
+    color: #ea0;
+}
+
+.form-check > label:active {
+    position: relative;
 }
 
 /*---------- Footer ----------*/
@@ -706,10 +759,10 @@ input[type=number] {
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
@@ -831,7 +884,7 @@ input[type=number] {
     .copyright {
         font-size: 16px;
     }
-    
+
     .footer-icon {
         font-size: 30px;
     }

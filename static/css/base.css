@@ -171,6 +171,16 @@ select option[value=""] {
   color: #aab7c4 !important;
 }
 
+/*---------- Images ----------*/
+
+.review-img {
+    width: 50%;
+    height: auto;
+    min-width: 200px;
+    max-width: 500px;
+    border-radius: 20px;
+}
+
 /*---------- Header ----------*/
 
 /*--- Logo ---*/

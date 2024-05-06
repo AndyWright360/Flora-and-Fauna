@@ -25,6 +25,10 @@ def add_review(request, product_id):
             return redirect(reverse('product_detail', args=[product.id]))
     else:
         form = ReviewForm()
+        
     template = 'reviews/add_review.html'
-    context = {'form': form, 'product': product}
+    context = {
+        'form': form,
+        'product': product
+        }
     return render(request, template, context)

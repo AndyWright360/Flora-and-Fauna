@@ -635,6 +635,17 @@ input[type=number] {
 
 /*---Star Rating---*/
 
+#div_id_rating {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.requiredField {
+    margin: 0;
+}
+
 /*
 Below code for Star Rating system
 Credit: Madannes https://jsfiddle.net/madannes/r3s1jx4y/
@@ -643,6 +654,7 @@ Credit: Madannes https://jsfiddle.net/madannes/r3s1jx4y/
 .form-check {
     float: left;
     border: none;
+    padding: 0;
 }
 .form-check:not(:checked) > input {
     position: absolute;
@@ -658,7 +670,7 @@ Credit: Madannes https://jsfiddle.net/madannes/r3s1jx4y/
     cursor: pointer;
     font-size: 200%;
     line-height: 1.2;
-    color: #ddd;
+    color: #636c72;
 }
 
 .form-check:not(:checked) > label:before {
@@ -669,17 +681,8 @@ Credit: Madannes https://jsfiddle.net/madannes/r3s1jx4y/
     color: #f70;
 }
 
-.form-check:not(:checked) > label:hover,
-.form-check:not(:checked) > label:hover ~ label {
+.form-check:not(:checked) > label:hover {
     color: gold;
-}
-
-.form-check > input:checked + label:hover,
-.form-check > input:checked + label:hover ~ label,
-.form-check > input:checked ~ label:hover,
-.form-check > input:checked ~ label:hover ~ label,
-.form-check > label:hover ~ input:checked ~ label {
-    color: #ea0;
 }
 
 .form-check > label:active {

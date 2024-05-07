@@ -35,3 +35,34 @@ def add_review(request, product_id):
         'product': product
         }
     return render(request, template, context)
+
+@login_required()
+def edit_review(request, review_id):
+    """
+    Edit a review for a product.
+    """
+    review = get_object_or_404(Review, pk=review_id)
+    product = review.product
+    if request.user != review.user:
+        messages.error(request, "You don't have authorisation to edit this review.")
+        return redirect(request.META.get(
+            'HTTP_REFERER', reverse('product_detail', args=[product.id])
+            ))
+
+    if request.method == "POST":
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your review has been updated.")
+            return redirect(request.META.get(
+                'HTTP_REFERER', reverse('product_detail', args=[product.id])
+                ))
+    else:
+        form = ReviewForm(instance=review)
+    template = 'reviews/edit_review.html'
+    context = {
+        'form': form,
+        'review': review,
+        'product': product
+        }
+    return render(request, template, context)

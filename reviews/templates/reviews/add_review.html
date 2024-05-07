@@ -33,6 +33,18 @@
 {% block postloadjs %}
     <script type="text/javascript">
         $(document).ready(function() {
+            // Set colours based on the initially checked input
+            $('#div_id_rating .form-check input').each(function(index) {
+                if ($(this).is(':checked')) {
+                    $('#div_id_rating .form-check label').each(function(i) {
+                        if (i <= index) {
+                            $(this).css('color', '#f70');
+                        }
+                    });
+                }
+            });
+
+            // Update colours when input changes
             $('#div_id_rating .form-check input').change(function() {
                 var checkedIndex = $(this).parent().index();
                 $('#div_id_rating .form-check label').each(function(index) {

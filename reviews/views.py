@@ -43,20 +43,25 @@ def edit_review(request, review_id):
     """
     review = get_object_or_404(Review, pk=review_id)
     product = review.product
+    referer_url = request.META.get('HTTP_REFERER')
+
     if request.user != review.user:
         messages.error(request, "You don't have authorisation to edit this review.")
-        return redirect(request.META.get(
-            'HTTP_REFERER', reverse('product_detail', args=[product.id])
-            ))
+        if referer_url and '/reviews/' not in referer_url:
+            return redirect(referer_url)
+        else:
+            return redirect(reverse('product_detail', args=[product.id]))
 
     if request.method == "POST":
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
             messages.success(request, "Your review has been updated.")
-            return redirect(request.META.get(
-                'HTTP_REFERER', reverse('product_detail', args=[product.id])
-                ))
+            if referer_url and '/reviews/' not in referer_url:
+                return redirect(referer_url)
+            else:
+                return redirect(reverse('product_detail', args=[product.id]))
+    
     else:
         form = ReviewForm(instance=review)
     template = 'reviews/edit_review.html'

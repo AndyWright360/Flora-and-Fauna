@@ -71,3 +71,27 @@ def edit_review(request, review_id):
         'product': product
         }
     return render(request, template, context)
+
+@login_required()
+def delete_review(request, review_id):
+    """
+    Delete a review for a product.
+    """
+    review = get_object_or_404(Review, pk=review_id)
+    product = review.product
+    referer_url = request.META.get('HTTP_REFERER')
+
+    if not request.user.is_superuser:
+        if request.user != review.user:
+            messages.error(request, "You don't have authorisation to edit this review.")
+            if referer_url and '/reviews/' not in referer_url:
+                return redirect(referer_url)
+            else:
+                return redirect(reverse('product_detail', args=[product.id]))
+
+    review.delete()
+    messages.success(request, "Your review has been deleted.")
+    if referer_url and '/reviews/' not in referer_url:
+        return redirect(referer_url)
+    else:
+        return redirect(reverse('product_detail', args=[product.id]))

@@ -7,6 +7,7 @@ from .models import Review
 from products.models import Product, Range
 from django.contrib.auth.models import User
 
+
 @freeze_time("2010-10-10")
 class TestReviewModels(TestCase):
 

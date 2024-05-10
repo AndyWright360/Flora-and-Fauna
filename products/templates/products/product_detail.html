@@ -86,6 +86,7 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 <script type="text/javascript">
+    // Code modified from https://www.youtube.com/watch?v=pdttUeJi7j8
     $(document).ready(function() {
         $(document).on("click", ".wishlist-btn", function(){
             let product_id = $(this).attr("data-product-item")

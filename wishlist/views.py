@@ -5,6 +5,7 @@ from django.http import JsonResponse
 from .models import WishlistItem
 from products.models import Product
 
+# add_to_wishlist view obtained from https://www.youtube.com/watch?v=pdttUeJi7j8
 @login_required()
 def add_to_wishlist(request):
     product_id = request.GET['id']

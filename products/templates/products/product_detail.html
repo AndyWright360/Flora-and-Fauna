@@ -12,7 +12,13 @@
             <div class="image-container my-5 anchor-point">
                 <img class="card-img-top img-fluid detail-img" src="/media/{{ product.image }}"
                     alt="{{ product.name }}">
-                <button class="wishlist-btn" data-product-item="{{ product.id }}"><i class="fa-regular fa-heart"></i></button>
+                <button class="wishlist-btn" data-product-item="{{ product.id }}">
+                    {% if product_in_wishlist %}
+                        <i class="fa-solid fa-heart"></i>
+                    {% else %}
+                        <i class="fa-regular fa-heart"></i>
+                    {% endif %}
+                </button>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-5 col-xl-4">
@@ -87,8 +93,17 @@
 
             console.log("Product ID is ", product_id);
 
+            let addedToWishlist = this_val.find("i").hasClass("fa-solid");
+
+            let url;
+            if (addedToWishlist) {
+                url = "/wishlist/remove-from-wishlist/"
+            } else {
+                url = "/wishlist/add-to-wishlist/"
+            }
+
             $.ajax({
-                url: "/wishlist/add-to-wishlist/",
+                url: url,
                 data: {
                     "id": product_id
                 },
@@ -97,8 +112,13 @@
                     console.log("Adding to Wishlist...")
                 },
                 success: function(response){
-                    this_val.html("YAY!")
-                    if (response.bool === true) {
+                    if (addedToWishlist) {
+                        // If item is already in wishlist, remove it
+                        this_val.html(`<i class="fa-regular fa-heart"></i>`);
+                        console.log("Removed from Wishlist!")
+                    } else {
+                        // If item is not in wishlist, add it
+                        this_val.html(`<i class="fa-solid fa-heart"></i>`);
                         console.log("Added to Wishlist!")
                     }
                 }

@@ -572,7 +572,7 @@ select option[value=""] {
     pointer-events: none;
 }
 
-.favorite-btn {
+.wishlist-btn {
     border: none;
     padding: 0;
     background-color: transparent;

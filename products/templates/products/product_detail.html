@@ -12,7 +12,7 @@
             <div class="image-container my-5 anchor-point">
                 <img class="card-img-top img-fluid detail-img" src="/media/{{ product.image }}"
                     alt="{{ product.name }}">
-                <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                <button class="wishlist-btn" data-product-item="{{ product.id }}"><i class="fa-regular fa-heart"></i></button>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-5 col-xl-4">
@@ -79,4 +79,32 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(document).on("click", ".wishlist-btn", function(){
+            let product_id = $(this).attr("data-product-item")
+            let this_val = $(this)
+
+            console.log("Product ID is ", product_id);
+
+            $.ajax({
+                url: "/wishlist/add-to-wishlist/",
+                data: {
+                    "id": product_id
+                },
+                dataType: "json",
+                beforeSend: function(){
+                    console.log("Adding to Wishlist...")
+                },
+                success: function(response){
+                    this_val.html("YAY!")
+                    if (response.bool === true) {
+                        console.log("Added to Wishlist!")
+                    }
+                }
+            })
+
+        })
+    });
+</script>
 {% endblock %}

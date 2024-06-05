@@ -651,17 +651,19 @@ Below code for Star Rating system
 Credit: Madannes https://jsfiddle.net/madannes/r3s1jx4y/
 */
 
-.form-check {
+#div_id_rating .form-check {
     float: left;
     border: none;
     padding: 0;
 }
-.form-check:not(:checked) > input {
+
+#div_id_rating .form-check:not(:checked) > input {
     position: absolute;
     left: -9999px;
     clip: rect(0, 0, 0, 0);
 }
-.form-check:not(:checked) > label {
+
+#div_id_rating .form-check:not(:checked) > label {
     float: right;
     width: 1em;
     padding: 0 .1em;
@@ -673,19 +675,19 @@ Credit: Madannes https://jsfiddle.net/madannes/r3s1jx4y/
     color: #636c72;
 }
 
-.form-check:not(:checked) > label:before {
+#div_id_rating .form-check:not(:checked) > label:before {
     content: '★ ';
 }
 
-.form-check > input:checked ~ label {
+#div_id_rating .form-check > input:checked ~ label {
     color: #f70;
 }
 
-.form-check:not(:checked) > label:hover {
+#div_id_rating .form-check:not(:checked) > label:hover {
     color: gold;
 }
 
-.form-check > label:active {
+#div_id_rating .form-check > label:active {
     position: relative;
 }
 

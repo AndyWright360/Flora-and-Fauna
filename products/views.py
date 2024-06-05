@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.contrib.auth.models import User
 
 from .models import Product, Range
 from wishlist.models import WishlistItem
@@ -72,12 +73,16 @@ def product_detail(request, product_id):
     A view to show individual product details
     """
 
-    product = get_object_or_404(Product, pk=product_id)
-    product_in_wishlist = WishlistItem.objects.filter(product=product, user=request.user).exists()
-
+    product = get_object_or_404(Product, id=product_id)
+    
+    if request.user.is_authenticated:
+        product_in_wishlist = WishlistItem.objects.filter(product=product, user=request.user).exists()
+    else:
+        product_in_wishlist = False
+    
     context = {
         'product': product,
         'product_in_wishlist': product_in_wishlist,
     }
-
+    
     return render(request, 'products/product_detail.html', context)

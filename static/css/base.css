@@ -141,7 +141,6 @@ a:hover {
 
 /*---------- Input Fields ----------*/
 
-.form-control,
 .input-field {
     border: 4px double var(--green);
     border-radius: 10px;
@@ -149,7 +148,6 @@ a:hover {
     height: fit-content;
 }
 
-.form-control:focus,
 .input-field:focus {
     outline: none;
     box-shadow: none;
@@ -532,13 +530,13 @@ select option[value=""] {
     border-radius: 25px;
 }
 
-#quantity-container {
+.quantity-container {
     border: 4px double var(--green);
     border-radius: 12px;
     overflow: hidden;
 }
 
-#quantity-container:focus-within {
+.quantity-container:focus-within {
     border-style: solid;
 }
 

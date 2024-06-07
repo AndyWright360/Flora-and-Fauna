@@ -572,12 +572,19 @@ select option[value=""] {
 
 .wishlist-btn {
     border: none;
-    padding: 0;
-    background-color: transparent;
+    padding: 5px;
+    background-color: var(--white);
+    color: var(--green);
     font-size: 28px;
     position: absolute;
     top: 12px;
-    right: 20px;
+    right: 12px;
+    border-radius: 100px;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .shop-btn {

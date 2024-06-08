@@ -143,6 +143,7 @@ a:hover {
     position: fixed;
     right: 20px;
     bottom: 20px;
+    z-index: 9999;
 }
 
 /*---------- Input Fields ----------*/
@@ -581,16 +582,25 @@ select option[value=""] {
     padding: 5px;
     background-color: var(--white);
     color: var(--green);
-    font-size: 28px;
     position: absolute;
-    top: 12px;
-    right: 12px;
     border-radius: 100px;
     height: fit-content;
     width: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.wishlist-btn-sm {
+    font-size: 22px;
+    top: 22px;
+    right: 22px;
+}
+
+.wishlist-btn-bg {
+    font-size: 28px;
+    top: 15px;
+    right: 15px;
 }
 
 .shop-btn {

@@ -45,6 +45,15 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pt-5">
                             <div class="card h-100 product-card">
                                 <img class="img-fluid product-img" src="/media/{{ product.image }}" alt="{{ product.name }}">
+                                {% if user.is_authenticated %}
+                                    <button class="wishlist-btn wishlist-btn-sm" data-product-item="{{ product.id }}">
+                                        {% if product.id in user_wishlist %}
+                                            <i class="fa-solid fa-heart"></i>
+                                        {% else %}
+                                            <i class="fa-regular fa-heart"></i>
+                                        {% endif %}
+                                    </button>
+                                {% endif %}
                                 <div class="card-body">
                                     {% if product.range %}
                                         <p class="product-range {{ product.range.name }}">
@@ -82,6 +91,27 @@
             <i class="fa-solid fa-angles-up mx-auto my-auto"></i>
         </a>	
     </div>
+
+    <!-- Toasts -->
+    <div class="toast-container">
+        <div id="addToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="mr-auto">Item added to Wishlist</strong>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    
+        <div id="removeToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="mr-auto">Item removed from Wishlist</strong>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block postloadjs %}
@@ -113,5 +143,74 @@
                 window.location.replace(currentUrl);
             }
         })
+    </script>
+
+    <script type="text/javascript">    
+        $(document).ready(function() {
+            // Code modified from https://www.youtube.com/watch?v=AZs4zggS7kA
+            // Explicitly hide the toasts on page load
+            $('#addToast').removeClass('show').addClass('hide');
+            $('#removeToast').removeClass('show').addClass('hide');
+
+            // Initialise toast options
+            var option = {
+                animation: true,
+                delay: 3000
+            };
+
+            function showAddToast() {
+                var addToastHTMLElement = document.getElementById("addToast");
+                var addToastElement = new bootstrap.Toast(addToastHTMLElement, option);
+                addToastElement.show();
+            }
+
+            function showRemoveToast() {
+                var removeToastHTMLElement = document.getElementById("removeToast");
+                var removeToastElement = new bootstrap.Toast(removeToastHTMLElement, option);
+                removeToastElement.show();
+            }
+
+            // Code modified from https://www.youtube.com/watch?v=pdttUeJi7j8
+            $(document).on("click", ".wishlist-btn", function(){
+                let product_id = $(this).attr("data-product-item")
+                let this_val = $(this)
+
+                console.log("Product ID is ", product_id);
+
+                let addedToWishlist = this_val.find("i").hasClass("fa-solid");
+
+                let url;
+                if (addedToWishlist) {
+                    url = "/wishlist/remove-from-wishlist/"
+                } else {
+                    url = "/wishlist/add-to-wishlist/"
+                }
+
+                $.ajax({
+                    url: url,
+                    data: {
+                        "id": product_id
+                    },
+                    dataType: "json",
+                    beforeSend: function(){
+                        console.log("Adding to Wishlist...")
+                    },
+                    success: function(response){
+                        if (addedToWishlist) {
+                            // If item is already in wishlist, remove it
+                            this_val.html(`<i class="fa-regular fa-heart"></i>`);
+                            console.log("Removed from Wishlist")
+                            showRemoveToast();
+                        } else {
+                            // If item is not in wishlist, add it
+                            this_val.html(`<i class="fa-solid fa-heart"></i>`);
+                            console.log("Added to Wishlist")
+                            showAddToast();
+                        }
+                    }
+                })
+
+            })
+        });
     </script>
 {% endblock %}

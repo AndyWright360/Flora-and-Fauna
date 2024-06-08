@@ -55,6 +55,11 @@ def all_products(request):
                 queries = Q(name__icontains=query) | Q(description__icontains=query)
                 products = products.filter(queries)
 
+    # Check if each product is in the user's wishlist
+    user_wishlist = []
+    if request.user.is_authenticated:
+        user_wishlist = list(WishlistItem.objects.filter(user=request.user).values_list('product_id', flat=True))
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -63,6 +68,7 @@ def all_products(request):
         'category': category,
         'range': range,
         'current_sorting': current_sorting,
+        'user_wishlist': user_wishlist,
     }
 
     return render(request, 'products/products.html', context)

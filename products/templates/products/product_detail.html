@@ -12,7 +12,7 @@
             <div class="image-container my-5 anchor-point">
                 <img class="card-img-top img-fluid detail-img" src="/media/{{ product.image }}" alt="{{ product.name }}">
                 {% if user.is_authenticated %}
-                    <button class="wishlist-btn" data-product-item="{{ product.id }}">
+                    <button class="wishlist-btn wishlist-btn-bg" data-product-item="{{ product.id }}">
                         {% if product_in_wishlist %}
                             <i class="fa-solid fa-heart"></i>
                         {% else %}
@@ -24,7 +24,7 @@
         </div>
         
         <!-- Toasts -->
-        <div class="toast-container" style="z-index: 5;">
+        <div class="toast-container">
             <div id="addToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
                     <strong class="mr-auto">{{ product.name }}</strong>
@@ -114,9 +114,9 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
-<script type="text/javascript">
-    // Code modified from https://www.youtube.com/watch?v=pdttUeJi7j8
+<script type="text/javascript">    
     $(document).ready(function() {
+        // Code modified from https://www.youtube.com/watch?v=AZs4zggS7kA
         // Explicitly hide the toasts on page load
         $('#addToast').removeClass('show').addClass('hide');
         $('#removeToast').removeClass('show').addClass('hide');
@@ -139,6 +139,7 @@
             removeToastElement.show();
         }
 
+        // Code modified from https://www.youtube.com/watch?v=pdttUeJi7j8
         $(document).on("click", ".wishlist-btn", function(){
             let product_id = $(this).attr("data-product-item")
             let this_val = $(this)

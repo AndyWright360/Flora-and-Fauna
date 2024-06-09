@@ -23,7 +23,6 @@ class TestCheckoutModels(TestCase):
             ingredients="Test Ingredients 1",
             price=9.99,
             size="Test Size 1",
-            rating=4,
             image="test_image_1.jpg",
         )
 
@@ -35,7 +34,6 @@ class TestCheckoutModels(TestCase):
             ingredients="Test Ingredients 2",
             price=19.99,
             size="Test Size 2",
-            rating=3,
             image="test_image_2.jpg",
         )
 

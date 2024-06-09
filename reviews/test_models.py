@@ -27,7 +27,6 @@ class TestReviewModels(TestCase):
             ingredients="Test Ingredients",
             price=9.99,
             size="Test Size",
-            rating=4,
             image="test_image.jpg",
         )
 

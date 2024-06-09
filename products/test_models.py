@@ -1,5 +1,7 @@
 from django.test import TestCase
 from .models import Range, Product
+from reviews.models import Review
+from django.contrib.auth.models import User
 
 class TestProductsModels(TestCase):
 
@@ -19,8 +21,19 @@ class TestProductsModels(TestCase):
             ingredients="Test Ingredients",
             price=9.99,
             size="Test Size",
-            rating=4,
             image="test_image.jpg",
+        )
+
+        self.user_test1 = User.objects.create(
+            username="TestUser1",
+            password="TestPassword1",
+            email='test1@test.com',
+        )
+
+        self.user_test2 = User.objects.create(
+            username="TestUser2",
+            password="TestPassword2",
+            email='test2@test.com',
         )
 
     def test_range_string_method(self):
@@ -67,10 +80,34 @@ class TestProductsModels(TestCase):
         """ Test the product size """
         self.assertEqual(self.product_test.size, 'Test Size')
 
-    def test_product_rating(self):
-        """ Test the product rating """
-        self.assertEqual(self.product_test.rating, 4)
-
     def test_product_image(self):
         """ Test the product image """
         self.assertEqual(self.product_test.image, 'test_image.jpg')
+    
+    def test_average_rating_with_no_reviews(self):
+        """ Test average rating when there are no reviews """
+        avg_rating = self.product_test.average_rating()
+        self.assertIsNone(avg_rating)
+
+    def test_average_rating_with_reviews(self):
+        """ Test average rating when there are reviews """
+
+        # Create reviews for the product
+        Review.objects.create(
+            product=self.product_test,
+            user=self.user_test1,
+            title="Great product",
+            content="Love it!",
+            rating=5,
+        )
+
+        Review.objects.create(
+            product=self.product_test,
+            user=self.user_test2,
+            title="Not bad",
+            content="It's okay",
+            rating=3,
+        )
+
+        avg_rating = self.product_test.average_rating()
+        self.assertAlmostEqual(avg_rating, 4.0, places=1)

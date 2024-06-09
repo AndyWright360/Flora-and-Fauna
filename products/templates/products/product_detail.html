@@ -54,11 +54,11 @@
             <div class="product-details-container mb-5 mt-md-5">
                 <p class="text-center font-weight-bold mb-0 detail-name">{{ product.name }}</p>
                 {% if product.range %}
-                <p class="text-center mt-1 mb-0">
-                    <a href="{% url 'products' %}?range={{ product.range.name }}">
-                        {{ product.range.friendly_name }}
-                    </a>
-                </p>
+                    <p class="range-link mt-1 mb-0 {{ product.range.name }}">
+                        <a href="{% url 'products' %}?range={{ product.range.name }}">
+                            {{ product.range.friendly_name }}
+                        </a>
+                    </p>
                 {% endif %}
                 {% if product.rating %}
                 <p class="mt-2">{{ product.rating }}</p>

@@ -577,6 +577,19 @@ select option[value=""] {
     pointer-events: none;
 }
 
+.range-link {
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: auto;
+    font-size: 18px;
+    text-align: center;
+}
+
+.range-link a:hover {
+    font-weight: bold;
+}
+
 .wishlist-btn {
     border: none;
     padding: 5px;

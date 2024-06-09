@@ -24,6 +24,10 @@ def add_review(request, product_id):
             review.user = user
             review.created_on = timezone.now().date()
             review.save()
+
+            # Calculate the average rating for the product
+            product.average_rating()
+
             messages.success(request, "Your review has been submitted.")
             return redirect(reverse('product_detail', args=[product.id]))
     else:
@@ -56,6 +60,10 @@ def edit_review(request, review_id):
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
+
+            # Update the average rating for the product
+            product.average_rating()
+
             messages.success(request, "Your review has been updated.")
             if referer_url and '/reviews/' not in referer_url:
                 return redirect(referer_url)
@@ -90,6 +98,10 @@ def delete_review(request, review_id):
                 return redirect(reverse('product_detail', args=[product.id]))
 
     review.delete()
+
+    # Update the average rating for the product
+    product.average_rating()
+
     messages.success(request, "Your review has been deleted.")
     if referer_url and '/reviews/' not in referer_url:
         return redirect(referer_url)

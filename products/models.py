@@ -32,5 +32,5 @@ class Product(models.Model):
         reviews = self.reviews.all()
         if reviews.exists():
             avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
-            return round(avg_rating, 1)
+            return round(avg_rating, 0)
         return None

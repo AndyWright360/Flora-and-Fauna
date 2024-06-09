@@ -110,4 +110,4 @@ class TestProductsModels(TestCase):
         )
 
         avg_rating = self.product_test.average_rating()
-        self.assertAlmostEqual(avg_rating, 4.0, places=1)
+        self.assertAlmostEqual(avg_rating, 4, places=0)

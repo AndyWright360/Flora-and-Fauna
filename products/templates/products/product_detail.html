@@ -60,16 +60,22 @@
                         </a>
                     </p>
                 {% endif %}
-                {% if product.rating %}
-                <p class="mt-2">{{ product.rating }}</p>
+                {% if product.average_rating %}
+                    <span class="product-rating mt-2">
+                        {% for i in "12345" %}
+                            {% if forloop.counter <= product.average_rating %}
+                                <i class="fa-solid fa-star"></i>
+                            {% else %}
+                                <i class="fa-regular fa-star"></i>
+                            {% endif %}
+                        {% endfor %}
+                    </span>
                 {% else %}
-                <span class="product-rating mt-2">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </span>
+                    <span class="product-rating mt-2">
+                        {% for i in "12345" %}
+                            <i class="fa-regular fa-star"></i>
+                        {% endfor %}
+                    </span>
                 {% endif %}
                 <div class="d-flex justify-content-around align-items-center">
                     <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>

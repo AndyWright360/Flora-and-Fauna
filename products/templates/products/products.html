@@ -63,13 +63,23 @@
                                         </p>
                                     {% endif %}
                                     <p class="product-name">{{ product.name }}</p>
-                                    <span class="product-rating">
-                                        <i class="fa-regular fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </span>
+                                    {% if product.average_rating %}
+                                        <span class="product-rating mt-2">
+                                            {% for i in "12345" %}
+                                                {% if forloop.counter <= product.average_rating %}
+                                                    <i class="fa-solid fa-star"></i>
+                                                {% else %}
+                                                    <i class="fa-regular fa-star"></i>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </span>
+                                    {% else %}
+                                        <span class="product-rating mt-2">
+                                            {% for i in "12345" %}
+                                                <i class="fa-regular fa-star"></i>
+                                            {% endfor %}
+                                        </span>
+                                    {% endif %}
                                     <span class="product-info">
                                         <p>£{{ product.price }}</p>
                                         <p>{{ product.size }}</p>

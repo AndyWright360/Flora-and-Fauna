@@ -27,3 +27,10 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def average_rating(self):
+        reviews = self.reviews.all()
+        if reviews.exists():
+            avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
+            return round(avg_rating, 1)
+        return None

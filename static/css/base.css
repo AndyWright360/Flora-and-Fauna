@@ -742,6 +742,11 @@ Credit: Madannes https://jsfiddle.net/madannes/r3s1jx4y/
 
 .footer-icon {
     font-size: 38px;
+    color: var(--white);
+}
+
+.footer-icon:hover {
+    color: rgba(251,251,242,0.8);
 }
 
 /*---------- Back To Top Button ----------*/

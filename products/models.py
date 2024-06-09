@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Avg
 
 
 class Range(models.Model):
@@ -14,13 +15,6 @@ class Range(models.Model):
 
 
 class Product(models.Model):
-    RATING_CHOICES = (
-        (1, '1 Star'),
-        (2, '2 Stars'),
-        (3, '3 Stars'),
-        (4, '4 Stars'),
-        (5, '5 Stars'),
-    )
 
     range = models.ForeignKey('Range', on_delete=models.SET_NULL, null=True, blank=True)
     name = models.CharField(max_length=254)
@@ -29,7 +23,6 @@ class Product(models.Model):
     ingredients = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     size = models.CharField(max_length=254)
-    rating = models.IntegerField(choices=RATING_CHOICES, null=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):

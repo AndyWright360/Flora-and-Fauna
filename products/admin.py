@@ -10,11 +10,8 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'price',
         'size',
-        'rating',
         'image',
     )
-
-    readonly_fields = ('rating',)
 
     ordering = ('name',)
 

@@ -129,3 +129,39 @@ class TestReviewViews(TestCase):
         response = self.client.get(reverse('delete_review', args=[self.review_test2.id]))
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, '/products/1/')
+    
+    def test_adding_a_product_review_updates_product_average_rating(self):
+        """ 
+        Test that the average rating for a product is updated when a review is added
+        """
+
+        # Create review for the product
+        self.review_test3 = Review.objects.create(
+            product=self.product_test,
+            user=self.user_test,
+            created_on=timezone.now(),
+            title="Test Title 3",
+            content="Test Content 3",
+            rating=4,
+        )
+
+        self.assertEqual(self.product_test.average_rating(), 4)
+
+    def test_editing_a_product_review_updates_product_average_rating(self):
+        """ 
+        Test that the average rating for a product is updated when a review is edited
+        """
+        # Edit the review's rating
+        self.review_test1.rating = 3
+        self.review_test1.save()
+
+        self.assertEqual(self.product_test.average_rating(), 3)
+
+    def test_deleting_a_product_review_updates_product_average_rating(self):
+        """ 
+        Test that the average rating for a product is updated when a review is deleted
+        """
+        # Delete a review
+        self.review_test2.delete()
+
+        self.assertEqual(self.product_test.average_rating(), 5)

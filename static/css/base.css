@@ -66,6 +66,10 @@ a:hover {
     position: relative;
 }
 
+.sub-heading {
+    font-size: 24px;
+}
+
 .underline {
     width: 280px;
     height: auto;

@@ -9,7 +9,7 @@
     </a>
     <div class="row">
         <div class="col-12 col-md-6 col-lg-5 col-xl-4 offset-lg-1 offset-xl-2">
-            <div class="image-container my-5 anchor-point">
+            <div class="image-container mt-5 mb-3 anchor-point">
                 <img class="card-img-top img-fluid detail-img" src="/media/{{ product.image }}" alt="{{ product.name }}">
                 {% if user.is_authenticated %}
                     <button class="wishlist-btn wishlist-btn-bg" data-product-item="{{ product.id }}">
@@ -51,7 +51,7 @@
         </div>
 
         <div class="col-12 col-md-6 col-lg-5 col-xl-4">
-            <div class="product-details-container mb-5 mt-md-5">
+            <div class="product-details-container mt-md-5">
                 <p class="text-center font-weight-bold mb-0 detail-name">{{ product.name }}</p>
                 {% if product.range %}
                     <p class="range-link mt-1 mb-0 {{ product.range.name }}">
@@ -112,6 +112,12 @@
                     </div>
                 </form>
             </div>
+        </div>
+        <div class="col-12 text-center mt-1">
+            <h3 class="sub-heading">Ingredients</h3>
+        </div>
+        <div class="col-12 col-md-10 offset-md-1">
+            <p>{{ product.ingredients }}</p>
         </div>
     </div>
 </div>

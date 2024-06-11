@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 
 from .models import Product, Range
 from wishlist.models import WishlistItem
+from reviews.models import Review
 
 
 def all_products(request):
@@ -80,6 +81,7 @@ def product_detail(request, product_id):
     """
 
     product = get_object_or_404(Product, id=product_id)
+    reviews = Review.objects.filter(product=product)
     
     if request.user.is_authenticated:
         product_in_wishlist = WishlistItem.objects.filter(product=product, user=request.user).exists()
@@ -88,6 +90,7 @@ def product_detail(request, product_id):
     
     context = {
         'product': product,
+        'reviews': reviews,
         'product_in_wishlist': product_in_wishlist,
     }
     

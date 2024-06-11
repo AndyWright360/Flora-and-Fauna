@@ -121,10 +121,38 @@
         </div>
     </div>
     <div class="row">
-        <div class="col text-center">
+        <div class="col-12 text-center">
             <h2 class="page-heading">Reviews</h2>
             <img class="underline" src="/media/underline.webp">
         </div>
+        {% if reviews %}
+            <div class="col-12 d-flex flex-wrap justify-content-around mt-5">
+            {% for review in reviews %}
+                <div class="review col-12 col-md-9 col-lg-5">
+                    <div class="col-12 d-flex justify-content-between">
+                        <p class="review-detail"><strong>{{ review.user.username }}</strong></p>
+                        <p class="review-detail">{{ review.created_on }}</p>
+                    </div>
+                    <div class="col-12">
+                        <span class="review-detail">
+                            {% for i in "12345" %}
+                                {% if forloop.counter <= review.rating %}
+                                    <i class="fa-solid fa-star"></i>
+                                {% else %}
+                                    <i class="fa-regular fa-star"></i>
+                                {% endif %}
+                            {% endfor %}
+                        </span>
+                    </div>
+                    <div class="col-12">
+                        <p>{{ review.content }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        {% else %}
+            <p>No reviews yet. Be the first to review this product!</p>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

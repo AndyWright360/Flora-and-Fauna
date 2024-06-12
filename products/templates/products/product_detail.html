@@ -121,12 +121,20 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 text-center">
+        <div class="col-12 text-center mb-5">
             <h2 class="page-heading">Reviews</h2>
             <img class="underline" src="/media/underline.webp">
         </div>
         {% if reviews %}
-            <div class="col-12 d-flex flex-wrap justify-content-around mt-5">
+            {% if user.is_authenticated %}
+                <div class="col-12 text-center mb-4">
+                    <p class="review-info">Have you tried this product? Why not tell us your thoughts!</p>
+                    <a href="{% url 'add_review' product.id %}" class="review-btn blue-btn text-uppercase">
+                        Add Review
+                    </a>
+                </div>
+            {% endif %}
+            <div class="col-12 d-flex flex-wrap justify-content-around">
             {% for review in reviews %}
                 <div class="review col-12 col-md-9 col-lg-5">
                     <div class="col-12 d-flex justify-content-between">
@@ -151,7 +159,16 @@
             {% endfor %}
             </div>
         {% else %}
-            <p>No reviews yet. Be the first to review this product!</p>
+            <div class="col-12 text-center">
+                {% if user.is_authenticated %}
+                    <p class="review-info">No reviews yet. Be the first to review this product!</p>
+                    <a href="{% url 'add_review' product.id %}" class="review-btn blue-btn text-uppercase">
+                        Add Review
+                    </a>
+                {% else %}
+                    <p class="review-info">No reviews yet.</p>
+                {% endif %}
+            </div>
         {% endif %}
     </div>
 </div>

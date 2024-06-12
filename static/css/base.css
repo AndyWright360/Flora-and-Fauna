@@ -655,6 +655,15 @@ select option[value=""] {
     margin: 0;
 }
 
+.review-info {
+    font-size: 18px;
+}
+
+.review-btn {
+    padding: 6px 10px;
+    border-radius: 12px;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

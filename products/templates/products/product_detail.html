@@ -171,12 +171,36 @@
             </div>
         {% endif %}
     </div>
-    <div class="row">
-        <div class="col-12 text-center my-5">
-            <h2 class="page-heading">More From This Range</h2>
-            <img class="underline" src="/media/underline.webp">
+    {% if other_products_in_range %}
+        <div class="row">
+            <div class="col-12 text-center my-5">
+                <h2 class="page-heading">More From This Range</h2>
+                <img class="underline" src="/media/underline.webp">
+            </div>
+            {% for other_product in other_products_in_range %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pt-5">
+                    <div class="card h-100 other-product-card">
+                        <img class="img-fluid other-product-img" src="/media/{{ other_product.image }}" alt="{{ other_product.name }}">
+                        <div class="card-body">
+                            <p class="other-product-detail">{{ other_product.name }}</p>
+                            <span class="product-info">
+                                <p class="other-product-detail">£{{ other_product.price }}</p>
+                            </span>
+                        </div>
+                        <div class="card-footer justify-content-between">
+                            <form action="{% url 'add_to_bag' other_product.id %}" method="POST">
+                                {% csrf_token %}
+                                <input type="hidden" name="quantity" value="1">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                <button class="other-product-btn green-btn text-uppercase" type="submit">Add</button>
+                            </form>
+                            <a class="other-product-btn blue-btn text-uppercase" href="{% url 'product_detail' other_product.id %}">View</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-    </div>
+    {% endif %}
 </div>
 {% endblock %}
 

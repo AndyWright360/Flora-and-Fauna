@@ -82,6 +82,7 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, id=product_id)
     reviews = Review.objects.filter(product=product)
+    other_products_in_range = Product.objects.filter(range=product.range).exclude(pk=product_id)
     
     if request.user.is_authenticated:
         product_in_wishlist = WishlistItem.objects.filter(product=product, user=request.user).exists()
@@ -92,6 +93,7 @@ def product_detail(request, product_id):
         'product': product,
         'reviews': reviews,
         'product_in_wishlist': product_in_wishlist,
+        'other_products_in_range': other_products_in_range,
     }
     
     return render(request, 'products/product_detail.html', context)

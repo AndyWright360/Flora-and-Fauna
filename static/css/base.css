@@ -650,6 +650,7 @@ select option[value=""] {
     border-radius: 10px;
     padding-top: 1rem;
     margin-bottom: 1rem;
+    background-color: var(--white);
 }
 
 .review-detail {

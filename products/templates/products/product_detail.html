@@ -10,7 +10,8 @@
     <div class="row">
         <div class="col-12 col-md-6 col-lg-5 col-xl-4 offset-lg-1 offset-xl-2">
             <div class="image-container mt-5 mb-3 anchor-point">
-                <img class="card-img-top img-fluid detail-img" src="/media/{{ product.image }}" alt="{{ product.name }}">
+                <img class="card-img-top img-fluid detail-img" src="/media/{{ product.image }}"
+                    alt="{{ product.name }}">
                 {% if user.is_authenticated %}
                     <button class="wishlist-btn wishlist-btn-bg" data-product-item="{{ product.id }}">
                         {% if product_in_wishlist %}
@@ -22,7 +23,7 @@
                 {% endif %}
             </div>
         </div>
-        
+
         <!-- Toasts -->
         <div class="toast-container">
             <div id="addToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
@@ -36,7 +37,7 @@
                     Added to Wishlist
                 </div>
             </div>
-        
+
             <div id="removeToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
                     <strong class="mr-auto">{{ product.name }}</strong>
@@ -98,7 +99,8 @@
                                     <input class="form-control qty_input" type="number" name="quantity" value="1"
                                         min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                     <div class="input-group-append">
-                                        <button class="increment-qty" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                        <button class="increment-qty" data-item_id="{{ product.id }}"
+                                            id="increment-qty_{{ product.id }}">
                                             <i class="fas fa-plus"></i>
                                         </button>
                                     </div>
@@ -106,7 +108,8 @@
                             </div>
                         </div>
                         <div class="col-6 d-flex justify-content-center align-items-start">
-                            <input type="submit" class="add-to-bag-btn blue-btn text-uppercase" form="quantity-form" value="Add to Bag">
+                            <input type="submit" class="add-to-bag-btn blue-btn text-uppercase" form="quantity-form"
+                                value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
@@ -135,70 +138,88 @@
                 </div>
             {% endif %}
             <div class="col-12 d-flex flex-wrap justify-content-around">
-            {% for review in reviews %}
-                <div class="review col-12 col-md-9 col-lg-5">
-                    <div class="col-12 d-flex justify-content-between">
-                        <p class="review-detail"><strong>{{ review.user.username }}</strong></p>
-                        <p class="review-detail">{{ review.created_on }}</p>
+                {% for review in reviews %}
+                    <div class="review col-12 col-md-9 col-lg-5">
+                        <div class="col-12 d-flex justify-content-between">
+                            <p class="review-detail"><strong>{{ review.user.username }}</strong></p>
+                            <p class="review-detail">{{ review.created_on }}</p>
+                        </div>
+                        <div class="col-12">
+                            <span class="review-detail">
+                                {% for i in "12345" %}
+                                    {% if forloop.counter <= review.rating %}
+                                        <i class="fa-solid fa-star"></i>
+                                    {% else %}
+                                        <i class="fa-regular fa-star"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            </span>
+                        </div>
+                        <div class="col-12">
+                            <p>{{ review.content }}</p>
+                        </div>
                     </div>
-                    <div class="col-12">
-                        <span class="review-detail">
-                            {% for i in "12345" %}
-                                {% if forloop.counter <= review.rating %}
-                                    <i class="fa-solid fa-star"></i>
-                                {% else %}
-                                    <i class="fa-regular fa-star"></i>
-                                {% endif %}
-                            {% endfor %}
-                        </span>
-                    </div>
-                    <div class="col-12">
-                        <p>{{ review.content }}</p>
-                    </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
             </div>
-        {% else %}
+            {% else %}
             <div class="col-12 text-center">
                 {% if user.is_authenticated %}
-                    <p class="review-info">No reviews yet. Be the first to review this product!</p>
-                    <a href="{% url 'add_review' product.id %}" class="review-btn blue-btn text-uppercase">
-                        Add Review
-                    </a>
+                <p class="review-info">No reviews yet. Be the first to review this product!</p>
+                <a href="{% url 'add_review' product.id %}" class="review-btn blue-btn text-uppercase">
+                    Add Review
+                </a>
                 {% else %}
-                    <p class="review-info">No reviews yet.</p>
+                <p class="review-info">No reviews yet.</p>
                 {% endif %}
             </div>
         {% endif %}
     </div>
+
+    <!-- Carousel Section -->
     {% if other_products_in_range %}
         <div class="row">
             <div class="col-12 text-center my-5">
                 <h2 class="page-heading">More From This Range</h2>
                 <img class="underline" src="/media/underline.webp">
             </div>
-            {% for other_product in other_products_in_range %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pt-5">
-                    <div class="card h-100 other-product-card">
-                        <img class="img-fluid other-product-img" src="/media/{{ other_product.image }}" alt="{{ other_product.name }}">
-                        <div class="card-body">
-                            <p class="other-product-detail">{{ other_product.name }}</p>
-                            <span class="product-info">
-                                <p class="other-product-detail">£{{ other_product.price }}</p>
-                            </span>
+            <div id="range-carousel" class="carousel slide w-100" data-interval="false">
+                <div class="carousel-inner">
+                    {% for other_product in other_products_in_range %}
+                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                            <div class="card other-product-card">
+                                <img class="img-fluid other-product-img" src="/media/{{ other_product.image }}"
+                                    alt="{{ other_product.name }}">
+                                <div class="card-body d-flex flex-column justify-content-around">
+                                    <p class="other-product-detail">{{ other_product.name }}</p>
+                                    <span class="product-info">
+                                        <p class="other-product-detail">£{{ other_product.price }}</p>
+                                    </span>
+                                </div>
+                                <div class="card-footer justify-content-between">
+                                    <form action="{% url 'add_to_bag' other_product.id %}" method="POST">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="quantity" value="1">
+                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        <button class="other-product-btn green-btn text-uppercase" type="submit">Add</button>
+                                    </form>
+                                    <a class="other-product-btn blue-btn text-uppercase"
+                                    href="{% url 'product_detail' other_product.id %}">View</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-footer justify-content-between">
-                            <form action="{% url 'add_to_bag' other_product.id %}" method="POST">
-                                {% csrf_token %}
-                                <input type="hidden" name="quantity" value="1">
-                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                <button class="other-product-btn green-btn text-uppercase" type="submit">Add</button>
-                            </form>
-                            <a class="other-product-btn blue-btn text-uppercase" href="{% url 'product_detail' other_product.id %}">View</a>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
-            {% endfor %}
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-target="#range-carousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#range-carousel" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </button>
+            </div>
         </div>
     {% endif %}
 </div>
@@ -207,8 +228,8 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
-<script type="text/javascript">    
-    $(document).ready(function() {
+<script type="text/javascript">
+    $(document).ready(function () {
         // Code modified from https://www.youtube.com/watch?v=AZs4zggS7kA
         // Explicitly hide the toasts on page load
         $('#addToast').removeClass('show').addClass('hide');
@@ -233,7 +254,7 @@
         }
 
         // Code modified from https://www.youtube.com/watch?v=pdttUeJi7j8
-        $(document).on("click", ".wishlist-btn", function(){
+        $(document).on("click", ".wishlist-btn", function () {
             let product_id = $(this).attr("data-product-item")
             let this_val = $(this)
 
@@ -254,10 +275,10 @@
                     "id": product_id
                 },
                 dataType: "json",
-                beforeSend: function(){
+                beforeSend: function () {
                     console.log("Adding to Wishlist...")
                 },
-                success: function(response){
+                success: function (response) {
                     if (addedToWishlist) {
                         // If item is already in wishlist, remove it
                         this_val.html(`<i class="fa-regular fa-heart"></i>`);

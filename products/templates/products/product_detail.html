@@ -182,7 +182,9 @@
                 <h2 class="page-heading">More From This Range</h2>
                 <img class="underline" src="/media/underline.webp">
             </div>
-            <div id="range-carousel" class="carousel slide w-100" data-interval="false">
+
+            <!-- Carousel display for small screens -->
+            <div id="range-carousel-sm" class="carousel slide w-100 d-md-none" data-interval="false">
                 <div class="carousel-inner">
                     {% for other_product in other_products_in_range %}
                         <div class="carousel-item {% if forloop.first %}active{% endif %}">
@@ -211,15 +213,108 @@
                 </div>
 
                 <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-target="#range-carousel" data-slide="prev">
+                <button class="carousel-control-prev" type="button" data-target="#range-carousel-sm" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-target="#range-carousel" data-slide="next">
+                <button class="carousel-control-next" type="button" data-target="#range-carousel-sm" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </button>
             </div>
+
+            <!-- Carousel display for medium screens -->
+            <div id="range-carousel-md" class="carousel slide w-100 d-none d-md-block d-lg-none" data-interval="false">
+                <div class="carousel-inner">
+                    {% for other_product in other_products_in_range %}
+                        {% if forloop.counter0|divisibleby:2 %}
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                        {% endif %}
+
+                        <div class="card other-product-card">
+                            <img class="img-fluid other-product-img" src="/media/{{ other_product.image }}"
+                                alt="{{ other_product.name }}">
+                            <div class="card-body d-flex flex-column justify-content-around">
+                                <p class="other-product-detail">{{ other_product.name }}</p>
+                                <span class="product-info">
+                                    <p class="other-product-detail">£{{ other_product.price }}</p>
+                                </span>
+                            </div>
+                            <div class="card-footer justify-content-between">
+                                <form action="{% url 'add_to_bag' other_product.id %}" method="POST">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="quantity" value="1">
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    <button class="other-product-btn green-btn text-uppercase" type="submit">Add</button>
+                                </form>
+                                <a class="other-product-btn blue-btn text-uppercase"
+                                href="{% url 'product_detail' other_product.id %}">View</a>
+                            </div>
+                        </div>
+
+                        {% if forloop.counter|divisibleby:2 or forloop.last %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-target="#range-carousel-md" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#range-carousel-md" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </button>
+            </div>
+
+            <!-- Carousel display for large screens -->
+            <div id="range-carousel-lg" class="carousel slide w-100 d-none d-lg-block" data-interval="false">
+                <div class="carousel-inner">
+                    {% for other_product in other_products_in_range %}
+                        {% if forloop.counter0|divisibleby:3 %}
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                        {% endif %}
+
+                        <div class="card other-product-card">
+                            <img class="img-fluid other-product-img" src="/media/{{ other_product.image }}"
+                                alt="{{ other_product.name }}">
+                            <div class="card-body d-flex flex-column justify-content-around">
+                                <p class="other-product-detail">{{ other_product.name }}</p>
+                                <span class="product-info">
+                                    <p class="other-product-detail">£{{ other_product.price }}</p>
+                                </span>
+                            </div>
+                            <div class="card-footer justify-content-between">
+                                <form action="{% url 'add_to_bag' other_product.id %}" method="POST">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="quantity" value="1">
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    <button class="other-product-btn green-btn text-uppercase" type="submit">Add</button>
+                                </form>
+                                <a class="other-product-btn blue-btn text-uppercase"
+                                href="{% url 'product_detail' other_product.id %}">View</a>
+                            </div>
+                        </div>
+
+                        {% if forloop.counter|divisibleby:3 or forloop.last %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-target="#range-carousel-lg" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#range-carousel-lg" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </button>
+            </div>
+
         </div>
     {% endif %}
 </div>

@@ -676,6 +676,14 @@ select option[value=""] {
     justify-content: space-evenly;
 }
 
+#range-carousel-lg .carousel-control-next {
+    padding: 0 0 0 80px;
+}
+
+#range-carousel-lg .carousel-control-prev {
+    padding: 0 80px 0 0;
+}
+
 .other-product-card {
     border: 5px double var(--green);
     border-radius: 38px;

@@ -676,12 +676,9 @@ select option[value=""] {
     justify-content: space-evenly;
 }
 
-#range-carousel-lg .carousel-control-next {
-    padding: 0 0 0 80px;
-}
-
+#range-carousel-lg .carousel-control-next,
 #range-carousel-lg .carousel-control-prev {
-    padding: 0 80px 0 0;
+    width: 6%;
 }
 
 .carousel-control-next,

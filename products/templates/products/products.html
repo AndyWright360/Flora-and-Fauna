@@ -208,18 +208,16 @@
                     },
                     dataType: "json",
                     beforeSend: function(){
-                        console.log("Adding to Wishlist...")
+                        console.log("Updating Wishlist...")
                     },
                     success: function(response){
                         if (addedToWishlist) {
                             // If item is already in wishlist, remove it
                             this_val.html(`<i class="fa-regular fa-heart"></i>`);
-                            console.log("Removed from Wishlist")
                             showRemoveToast();
                         } else {
                             // If item is not in wishlist, add it
                             this_val.html(`<i class="fa-solid fa-heart"></i>`);
-                            console.log("Added to Wishlist")
                             showAddToast();
                         }
                     }

@@ -8,6 +8,8 @@
     --white: #FBFBF2;
     --dark-blue: #101036;
     --blue: #93B7DA;
+    --red: #AB1530;
+    --dark-red: #4c0b17;
     --aloe: #A6D274;
     --rose: #FFA8B6;
     --honey: #FDD369;
@@ -483,6 +485,17 @@ select option[value=""] {
     border-style: solid;
 }
 
+.red-btn {
+    border: 4px double var(--dark-red);
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.red-btn:hover {
+    color: var(--white);
+    border-style: solid;
+}
+
 /*--- Product Range Banner ---*/
 
 .aloe-revive {
@@ -653,6 +666,11 @@ select option[value=""] {
     background-color: var(--white);
 }
 
+.review-title {
+    font-size: 20px;
+    margin: 0;
+}
+
 .review-detail {
     font-size: 16px;
     margin: 0;
@@ -665,6 +683,22 @@ select option[value=""] {
 .review-btn {
     padding: 6px 10px;
     border-radius: 12px;
+}
+
+.edit-review-btn {
+    display: block;
+    width: 75px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.delete-review-btn {
+    display: block;
+    width: 75px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
 }
 
 /*--- Other Product Card ---*/
@@ -814,6 +848,28 @@ Credit: Madannes https://jsfiddle.net/madannes/r3s1jx4y/
 
 #div_id_rating .form-check > label:active {
     position: relative;
+}
+
+/*---------- Modal ----------*/
+
+.modal-content {
+    background-color: var(--white);
+    border: 4px double var(--dark-green);
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    font-size: 20px;
+    text-align: center;
+}
+
+.modal-footer {
+    justify-content: space-evenly;
+    border-top: none;
 }
 
 /*---------- Footer ----------*/

@@ -5,6 +5,8 @@ from .models import UserProfile
 from .forms import UserProfileForm
 
 from checkout.models import Order
+from reviews.models import Review
+from wishlist.models import WishlistItem
 
 
 def profile(request):
@@ -19,11 +21,15 @@ def profile(request):
 
     form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
+    reviews = Review.objects.filter(user=profile.user)
+    wishlist = WishlistItem.objects.filter(user=profile.user)
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
+        'reviews': reviews,
+        'wishlist': wishlist,
         'on_profile_page': True
     }
 

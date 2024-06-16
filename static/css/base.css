@@ -711,7 +711,9 @@ select option[value=""] {
 }
 
 #range-carousel-lg .carousel-control-next,
-#range-carousel-lg .carousel-control-prev {
+#range-carousel-lg .carousel-control-prev,
+#wishlist-carousel-lg .carousel-control-next,
+#wishlist-carousel-lg .carousel-control-prev {
     width: 6%;
 }
 

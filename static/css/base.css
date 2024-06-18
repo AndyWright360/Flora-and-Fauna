@@ -156,22 +156,30 @@ a:hover {
 
 .input-field,
 #profile-update-form .form-control,
-#payment-form .form-control,
-#card-element {
+#payment-form .form-control {
     border: 4px double var(--green);
     border-radius: 10px;
     color: var(--dark-green);
-    height: fit-content;
+    height: 44px;
+    padding: .375rem .75rem;
+    background-color: #fff;
 }
 
 .input-field:focus,
 #profile-update-form .form-control:focus,
 #payment-form .form-control:focus,
-#card-element:focus {
+#card-element:focus,
+#card-element:active {
     outline: none;
     box-shadow: none;
     border-color: var(--green);
     border-style: solid;
+}
+
+.form-control,
+.form-control:focus,
+.form-control:active {
+    color: var(--dark-green);
 }
 
 .form-check-input {

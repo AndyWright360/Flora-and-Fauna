@@ -1,0 +1,29 @@
+Hello {{ order.full_name }},
+
+Thank you for choosing Flora & Fauna for your natural skincare needs! We are delighted to confirm your order. Here are the details:
+
+Order Information:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+Order Total: £{{ order.order_total }}
+Delivery Cost: £{{ order.delivery_cost }}
+Grand Total: £{{ order.grand_total }}
+
+Shipping Address:
+
+{{ order.street_address1 }}
+{{ order.town_or_city }}
+{{ order.country }}
+
+Contact Information:
+
+Phone Number: {{ order.phone_number }}
+
+Your order will be lovingly packed and shipped soon. If you have any questions or need further assistance, please feel free to contact us at {{ contact_email }}.
+
+Thank you for supporting natural beauty!
+
+Warm Regards,
+
+The Flora & Fauna Team

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Product, Category
+from .models import Product, Range
 
 
 class ProductForm(forms.ModelForm):
@@ -10,7 +10,7 @@ class ProductForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        categories = Category.objects.all()
-        friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
+        range = Range.objects.all()
+        friendly_names = [(r.id, r.get_friendly_name()) for r in range]
 
-        self.fields['category'].choices = friendly_names
+        self.fields['range'].choices = friendly_names

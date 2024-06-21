@@ -5,6 +5,7 @@ from django.db.models.functions import Lower
 from django.contrib.auth.models import User
 
 from .models import Product, Range
+from .forms import ProductForm
 from wishlist.models import WishlistItem
 from reviews.models import Review
 
@@ -97,3 +98,14 @@ def product_detail(request, product_id):
     }
     
     return render(request, 'products/product_detail.html', context)
+
+
+def add_product(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

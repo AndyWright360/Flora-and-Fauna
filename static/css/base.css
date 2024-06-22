@@ -155,19 +155,15 @@ a:hover {
 /*---------- Input Fields ----------*/
 
 .input-field,
-#profile-update-form .form-control,
-#payment-form .form-control {
+.form-control {
     border: 4px double var(--green);
     border-radius: 10px;
     color: var(--dark-green);
-    height: 44px;
-    padding: .375rem .75rem;
     background-color: #fff;
 }
 
 .input-field:focus,
-#profile-update-form .form-control:focus,
-#payment-form .form-control:focus,
+.form-control:focus,
 #card-element:focus,
 #card-element:active {
     outline: none;
@@ -176,10 +172,10 @@ a:hover {
     border-style: solid;
 }
 
-.form-control,
-.form-control:focus,
-.form-control:active {
-    color: var(--dark-green);
+#profile-update-form .form-control,
+#payment-form .form-control {
+    min-height: 44px;
+    padding: .375rem .75rem;
 }
 
 .form-check-input {
@@ -583,13 +579,13 @@ select option[value=""] {
     border-style: solid;
 }
 
-.qty_input {
+.input-group > .number-container {
     border: none;
     text-align: center;
     color: var(--dark-green);
 }
 
-.qty_input:focus {
+.input-group > .number-container:focus {
     outline: none;
     box-shadow: none;
 }
@@ -869,6 +865,28 @@ Credit: Madannes https://jsfiddle.net/madannes/r3s1jx4y/
 
 #div_id_rating .form-check > label:active {
     position: relative;
+}
+
+/*---------- Product Form ----------*/
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox {
+    margin-left: 20px;
+    margin-bottom: -15px;
 }
 
 /*---------- Modal ----------*/

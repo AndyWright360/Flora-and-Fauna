@@ -123,8 +123,8 @@
                 <p class="text-center mt-3">{{ product.description }}</p>
                 <form id="quantity-form" class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
-                    <div class="form-row">
-                        <div class="col-6 text-center">
+                    <div class="form-row justify-content-center">
+                        <div class="col-10 col-sm-6 text-center">
                             <p class="mt-0 mb-1"><strong>Quantity</strong></p>
                             <div class="form-group quantity-container">
                                 <div class="input-group">
@@ -154,7 +154,7 @@
                 </form>
             </div>
         </div>
-        <div class="col-12 text-center mt-1">
+        <div class="col-12 text-center mt-3 mt-sm-1">
             <h3 class="sub-heading">Ingredients</h3>
         </div>
         <div class="col-12 col-md-10 offset-md-1 mb-3 text-center">

@@ -591,6 +591,9 @@ select option[value=""] {
     border: 4px double var(--green);
     border-radius: 12px;
     overflow: hidden;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .quantity-container:focus-within {
@@ -1152,9 +1155,35 @@ Credit: Madannes https://jsfiddle.net/madannes/r3s1jx4y/
     }
 }
 
+@media (max-width: 575.5px) {
+    .add-to-bag-btn {
+        margin-top: 0;
+    }
+}
+
 @media (max-width: 499.5px) {
     .home-content {
         padding: 80px 20px;
         max-width: 360px;
+    }
+}
+
+@media (max-width: 374.5px) {
+    #range-carousel-sm > .carousel-control-next {
+        right: -15px;
+        justify-content: end;
+    }
+
+    #range-carousel-sm > .carousel-control-prev {
+        left: -15px;
+        justify-content: start;
+    }
+
+    #wishlist-carousel-sm > .carousel-control-next {
+        justify-content: end;
+    }
+
+    #wishlist-carousel-sm > .carousel-control-prev {
+        justify-content: start;
     }
 }

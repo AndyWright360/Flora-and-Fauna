@@ -990,9 +990,27 @@ Credit: Madannes https://jsfiddle.net/madannes/r3s1jx4y/
 
 /*---------- Update Bag Links ----------*/
 
-.update-link,
+.update-item,
 .remove-item {
     cursor: pointer;
+}
+
+.update-item {
+    color: var(--green);
+}
+
+.update-item > small:hover {
+    font-weight: bold;
+    color: var(--green);
+}
+
+.remove-item {
+    color: var(--red);
+}
+
+.remove-item > small:hover {
+    font-weight: bold;
+    color: var(--red);
 }
 
 /*---------- Bootstrap Toasts ----------*/

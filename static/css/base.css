@@ -258,7 +258,7 @@ select option[value=""] {
 .review-img {
     width: 50%;
     height: auto;
-    min-width: 200px;
+    min-width: 180px;
     max-width: 500px;
     border-radius: 20px;
 }

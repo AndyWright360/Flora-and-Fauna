@@ -5,7 +5,7 @@
     <div class="container-fluid light-green-bg py-5">
         <div class="container">
             <div class="row">
-                <div class="col-10 col-lg-8 offset-1 offset-lg-2 white-container p-5">
+                <div class="col-10 col-lg-8 offset-1 offset-lg-2 white-container p-sm-5 p-3">
                     <div class="text-center">
                         <h4 class="pb-3">We'd love to know what you think!</h4>
                         {% if product.image %}
@@ -16,12 +16,12 @@
                         <p class="pt-2"><strong>{{ product.name }}</strong></p>
                     </div>
                     
-                    <form class="px-3 px-md-5 pt-4" method="POST" action="{% url 'edit_review' review.id %}">
+                    <form class="px-2 px-sm-3 px-md-5 pt-4" method="POST" action="{% url 'edit_review' review.id %}">
                         {% csrf_token %}
                         {{ form|crispy }}
-                        <div class="d-flex justify-content-center justify-content-md-end mt-5">
-                            <a class="default-btn green-btn mr-2" href="{% url 'product_detail' product.id %}">Cancel</a>
-                            <button class="default-btn blue-btn ml-2" type="submit">Submit</button>
+                        <div class="d-flex flex-wrap justify-content-center justify-content-md-end mt-3">
+                            <a class="default-btn green-btn mx-2 mt-3" href="{% url 'product_detail' product.id %}">Cancel</a>
+                            <button class="default-btn blue-btn mx-2 mt-3" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>

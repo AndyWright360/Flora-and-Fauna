@@ -39,9 +39,7 @@ a:hover {
     text-decoration: none;
 }
 
-.container-fluid {
-    max-width: 1600px;
-}
+/*---------- Buttons ----------*/
 
 .default-btn {
     border-radius: 10px;
@@ -50,6 +48,59 @@ a:hover {
     min-width: 100px;
     text-align: center;
     text-transform: uppercase;
+}
+
+.green-btn {
+    border: 4px double var(--green);
+    background-color: var(--light-green);
+    color: var(--green);
+}
+
+.green-btn:hover {
+    color: var(--green);
+    border-style: solid;
+}
+
+.blue-btn {
+    border: 4px double var(--dark-blue);
+    background-color: var(--blue);
+    color: var(--dark-blue);
+}
+
+.blue-btn:hover {
+    color: var(--dark-blue);
+    border-style: solid;
+}
+
+.red-btn {
+    border: 4px double var(--dark-red);
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.red-btn:hover {
+    color: var(--white);
+    border-style: solid;
+}
+
+.sm-green-btn {
+    color: var(--green);
+}
+
+.sm-green-btn:hover {
+    font-weight: bold;
+    color: var(--green);
+}
+
+.sm-red-btn {
+    color: var(--red);
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.sm-red-btn:hover {
+    font-weight: bold;
 }
 
 /*---------- Fonts ----------*/
@@ -191,6 +242,10 @@ select option[value=""] {
 .fieldset-label {
     position: relative;
     right: .5rem;
+}
+
+#sort-selector {
+    height: fit-content;
 }
 
 /*---------- Images ----------*/
@@ -472,39 +527,6 @@ select option[value=""] {
     margin-bottom: 10px;
     border-radius: 12px;
     text-transform: uppercase;
-}
-
-.green-btn {
-    border: 4px double var(--green);
-    background-color: var(--light-green);
-    color: var(--green);
-}
-
-.green-btn:hover {
-    color: var(--green);
-    border-style: solid;
-}
-
-.blue-btn {
-    border: 4px double var(--dark-blue);
-    background-color: var(--blue);
-    color: var(--dark-blue);
-}
-
-.blue-btn:hover {
-    color: var(--dark-blue);
-    border-style: solid;
-}
-
-.red-btn {
-    border: 4px double var(--dark-red);
-    background-color: var(--red);
-    color: var(--white);
-}
-
-.red-btn:hover {
-    color: var(--white);
-    border-style: solid;
 }
 
 /*--- Product Range Banner ---*/

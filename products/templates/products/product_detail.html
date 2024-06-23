@@ -86,8 +86,8 @@
                 {% if request.user.is_superuser %}
                     <div class="text-center m-0 p-0">
                         <small>
-                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                            <button type="button" class="text-danger" data-toggle="modal" data-target="#delete-modal{{ product.id }}">
+                            <a href="{% url 'edit_product' product.id %}" class="sm-green-btn mr-2">Edit</a> | 
+                            <button type="button" class="sm-red-btn ml-2" data-toggle="modal" data-target="#delete-modal{{ product.id }}">
                                 Delete
                             </button>
                         </small>

@@ -1,0 +1,1 @@
+web: gunicorn flora_and_fauna.wsgi:application

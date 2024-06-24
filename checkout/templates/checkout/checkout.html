@@ -32,7 +32,7 @@
                             <div class="col-3 col-sm-2 mb-1">
                                 <a href="{% url 'product_detail' item.product.id %}">
                                     {% if item.product.image %}
-                                        <img class="w-100 rounded" src="/media/{{ item.product.image }}" alt="{{ product.name }}">
+                                        <img class="w-100 rounded" src="{{ MEDIA_URL }}{{ item.product.image }}" alt="{{ product.name }}">
                                     {% else %}
                                         <img class="w-100 rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                     {% endif %}

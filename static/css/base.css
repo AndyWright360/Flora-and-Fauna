@@ -181,6 +181,7 @@ a:hover {
 
 .light-green-bg {
     background-color: var(--light-green);
+    min-height: 55vh;
 }
 
 .dark-blue-bg {

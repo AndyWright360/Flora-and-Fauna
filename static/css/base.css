@@ -634,7 +634,8 @@ select option[value=""] {
     transition: background-color 0.3s ease-in-out;
 }
 
-.decrement-qty:disabled {
+.decrement-qty:disabled,
+.increment-qty:disabled {
     color: var(--aloe);
     pointer-events: none;
 }

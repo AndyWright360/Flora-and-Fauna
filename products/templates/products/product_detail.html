@@ -129,16 +129,14 @@
                             <div class="form-group quantity-container">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-qty" data-item_id="{{ product.id }}"
-                                            id="decrement-qty_{{ product.id }}">
+                                        <button type="button" class="decrement-qty decrement-qty_{{ product.id }}" data-item_id="{{ product.id }}">
                                             <i class="fas fa-minus"></i>
                                         </button>
                                     </div>
-                                    <input class="form-control qty_input number-container" type="number" name="quantity" value="1"
-                                        min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <input class="form-control qty_input number-container class_qty_{{ product.id }}" type="number" name="quantity" value="1"
+                                        min="1" max="99" data-item_id="{{ product.id }}">
                                     <div class="input-group-append">
-                                        <button class="increment-qty" data-item_id="{{ product.id }}"
-                                            id="increment-qty_{{ product.id }}">
+                                        <button type="button" class="increment-qty increment-qty_{{ product.id }}" data-item_id="{{ product.id }}">
                                             <i class="fas fa-plus"></i>
                                         </button>
                                     </div>

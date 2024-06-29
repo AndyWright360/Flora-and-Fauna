@@ -5,6 +5,8 @@
     <div class="container-fluid light-green-bg py-5">
         <div class="container">
             <div class="row">
+
+                <!-- Review Container -->
                 <div class="col-10 col-lg-8 offset-1 offset-lg-2 white-container p-sm-5 p-3">
                     <div class="text-center">
                         <h4 class="pb-3">We'd love to know what you think!</h4>
@@ -16,6 +18,7 @@
                         <p class="pt-2"><strong>{{ product.name }}</strong></p>
                     </div>
                     
+                    <!-- Review Form -->
                     <form class="px-2 px-sm-3 px-md-5 pt-4" method="POST" action="{% url 'add_review' product.id %}">
                         {% csrf_token %}
                         {{ form|crispy }}
@@ -31,6 +34,7 @@
 {% endblock %}
 
 {% block postloadjs %}
+    <!-- Rating JavaScript -->
     <script type="text/javascript">
         $(document).ready(function() {
             // Set colours based on the initially checked input

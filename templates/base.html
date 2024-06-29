@@ -149,6 +149,7 @@
     </header>
 
     {% if messages %}
+        <!-- Toast Messages -->
         <div class="message-container">
             {% for message in messages %}
                 {% with message.level as level %}
@@ -176,13 +177,16 @@
     {% block content %}
     {% endblock %}
 
+    <!-- Footer -->
     <footer>
         <div class="container-fluid dark-blue-bg white-font">
+            <!-- Footer Logo -->
             <div class="row">
                 <div class="col text-center">
                     <img class="footer-logo" src="{{ MEDIA_URL }}logo-alt.webp" alt="logo" >
                 </div>
             </div>
+            <!-- Footer Links -->
             <div class="row pb-3">
                 <div class="col d-flex align-items-end">
                     <a class="mr-3" href="https://github.com/AndyWright360" target="_blank" aria-label="go to github page">
@@ -198,6 +202,7 @@
     </footer>
 
     {% block postloadjs %}
+        <!-- Toast JavaScript -->
         <script type="text/javascript">
             $('.toast').toast('show');
         </script>

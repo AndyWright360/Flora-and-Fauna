@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+    <!-- Page Heading -->
     <div class="container-fluid light-green-bg py-5">
         <div class="container">
             <div class="row">
@@ -14,6 +15,7 @@
                 </div>
             </div>
 
+            <!-- Product Form -->
             <div class="row pt-5">
                 <div class="col-10 col-lg-8 offset-1 offset-lg-2 white-container p-sm-5 p-3">
                     <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
@@ -38,6 +40,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- New Image JavaScript -->
     <script type="text/javascript">
         $('#new-image').change(function() {
             var file = $('#new-image')[0].files[0];

@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+    <!-- Page Heading -->
     <div class="container-fluid py-5 light-green-bg">
         <div class="row">
             <div class="col text-center">
@@ -13,6 +14,7 @@
         <div class="row">
             <div class="col-10 offset-1">
                 <div class="row mt-5 mt-md-4 mb-0">
+                    <!-- Product Sort -->
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector" class="custom-select custom-select-sm input-field -{% if current_sorting != 'None_None' %}{% else %}{% endif %}">
@@ -30,6 +32,8 @@
                             </select>
                         </div>
                     </div>
+
+                    <!-- Search Results Info -->
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="mt-3 text-center text-md-left green-font">
                             {% if search_term or range or current_sorting != 'None_None' %}
@@ -40,15 +44,20 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Products -->
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pt-5">
                             <div class="card h-100 product-card">
+                                <!-- Product Image -->
                                 {% if product.image %}
                                     <img class="img-fluid product-img" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.name }}">
                                 {% else %}
                                     <img class="img-fluid product-img" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}">
                                 {% endif %}
+
+                                <!-- Wishlist Button -->
                                 {% if user.is_authenticated %}
                                     <button class="wishlist-btn wishlist-btn-sm" data-product-item="{{ product.id }}">
                                         {% if product.id in user_wishlist %}
@@ -58,6 +67,8 @@
                                         {% endif %}
                                     </button>
                                 {% endif %}
+
+                                <!-- Product Details -->
                                 <div class="card-body">
                                     {% if product.range %}
                                         <p class="product-range {{ product.range.name }}">
@@ -67,6 +78,8 @@
                                         </p>
                                     {% endif %}
                                     <p class="product-name">{{ product.name }}</p>
+
+                                    <!-- Superuser Buttons -->
                                     {% if request.user.is_superuser %}
                                         <div class="text-center m-0 p-0">
                                             <small>
@@ -77,7 +90,7 @@
                                             </small>
                                         </div>
 
-                                        <!-- Modal -->
+                                        <!-- Superuser Delete Modal -->
                                         <div class="modal fade" id="delete-modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                             <div class="modal-content">
@@ -100,6 +113,7 @@
                                             </div>
                                         </div>
                                     {% endif %}
+                                    <!-- Product Rating -->
                                     {% if product.average_rating %}
                                         <span class="product-rating mt-2">
                                             {% for i in "12345" %}
@@ -122,6 +136,7 @@
                                         <p>{{ product.size }}</p>
                                     </span>
                                 </div>
+                                <!-- Product Buttons -->
                                 <div class="card-footer">
                                     <form action="{% url 'add_to_bag' product.id %}" method="POST">
                                         {% csrf_token %}
@@ -138,13 +153,15 @@
             </div>
         </div>
     </div>
+
+    <!-- Return To Top Button -->
     <div class="btt-button">
         <a class="btt-link d-flex h-100">
             <i class="fa-solid fa-angles-up mx-auto my-auto"></i>
         </a>	
     </div>
 
-    <!-- Toasts -->
+    <!-- Wishlist Toasts -->
     <div class="toast-container">
         <div id="addToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
@@ -168,12 +185,14 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- Return To Top Button JavaScript -->
     <script type="text/javascript">
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
 	</script>
     
+    <!-- Product Sort JavaScript -->
     <script type="text/javascript">
         $('#sort-selector').change(function() {
             var selector = $(this);
@@ -223,6 +242,7 @@
             }
 
             // Code modified from https://www.youtube.com/watch?v=pdttUeJi7j8
+            // Add/Remove Wishlist Item JavaScript
             $(document).on("click", ".wishlist-btn", function(){
                 let product_id = $(this).attr("data-product-item")
                 let this_val = $(this)

@@ -105,6 +105,43 @@ From a visual perspective, the design of the website is intended to evoke the be
 
 ---
 
+## **Technologies Used**
+
+### **Languages**
+
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Python**
+
+### **Frameworks**
+
+- **Bootstrap:** A front-end framework used for developing a responsive layout.
+- **Django:** A Python based framework used for backend development.
+
+### **Libraries**
+
+- **jQuery:** A JavaScript library used to simplify writing JavaScript code.
+- **Font Awesome:** A toolkit for incorporating icons throughout the site.
+- **Google Fonts:** A library of open-source fonts; 'Ovo' is used as the primary typeface throughout the project.
+
+### **Programs**
+
+- **Gitpod:** An online IDE used for development and version control, facilitating the process of committing and pushing changes to GitHub.
+- **GitHub:** A platform for version control, serving as the repository for the project's code.
+- **Heroku:** A cloud platform that enables the deployment of web applications.
+- **Pixlr:** An online photo editing tool used for image modifications, including colour adjustments and resizing.
+- **Balsamiq:** A wireframing tool used during the design phase to create mockups of the project.
+- **XnConvert:** Image processing software used to convert image files to WebP format.
+- **TinyPNG:** An online tool used to compress image files.
+- **ScreenToGif:** A screen recording tool used to capture screen recordings as GIF files.
+- **Google Chrome Dev Tools:** A set of web developer tools used for inspecting page elements, debugging, and testing responsiveness.
+- **PostgreSQL:** An open-source relational database management system used to store data.
+- **Am I Responsive?:** A tool to showcase how the website looks across different devices.
+- **Lucidchart:** A web-based diagramming tool used to create the database schema.
+
+---
+
 ## Deployment & Local Development
 
 The application was deployed on [Heroku](https://www.heroku.com) using the steps below.
@@ -155,7 +192,10 @@ This project uses AWS for storing media and static files.
       "Statement": [
         {
           "Effect": "Allow",
-          "Action": "s3:*",
+          "Action": [
+              "s3:*",
+              "s3-object-lambda:*"
+          ],
           "Resource": [
             "arn:aws:s3:::your-bucket-name",
             "arn:aws:s3:::your-bucket-name/*"
@@ -201,14 +241,16 @@ This project uses AWS for storing media and static files.
 Stripe handles ecommerce payments.
 
 1. From the Stripe dashboard, access **API Keys** from the **Developers** tab.
-  - **Note:** The page contains:
-    - `STRIPE_PUBLIC_KEY` = Publishable Key
-    - `STRIPE_SECRET_KEY` = Secret Key
+
+    **Note:** The page contains:
+      - `STRIPE_PUBLIC_KEY` = Publishable Key
+      - `STRIPE_SECRET_KEY` = Secret Key
 2. Select the **Webhooks** tab.
 3. Click **Add Endpoint**, enter `https://your-heroku-domain/checkout/wh/`, and select **Receive all events**.
 4. Click **Add Endpoint** to complete.
-**Note:** The page contains:
-  - `STRIPE_WH_SECRET` = Signing Secret Key
+
+    **Note:** The page contains:
+      - `STRIPE_WH_SECRET` = Signing Secret Key
 
 ### Heroku Deployment
 
@@ -216,7 +258,9 @@ This web application is deployed using Heroku. Follow these steps to recreate th
 
 1. Create a requirements.txt file in the root directory, containing all necessary applications and dependencies.
 2. Create a Procfile in the root directory, which informs Heroku about the files that run the app and how to run it.
-**NB: Ensure the Procfile has a capital "P" and no file extension.**
+
+    **NB: Ensure the Procfile has a capital "P" and no file extension.**
+
 3. Check for any blank lines at the end of the file and remove them if present.
 4. Save both files, add, commit, and push them to your GitHub repository.
 5. Log in to Heroku.

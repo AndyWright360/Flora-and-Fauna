@@ -164,7 +164,7 @@ This project uses AWS for storing media and static files.
 
 #### Create S3 Bucket:
 
-1. **Log In:** Log into the AWS Management Console.
+1. Log into the AWS Management Console.
 2. Search for **S3** and click to create a new bucket.
 3. Name the bucket (preferably matching your Heroku app name) and select the closest region.
 4. Uncheck **Block all public access** and acknowledge that the bucket will be public.

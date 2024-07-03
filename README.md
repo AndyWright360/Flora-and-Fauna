@@ -226,9 +226,9 @@ This project uses AWS for storing media and static files.
 8. Go to the **User Groups** section, select `flora-and-fauna-group`, click **Attach Policy**, search for your newly created policy, and attach it.
 9. Click **Add User**, name it (e.g., `flora-and-fauna-user`), select **Programmatic Access**, add it to the `flora-and-fauna-group`, and click **Create User**.
 10. Download the `.csv` file containing the Access key ID and Secret access key immediately.
-  - **Note:** The `.csv` file contains:
-    - `AWS_ACCESS_KEY_ID` = Access key ID
-    - `AWS_SECRET_ACCESS_KEY` = Secret access key
+    **NB:** The `.csv` file contains:
+      - `AWS_ACCESS_KEY_ID` = Access key ID
+      - `AWS_SECRET_ACCESS_KEY` = Secret access key
 
 ### Final AWS Setup
 
@@ -242,14 +242,14 @@ Stripe handles ecommerce payments.
 
 1. From the Stripe dashboard, access **API Keys** from the **Developers** tab.
 
-    **Note:** The page contains:
+    **NB:** The page contains:
       - `STRIPE_PUBLIC_KEY` = Publishable Key
       - `STRIPE_SECRET_KEY` = Secret Key
 2. Select the **Webhooks** tab.
 3. Click **Add Endpoint**, enter `https://your-heroku-domain/checkout/wh/`, and select **Receive all events**.
 4. Click **Add Endpoint** to complete.
 
-    **Note:** The page contains:
+    **NB:** The page contains:
       - `STRIPE_WH_SECRET` = Signing Secret Key
 
 ### Heroku Deployment
@@ -319,7 +319,9 @@ To clone this project, please follow the steps below:
 
 9. Press enter.
 10. Set up a virtual environment.
-**NB: If you're using the Code Institute Template in GitPod, you can proceed directly to the next step as the virtual environment is pre-configured for you.**
+
+    **NB: If you're using the Code Institute Template in GitPod, you can proceed directly to the next step as the virtual environment is pre-configured for you.**
+
 11. Install the required packages listed in the requirements.txt file by executing the following command in the Terminal.
 
     ```bash

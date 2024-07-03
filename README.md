@@ -50,7 +50,13 @@ This project was created as part of the Code Institute Level 5 Diploma in Web Ap
   - [**Languages Used**](#languages-used) 
   - [**Frameworks, Libraries \& Programs Used**](#frameworks-libraries--programs-used) 
 - [**Deployment \& Local Development**](#deployment--local-development) 
-  - [**Deployment**](#deployment) 
+  - [**PostgreSQL Database**](#postgresql-database)
+  - [**Amazon AWS**](#amazon-aws)
+    - [**Create S3 Bucket**](#create-s3-bucket) 
+    - [**Set Up IAM**](#set-up-iam)
+    - [**Final AWS Setup**](#final-aws-setup)
+  - [**Stripe API**](#stripe-api)
+  - [**Heroku Deployment**](#heroku-deployment)
   - [**Local Development**](#local-development) 
     - [**How to Fork**](#how-to-fork) 
     - [**How to Clone**](#how-to-clone) 
@@ -162,7 +168,7 @@ This project uses a PostgreSQL Database hosted by Code Institute. As an alternat
 
 This project uses AWS for storing media and static files.
 
-#### Create S3 Bucket:
+#### Create S3 Bucket
 
 1. Log into the AWS Management Console.
 2. Search for **S3** and click to create a new bucket.
@@ -209,7 +215,7 @@ This project uses AWS for storing media and static files.
 11. Copy the entire policy, and paste it into the Bucket Policy Editor. Add `/*` to the end of the Resource key, and click **Save**.
 12. In the **Access Control List (ACL)** section, click **Edit**, enable **List** for **Everyone (public access)**, and accept the warning box. If the **Edit** button is disabled, ensure ACLs are enabled in the **Object Ownership** section.
 
-#### Set Up IAM:
+#### Set Up IAM
 
 1. Go to IAM (Identity and Access Management).
 2. Click **Create New Group**, name it (e.g., `flora-and-fauna-group`), and proceed to the review policy page.
@@ -230,7 +236,7 @@ This project uses AWS for storing media and static files.
       - `AWS_ACCESS_KEY_ID` = Access key ID
       - `AWS_SECRET_ACCESS_KEY` = Secret access key
 
-### Final AWS Setup
+#### Final AWS Setup
 
 1. Remove `DISABLE_COLLECTSTATIC` from Heroku Config Vars so that AWS handles static files.
 2. Create a folder named `media` in S3.

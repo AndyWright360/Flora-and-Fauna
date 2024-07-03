@@ -58,7 +58,7 @@ This project was created as part of the Code Institute Level 5 Diploma in Web Ap
 - [**Credits**](#credits) 
   - [**Code Used**](#code-used) 
   - [**Content**](#content) 
-  - [**Media**](#media) 
+  - [**Images**](#images) 
   - [**Acknowledgments**](#acknowledgments)
 
 ---
@@ -373,3 +373,39 @@ To clone this project, please follow the steps below:
     ```
 
 ---
+
+## **Credits**
+
+### **Code Used**
+
+- The Bootstrap 5 Toasts tutorial by [Sonar Systems](https://www.youtube.com/watch?v=AZs4zggS7kA) provided valuable insights into implementing toast messages for adding and removing products from the wishlist.
+
+- The Add/Remove Wishlist Items using AJAX guide by [Desphixs](https://www.youtube.com/watch?v=pdttUeJi7j8) helped me implement wishlist functionality without having to reload the webpage.
+
+- The Star Rating System by [Madannes](https://jsfiddle.net/madannes/r3s1jx4y/) helped me to modify radio inputs into a star rating system using CSS.
+
+- The [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/250e2c2b8e43cccb56b4721cd8a8bd4de6686546) project by Code Institute was instrumental in enhancing my understanding of Django and implementing e-commerce website features.
+
+### **Content**
+
+The product descriptions and ingredient lists were generated with the assistance of Microsoft Copilot AI. All other website content was created by the developer, Andrew Wright.
+
+### **Images**
+
+- Company Logo from [Pngtree](https://pngtree.com/freepng/watercolor-wreath-with-green-leaf-circle-frame_5290430.html)
+
+- Heading underline from [Pngtree](https://pngtree.com/freepng/elegant-green-line-border_8053695.html)
+
+- No Product Image from [Freepik](https://www.freepik.com/free-vector/flat-design-no-photo-sign_22631620.htm#&position=0&from_view=user&uuid=ac8a2e42-92fd-472c-97dd-7d97dc715683)
+
+- All product images and the hero image were AI generated using Microsoft Copilot.
+
+### **Acknowledgments**
+
+- Thanks to my mentor [Jubril Akolade](https://github.com/Jubrillionaire) for his consistent encouragement and valuable advice throughout the project.
+
+- Cohort Facilitator [Amy Richardson](https://github.com/amylour) for providing essential resources and support whenever needed.
+
+- Thanks to everyone at Code Institute for their exceptional support.
+
+- The Code Institute Slack community for the invaluable feedback and assistance throughout the project.

@@ -4,11 +4,11 @@
 
 ## **Welcome to Flora & Fauna: Organic Skincare** <!-- omit in toc -->
 
-Embued with the nourishment of nature, our mission at Flora & Fauna is to offer the finest organic ingredients across our entire range of products. Our collection of serums, creams, and elixirs transforms your skincare routine into a botanical sanctuary. Dive into our garden of products and discover the perfect blend of nature's best for your skin.
+Embued with the nourishment of nature, our mission at Flora & Fauna is to offer the finest organic ingredients across our entire product range. Our collection of serums, creams, and elixirs will transform your skincare routine into a botanical sanctuary. Explore our garden and discover the perfect blend of nature's best for your skin.
 
 This project was created as part of the Code Institute Level 5 Diploma in Web Application Development course.
 
-![Quest Board displayed on miltiple devices](media/docs/responsive-site.jpg)
+![Flora & Fauna displayed on miltiple devices](media/docs/responsive-site.jpg)
 
 [Click here to visit Flora & Fauna](https://flora-and-fauna-c279c1bad929.herokuapp.com/)
 
@@ -18,53 +18,50 @@ This project was created as part of the Code Institute Level 5 Diploma in Web Ap
 
 ## **Contents** <!-- omit in toc --> 
 
-- [**User Experience (UX)**](#user-experience-ux) 
-  - [**Initial Concept**](#initial-concept) 
-  - [**User Stories**](#user-stories) 
-- [**Design**](#design) 
-  - [**Colour Scheme**](#colour-scheme) 
-    - [**Primary Palette**](#primary-palette) 
-    - [**Additional Colours**](#additional-colours) 
-  - [**Typography**](#typography) 
-    - [**Dragon Hunter**](#dragon-hunter) 
-    - [**Charm**](#charm) 
-  - [**Imagery**](#imagery) 
-  - [**Wireframes**](#wireframes) 
-    - [**Home Page WF**](#home-page-wf) 
-    - [**Products Page WF**](#products-page-wf) 
-    - [**Product Detail Page WF**](#product-detail-page-wf) 
-    - [**Add Product Page WF**](#add-product-page-wf) 
-    - [**Edit Product Page WF**](#edit-product-page-wf) 
-    - [**Bag Page WF**](#bag-page-wf) 
-    - [**Checkout Page WF**](#checkout-page-wf) 
+- [**User Experience (UX)**](#user-experience-ux)
+  - [**Initial Concept**](#initial-concept)
+  - [**User Stories**](#user-stories)
+- [**Design**](#design)
+  - [**Colour Scheme**](#colour-scheme)
+    - [**Primary Palette**](#primary-palette)
+    - [**Seconday Pallette**](#secondary-pallette)
+    - [**Additional Colours**](#additional-colours)
+  - [**Typography**](#typography)
+  - [**Imagery**](#imagery)
+  - [**Wireframes**](#wireframes)
+    - [**Home Page WF**](#home-page-wf)
+    - [**Products Page WF**](#products-page-wf)
+    - [**Product Detail Page WF**](#product-detail-page-wf)
+    - [**Add Product Page WF**](#add-product-page-wf)
+    - [**Edit Product Page WF**](#edit-product-page-wf)
+    - [**Bag Page WF**](#bag-page-wf)
+    - [**Checkout Page WF**](#checkout-page-wf)
     - [**Checkout Success Page WF**](#checkout-success-page-wf)
-    - [**Profile Page WF**](#profile-page-wf) 
-    - [**Add Review Page WF**](#add-review-page-wf) 
-    - [**Edit Review Page WF**](#edit-review-page-wf)
-  - [**User Journey**](#user-journey) 
+    - [**Profile Page WF**](#profile-page-wf)
+    - [**Add/Edit Review Page WF**](#addedit-review-page-wf)
   - [**Database Schema**](#database-schema)
-- [**Features**](#features) 
-  - [**General Features**](#general-features)  
-  - [**Future Implementations**](#future-implementations) 
-- [**Technologies Used**](#technologies-used) 
-  - [**Languages Used**](#languages-used) 
-  - [**Frameworks, Libraries \& Programs Used**](#frameworks-libraries--programs-used) 
-- [**Deployment \& Local Development**](#deployment--local-development) 
+- [**Features**](#features)
+  - [**General Features**](#general-features)
+  - [**Future Implementations**](#future-implementations)
+- [**Technologies Used**](#technologies-used)
+  - [**Languages Used**](#languages-used)
+  - [**Frameworks, Libraries \& Programs Used**](#frameworks-libraries--programs-used)
+- [**Deployment \& Local Development**](#deployment--local-development)
   - [**PostgreSQL Database**](#postgresql-database)
   - [**Amazon AWS**](#amazon-aws)
-    - [**Create S3 Bucket**](#create-s3-bucket) 
+    - [**Create S3 Bucket**](#create-s3-bucket)
     - [**Set Up IAM**](#set-up-iam)
     - [**Final AWS Setup**](#final-aws-setup)
   - [**Stripe API**](#stripe-api)
   - [**Heroku Deployment**](#heroku-deployment)
-  - [**Local Development**](#local-development) 
-    - [**How to Fork**](#how-to-fork) 
-    - [**How to Clone**](#how-to-clone) 
-- [**Testing**](#testing) 
-- [**Credits**](#credits) 
-  - [**Code Used**](#code-used) 
-  - [**Content**](#content) 
-  - [**Images**](#images) 
+  - [**Local Development**](#local-development)
+    - [**How to Fork**](#how-to-fork)
+    - [**How to Clone**](#how-to-clone)
+- [**Testing**](#testing)
+- [**Credits**](#credits)
+  - [**Code Used**](#code-used)
+  - [**Content**](#content)
+  - [**Images**](#images)
   - [**Acknowledgments**](#acknowledgments)
 
 ---
@@ -73,7 +70,7 @@ This project was created as part of the Code Institute Level 5 Diploma in Web Ap
 
 ### **Initial Concept**
 
-From a visual perspective, the design of the website is intended to evoke the beauty of nature. A soft color palette of greens and blues was chosen to represent earthy and natural tones. The visual design is minimalist and clean, further emphasising the connection to nature. Each product range focuses on a key natural ingredient, prominently featured in the images. By incorporating nature-inspired visuals and a user-friendly interface, my intention is to make navigating the site feel like a walk through a botanical garden.
+From a visual perspective, the design of the website is intended to evoke the beauty of nature. A soft colour palette of greens and blues was chosen to represent earthy and natural tones. The visual design is minimalist and clean, further emphasising the connection to nature. Each product range focuses on a key natural ingredient, prominently featured in the images. By incorporating nature-inspired visuals and a user-friendly interface, my intention is to make navigating the site feel like a walk through a botanical garden.
 
 ### **User Stories**
 
@@ -108,6 +105,122 @@ From a visual perspective, the design of the website is intended to evoke the be
 1. I want to add and edit products.
 2. I want to remove products.
 3. I want all admin controls to be simple to find and use.
+
+---
+
+## **Design**
+
+### **Colour Scheme**
+
+#### **Primary Palette**
+
+![Primary colour palette used in the project](media/docs/primary-palette.png)
+
+The website's colour scheme is inspired by nature, with shades of green representing plant life and blues symbolising water. This design choice aims to visually connect the brand to the natural world, emphasising its commitment to using organic ingredients. The blend of these colours highlights the brand's dedication to natural elements, reinforcing the message that these elements are integral to the business and its products. 
+
+#### **Secondary Palette**
+
+![Secondary colour palette used in the project](media/docs/secondary-palette.png)
+
+The secondary palette was designed to visually represent the key ingredients of each of the four product ranges: aloe vera, clear willow, rosehip, and honey. Each product range features a lighter tone as its primary colour to symbolise its respective ingredient, with a contrasting darker shade used for the font to ensure readability.
+
+#### **Additional Colours**
+
+![Additional colour palette used in the project](media/docs/additional-colours.png)
+
+The additional colours were used for delete buttons. The two shades of red serve as a warning to the user before deleting any data.
+
+### **Typography**
+
+![Logo for Ovo font](media/docs/ovo.png)
+
+Ovo was chosen as the font for the website because of its clean and clear design. Its distinctive decorative ampersand enhances the brand name's visual impact. As a medium contrast serif font, Ovo offers excellent readability and ensures a smooth reading experience for users. Additionally, its use in the logo helps reinforce a connection with the brand's identity.
+
+### **Imagery**
+
+The imagery on the Flora & Fauna website is designed to highlight the brand's natural and organic focus. The website’s colour palette of greens and blues is designed to reflect the beauty of the natural world. Product images incorporate elements related to key ingredients, enhancing the overall connection to nature and emphasising the natural elements in each product. This design approach aims to create a visually cohesive experience that aligns with the brand’s emphasis on natural beauty.
+
+Pairing these design elements with a minimalist style was intended to appeal to a high-end market and highlight the luxurious and indulgent nature of the brand.
+
+### **Wireframes**
+
+Wireframes were created using Balsamiq to cover desktop, tablet, and mobile screen dimensions, ensuring a responsive design. This approach helps in visualising and organising the layout, resulting in a consistent user experience across different devices.
+
+#### **Home Page WF**
+
+![Home page wireframes](media/docs/home.png)
+
+#### **Products Page WF**
+
+![Products page wireframes](media/docs/products.png)
+
+#### **Product Detail Page WF**
+
+![Product detail page wireframes](media/docs/product-detail.png)
+
+#### **Add Product Page WF**
+
+![Add product page wireframes](media/docs/add-product.png)
+
+#### **Edit Product Page WF**
+
+![Edit product page wireframes](media/docs/edit-product.png)
+
+#### **Bag Page WF**
+
+![Bag page wireframes](media/docs/bag.png)
+
+#### **Checkout Page WF**
+
+![Checkout page wireframes](media/docs/checkout.png)
+
+#### **Checkout Success Page WF**
+
+![Checkout success page wireframes](media/docs/checkout-success.png)
+
+#### **Profile Page WF**
+
+![Profile page wireframes](media/docs/profile.png)
+
+#### **Add/Edit Review Page WF**
+
+![Add/Edit review page wireframes](media/docs/add-edit-review.png)
+
+### **Database Schema**
+
+![Database Schema](media/docs/database-schema.png)
+
+A relational database schema was implemented using PostgreSQL to support the e-commerce functionalities of the Flora & Fauna website. The primary tables are UserProfile, Order, OrderLineItem, Product, Range, Review, and WishlistItem.
+
+These tables are interconnected to enable the management of user profiles, orders, order items, product categories, user reviews, and wishlists. This relational approach maintains reliable data, providing a smooth and consistent user experience across the site.
+
+#### **UserProfile**
+
+The UserProfile model maintains default delivery information and order history for each user. This is linked to the built-in `User` model via a one-to-one relationship, ensuring that each user has a single profile containing their contact details. This setup simplifies the process of retrieving user-specific data for orders and improves the user experience during checkout by pre-filling delivery information.
+
+#### **Order**
+
+This table records individual orders placed by users, storing essential details such as the user profile, contact information, delivery address, and order totals. The `user_profile` field establishes a foreign key relationship with the `UserProfile` model, allowing the system to associate orders with specific users and their profiles.
+
+#### **OrderLineItem**
+
+Each order can consist of multiple products, and this is managed through the OrderLineItem model. It has a foreign key relationship with both the `Order` and `Product` models, enabling a many-to-one relationship with orders and a one-to-one relationship with products within each order. This structure allows the system to track the quantity and total cost of each product in an order.
+
+#### **Range**
+
+The Range model categorises products into different groups based on their key ingredients. This relationship enables users to filter and browse products by specific ranges, enhancing the shopping experience.
+
+#### **Product**
+
+This model stores detailed information about each product available on the site, including its range, name, category, description, ingredients, price, size, and image. The `range` field is a foreign key linked to the `Range` model, which classifies products into specific ranges associated with key ingredients.
+
+#### **Review**
+
+The Review model allows users to leave reviews for products. It includes a foreign key relationship to both the `Product` and `User` models, establishing a connection between users and the products they review. This setup supports a one-to-many relationship where each product can have multiple reviews, and each user can leave multiple reviews.
+
+#### **WishlistItem**
+
+The WishlistItem model enables users to add products to their wishlist. It has foreign key relationships with both the `User` and `Product` models, allowing users to save products they are interested in. The `unique_together` constraint ensures that each product can be added to a user's wishlist only once.
 
 ---
 

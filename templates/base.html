@@ -26,6 +26,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ovo&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ MEDIA_URL }}apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ MEDIA_URL }}favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ MEDIA_URL }}favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="{{ MEDIA_URL }}android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="{{ MEDIA_URL }}android-chrome-512x512.png">
     {% endblock %}
 
     {% block extra_css %}

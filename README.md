@@ -264,7 +264,7 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 - **Google Chrome Dev Tools:** A set of web developer tools used for inspecting page elements, debugging, and testing responsiveness.
 - **PostgreSQL:** An open-source relational database management system used to store data.
 - **Am I Responsive?:** A tool to showcase how the website looks across different devices.
-- **Lucidchart:** A web-based diagramming tool used to create the database schema.
+- **drawSQL:** A web-based tool used to design and document the database schema.
 
 ---
 

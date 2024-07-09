@@ -231,6 +231,146 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 
 ---
 
+## **Features**
+
+### **General Features**
+
+**Responsive Design**
+
+- **Responsive Layout:** The layout adapts to different device widths, ensuring a smooth experience across all devices, improving both accessibility and usability.
+
+**Navbar**
+
+- **Nav Link Hover Effect:** A hover effect on navbar links provides visual feedback, enhancing the interactive experience.
+
+- **Logo Navigation:** The website logo serves as a consistent link to the home page, ensuring easy navigation from any section of the site.
+
+- **Icon Navigation:** Icons for the user account, bag, and search bar (on smaller screens) keep key navigation features accessible even on smaller devices.
+
+- **Search Bar:** Provides a convenient method for users to filter products based on their input.
+
+- **Fixed Position:** The navbar remains fixed, keeping key navigation features always available to the user.
+
+**Favicon**
+
+- **Favicon:** Included to further establish brand identity.
+
+**Delivery Banner**
+
+- **Delivery Threshold Banner:** Notifies users of the minimum spend required for free delivery.
+
+**Back to Top Button**
+
+- **Back to Top Button:** Provides a convenient navigation option on pages with larger vertical height.
+
+**Buttons**
+
+- **Mouse Hover Feedback:** Hovering over buttons alters the border to communicate interactivity.
+
+**Messages**
+
+- **Messages & Feedback:** Messages provide feedback to the use after actions. Indicating task completion or guiding users on how to correct errors.
+
+**Footer**
+
+- **Icon Hover Feedback:** Links include a hover effect, suggesting interactivity and enhancing user engagement.
+
+### **Home Page**
+
+- **Hero Image:** The hero image sets the tone for the website's focus on natural ingredients. It immediately captures attention, highlights the brand's commitment to organic beauty, and invites users to explore further.
+
+- **Introduction:** This provides a brief overview to inform users about the brand's essence and mission.
+
+- **Call to Action Link:** Designed to entice users to explore further, this link directs them to the products page, which is the focal point of the site.
+
+### **Products Page**
+
+- **Product Sorting:** Users can sort products by price, rating, name, range, and category. Allowing them to organise the list of products according to their preferences.
+
+- **Product Filtering:** Users can filter displayed products using the search bar or product category links to meet their specific needs.
+
+- **Product Cards:** Products are displayed on cards that contain all essential product details and functionalities a user might need.
+
+- **Range Links:** Each product is categorised into a range with a colour-specific link, providing a simple navigation option to display all products within the given range.
+
+- **Rating:** Each product's rating is displayed out of five, based on the average rating from user reviews. This offers a visual indicator of other users' opinions.
+
+- **Add Button:** The `ADD` button allows users to quickly add a quantity of 1 to their bag.
+
+- **View Button:** The `VIEW` button navigates users to the product detail page, displaying more information about the given product.
+
+- **Wishlist Button:** Logged-in users can conveniently curate a list of their favourite products with the wishlist button. Once selected, the icon changes to a solid heart, and a notification message is displayed.
+
+- **Edit/Delete Button:** Superusers have the option to edit or delete products, providing a convenient method of product management.
+
+- **Delete Modal:** Clicking the `DELETE` button triggers a modal to confirm the action, providing a failsafe against accidental deletions.
+
+### **Product Detail Page**
+
+- **Additional Product Info:** This page provides detailed information about the product, including its description and list of ingredients, giving users more insight into their selection.
+
+- **Quantity Input:** Users can specify the quantity to add to their bag, within a range of 1 to 99.
+
+- **Increment/Decrement Buttons:** The buttons adjust the quantity within the valid range and are disabled when the minimum or maximum limit is reached.
+
+- **Reviews:** User reviews for the product are displayed, offering feedback and opinions from other customers.
+
+- **Product Range Carousel:** A carousel displays other products from the same range, each with `ADD` and `VIEW` buttons for added convenience.
+
+- **Keep Shopping Button:** Positioned at the top of the page, this button lets users easily return to the products page, enabling them to continue browsing.
+
+### **Shopping Bag Page**
+
+- **Update Quantity:** Each item in the bag includes a number input allowing users to modify the quantity. By changing the quantity and selecting the `Update` button, the product quantity for that line will be adjusted accordingly.
+
+- **Remove Item:** This feature provides a convenient way for users to remove items from their bag. Clicking the `Remove` button will delete the selected order line.
+
+- **Order Summary:** The grand total of the customer's order is displayed, including the bag total, delivery charge if applicable, and the overall grand total. This gives the customer a clear understanding of the total cost.
+
+- **Bag Displayed on Update:** Whenever items are added, updated, or removed from the bag, a display window shows the bag contents along with a message notifying the user of the change made.
+
+### **Checkout Page**
+
+- **Customer Details:** The customer is required to enter their delivery information to proceed with the checkout. Account holders can opt to save these details for a faster checkout process. This form is pre-populated with the saved details if they have previously saved this information.
+
+- **Order Summary:** The order is summarised, including a list of products, the quantities requested, and the total order value. This allows users to quickly check their order before proceeding with payment.
+
+- **Adjust Bag Button:** The `ADJUST BAG` button offers a quick navigation option for users to return to the bag page and make any amendments to their order if required.
+
+- **Loading Overlay:** Once the customer's details and payment method have been validated, a loading overlay is displayed with a rotating icon to provide a visual indicator that the transaction is being processed.
+
+### **Checkout Success Page**
+
+- **Order Summary:** The Checkout Success page provides the user with a full summary of their order. This includes the products ordered, quantities, delivery details, and grand total. A message indicating the email address to which the confirmation has been sent is also displayed at the top of the page.
+
+- **Keep Shopping Button:** The `KEEP SHOPPING` button offers a convenient navigation option to return to the products page.
+
+### **Profile Page**
+
+- **Update Details:** Users can save or update their current delivery information for a more efficient checkout process.
+
+- **Order History:** A list of the customer's previous orders is displayed. Clicking the order number link takes the user to the confirmation success page for that particular order. A message is displayed notifying the customer that the page is showing details from a previously completed order.
+
+- **Reviews:** A list of the customer's current product reviews is displayed, with options to edit or delete each review.
+
+- **Delete Modal:** If the customer opts to delete a review, a modal is displayed to confirm this action as an additional security step.
+
+- **Wishlist:** A carousel of the customer's selected wishlist items can be browsed on this page. Each item contains an `ADD` and `VIEW` button for convenience.
+
+### **Add/Edit Review Page**
+
+- **Review Form:** The form includes an image of the product being reviewed along with its name. It features input fields for the review title, review content, and a customer rating out of 5 stars.
+
+- **Rating System:** The rating system uses star icons that change colour when hovered over and selected, providing interactive feedback. This visual cue helps users easily select and view their chosen rating.
+
+### **Add/Edit Product Page**
+
+- **Product Form:** This page enables SuperUsers to add or modify product details by completing the input fields. These fields include range, name, category, description, ingredients, price, size, and image. If no image is uploaded, a default 'no-image' placeholder will be applied to the product.
+
+- **Remove Image:** When editing a product, the current image is displayed in a small preview. A checkbox option is available to remove this image, allowing users to update or clear the existing product image.
+
+---
+
 ## **Technologies Used**
 
 ### **Languages**

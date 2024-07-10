@@ -369,6 +369,20 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 
 - **Remove Image:** When editing a product, the current image is displayed in a small preview. A checkbox option is available to remove this image, allowing users to update or clear the existing product image.
 
+### **Future Implementations**
+
+- **Error Pages:** I plan to create custom error pages. In the event of an error, users will receive a message explaining the issue and providing navigation options to return to a relevant page within the site. This enhancement will significantly improve the user experience during any unexpected issues.
+
+- **Review Validation:** I aim to implement a validation check for reviews to ensure users have purchased the product before submission is accepted. This will guarantee that feedback is provided by customers with firsthand experience of the product.
+
+- **Review Limitation:** Currently, account holders can create multiple reviews for the same product. To ensure a diverse range of opinions, I plan to limit users to a single review per product.
+
+- **Discontinued Products:** Admin users can delete products from the database, which is crucial functionality. However, this currently removes the product from the order history of any customer who previously purchased it, leading to inaccurate order records. While this is not a significant issue for the context of this project, it would be problematic if the site were used as a business. To address this, I plan to implement a feature allowing admin users to mark products as discontinued. This will remove the product from the website but retain it in the database, ensuring accurate order history for customers.
+
+- **Wishlist Expansion:** I aim to expand the wishlist functionality, allowing users to create multiple lists for better organisation. Users will be able to name, modify, and delete lists, enhancing the feature's usability.
+
+- **Deals & Offers:** I plan to add functionality for admin users to apply discounts and deals to products easily. This will integrate with a newsletter system to inform subscribed customers about new offers
+
 ---
 
 ## **Technologies Used**

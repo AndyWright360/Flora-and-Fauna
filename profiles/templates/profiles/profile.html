@@ -72,8 +72,8 @@
                     <div class="col-12 d-flex flex-wrap justify-content-around">
                         {% for review in reviews %}
                             <div class="review col-12 col-md-9 col-lg-5">
-                                <div class="col-12 d-flex justify-content-between">
-                                    <p class="review-detail"><strong>{{ review.user.username }}</strong></p>
+                                <div class="col-12 d-flex justify-content-between flex-wrap">
+                                    <p class="review-detail mr-3"><strong>{{ review.user.username }}</strong></p>
                                     <p class="review-detail">{{ review.created_on }}</p>
                                 </div>
                                 <div class="col-12">

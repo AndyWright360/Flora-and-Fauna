@@ -245,9 +245,31 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 
 **Responsive Design**
 
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/features-responsive.gif">
+
+*Responsive Layout*
+
+</details>
+
 - **Responsive Layout:** The layout adapts to different device widths, ensuring a smooth experience across all devices, improving both accessibility and usability.
 
 **Navbar**
+
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/features-navbar-lg.jpg">
+<img src="media/docs/features-navbar-md.jpg">
+<img src="media/docs/features-navbar-sm.jpg">
+
+*Navbar Design*
+
+<img src="media/docs/features-navbar.gif">
+
+*Navbar Features*
+
+</details>
 
 - **Nav Link Hover Effect:** A hover effect on navbar links provides visual feedback, enhancing the interactive experience.
 
@@ -261,29 +283,93 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 
 **Favicon**
 
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/features-favicon.jpg">
+
+*Favicon*
+
+</details>
+
 - **Favicon:** Included to further establish brand identity.
 
 **Delivery Banner**
+
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/features-banner.jpg">
+
+*Delivery Banner*
+
+</details>
 
 - **Delivery Threshold Banner:** Notifies users of the minimum spend required for free delivery.
 
 **Back to Top Button**
 
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/features-back-to-top.gif">
+
+*Back To Top Button*
+
+</details>
+
 - **Back to Top Button:** Provides a convenient navigation option on pages with larger vertical height.
 
 **Buttons**
+
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/features-buttons.gif">
+
+*Button Hover*
+
+</details>
 
 - **Mouse Hover Feedback:** Hovering over buttons alters the border to communicate interactivity.
 
 **Messages**
 
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/features-messages.gif">
+
+*Messages*
+
+</details>
+
 - **Messages & Feedback:** Messages provide feedback to the use after actions. Indicating task completion or guiding users on how to correct errors.
 
 **Footer**
 
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/features-footer.jpg">
+
+*Footer Design*
+
+<img src="media/docs/features-footer-icons.gif">
+
+*Footer Icons*
+
+</details>
+
 - **Icon Hover Feedback:** Links include a hover effect, suggesting interactivity and enhancing user engagement.
 
 ### **Home Page**
+
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/home-page.jpg">
+
+*Home Page*
+
+<img src="media/docs/home-explore.gif">
+
+*Call To Action Link*
+
+</details>
 
 - **Hero Image:** The hero image sets the tone for the website's focus on natural ingredients. It immediately captures attention, highlights the brand's commitment to organic beauty, and invites users to explore further.
 
@@ -292,6 +378,42 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 - **Call to Action Link:** Designed to entice users to explore further, this link directs them to the products page, which is the focal point of the site.
 
 ### **Products Page**
+
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/products-page.jpg">
+
+*Products Page*
+
+<img src="media/docs/products-sorting.gif">
+
+*Products Sorting*
+
+<img src="media/docs/products-filter.gif">
+
+*Products Filter*
+
+<img src="media/docs/products-card.jpg">
+
+*Product Card*
+
+<img src="media/docs/products-range-link.gif">
+
+*Range Links*
+
+<img src="media/docs/products-add-view.gif">
+
+*Add/View Buttons*
+
+<img src="media/docs/products-wishlist.gif">
+
+*Wishlist*
+
+<img src="media/docs/products-delete-modal.gif">
+
+*Delete Modal*
+
+</details>
 
 - **Product Sorting:** Users can sort products by price, rating, name, range, and category. Allowing them to organise the list of products according to their preferences.
 
@@ -315,6 +437,22 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 
 ### **Product Detail Page**
 
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/product-detail-page.jpg">
+
+*Product Detail Page*
+
+<img src="media/docs/product-detail-quantity.gif">
+
+*Quantity Input*
+
+<img src="media/docs/product-detail-range.gif">
+
+*Other Products From This Range*
+
+</details>
+
 - **Additional Product Info:** This page provides detailed information about the product, including its description and list of ingredients, giving users more insight into their selection.
 
 - **Quantity Input:** Users can specify the quantity to add to their bag, within a range of 1 to 99.
@@ -329,6 +467,18 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 
 ### **Shopping Bag Page**
 
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/bag-page.jpg">
+
+*Shopping Bag Page*
+
+<img src="media/docs/bag-features.gif">
+
+*Shopping Bag Features*
+
+</details>
+
 - **Update Quantity:** Each item in the bag includes a number input allowing users to modify the quantity. By changing the quantity and selecting the `Update` button, the product quantity for that line will be adjusted accordingly.
 
 - **Remove Item:** This feature provides a convenient way for users to remove items from their bag. Clicking the `Remove` button will delete the selected order line.
@@ -338,6 +488,18 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 - **Bag Displayed on Update:** Whenever items are added, updated, or removed from the bag, a display window shows the bag contents along with a message notifying the user of the change made.
 
 ### **Checkout Page**
+
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/checkout-page.jpg">
+
+*Checkout Page*
+
+<img src="media/docs/checkout-overlay.gif">
+
+*Checkout Overlay*
+
+</details>
 
 - **Customer Details:** The customer is required to enter their delivery information to proceed with the checkout. Account holders can opt to save these details for a faster checkout process. This form is pre-populated with the saved details if they have previously saved this information.
 
@@ -349,11 +511,35 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 
 ### **Checkout Success Page**
 
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/checkout-success-page.jpg">
+
+*Checkout Success Page*
+
+</details>
+
 - **Order Summary:** The Checkout Success page provides the user with a full summary of their order. This includes the products ordered, quantities, delivery details, and grand total. A message indicating the email address to which the confirmation has been sent is also displayed at the top of the page.
 
 - **Keep Shopping Button:** The `KEEP SHOPPING` button offers a convenient navigation option to return to the products page.
 
 ### **Profile Page**
+
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/profile-page.jpg">
+
+*Profile Page*
+
+<img src="media/docs/profile-history.gif">
+
+*Order History*
+
+<img src="media/docs/profile-modal.gif">
+
+*Delete Modal*
+
+</details>
 
 - **Update Details:** Users can save or update their current delivery information for a more efficient checkout process.
 
@@ -367,11 +553,31 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 
 ### **Add/Edit Review Page**
 
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/add-edit-review-page.jpg">
+
+*Add/Edit Review Page*
+
+</details>
+
 - **Review Form:** The form includes an image of the product being reviewed along with its name. It features input fields for the review title, review content, and a customer rating out of 5 stars.
 
 - **Rating System:** The rating system uses star icons that change colour when hovered over and selected, providing interactive feedback. This visual cue helps users easily select and view their chosen rating.
 
 ### **Add/Edit Product Page**
+
+<details><summary>Screenshots</summary>
+
+<img src="media/docs/add-product-page.jpg">
+
+*Add Product Page*
+
+<img src="media/docs/edit-product-page.jpg">
+
+*Edit Product Page*
+
+</details>
 
 - **Product Form:** This page enables SuperUsers to add or modify product details by completing the input fields. These fields include range, name, category, description, ingredients, price, size, and image. If no image is uploaded, a default 'no-image' placeholder will be applied to the product.
 

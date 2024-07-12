@@ -71,11 +71,9 @@
                                 <!-- Product Details -->
                                 <div class="card-body">
                                     {% if product.range %}
-                                        <p class="product-range {{ product.range.name }}">
-                                            <a href="{% url 'products' %}?range={{ product.range.name }}">
-                                                {{ product.range.friendly_name }}
-                                            </a>
-                                        </p>
+                                        <a class="product-range {{ product.range.name }}" href="{% url 'products' %}?range={{ product.range.name }}" data-toggle="tooltip" data-placement="top" title="See the full range!">
+                                            {{ product.range.friendly_name }}
+                                        </a>
                                     {% endif %}
                                     <p class="product-name">{{ product.name }}</p>
 
@@ -190,6 +188,11 @@
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
+
+        // Initialise Tooltip
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
 	</script>
     
     <!-- Product Sort JavaScript -->

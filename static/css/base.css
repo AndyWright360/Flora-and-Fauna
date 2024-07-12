@@ -494,9 +494,10 @@ select option[value=""] {
     font-size: 17px;
     padding: 5px;
     border-radius: 0 0 25px 25px;
+    display: block;
 }
 
-.product-range a:hover {
+.product-range:hover {
     font-weight: bold;
 }
 
@@ -544,31 +545,34 @@ select option[value=""] {
     color: var(--dark-aloe);
 }
 
-.aloe-revive a {
+.aloe-revive:hover {
     color: var(--dark-aloe);
 }
 
 .eternal-rose {
     background-color: var(--rose);
+    color: var(--dark-rose);
 }
 
-.eternal-rose a {
+.eternal-rose:hover {
     color: var(--dark-rose);
 }
 
 .honey-harmony {
     background-color: var(--honey);
+    color: var(--dark-honey);
 }
 
-.honey-harmony a {
+.honey-harmony:hover {
     color: var(--dark-honey);
 }
 
 .clear-willow {
     background-color: var(--willow);
+    color: var(--dark-willow);
 }
 
-.clear-willow a {
+.clear-willow:hover {
     color: var(--dark-willow);
 }
 
@@ -649,9 +653,10 @@ select option[value=""] {
     margin: auto;
     font-size: 18px;
     text-align: center;
+    display: block;
 }
 
-.range-link a:hover {
+.range-link:hover {
     font-weight: bold;
 }
 

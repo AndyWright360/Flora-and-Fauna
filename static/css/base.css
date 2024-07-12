@@ -29,6 +29,7 @@ body {
     max-width: 1600px;
     overflow-x: hidden;
     background-color: #F0E5C0;
+    background-image: url('/media/floral-background.webp');
 }
 
 header {

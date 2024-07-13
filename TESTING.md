@@ -35,3 +35,62 @@ The goal of this approach is to deliver the highest quality website achievable w
 
 ---
 
+## **Automated Testing**
+
+### **Django Testing**
+
+This project marked my first experience with automated testing. As a beginner, I kept the tests straightforward to better understand this approach. I achieved 83% coverage across all apps, which I was pleased with given my experience level. The remaining testing was conducted manually.
+
+I aimed to follow a test-driven development (TDD) approach, writing automated tests or manually checking the site functionality after adding new features. This experience highlighted the benefits of automated testing and improved my understanding of the process.
+
+**Django Test Results**
+
+![Total test results](media/docs/test-results.jpg)
+
+**Total Test Coverage Results**
+
+![Total test coverage results](media/docs/coverage-total.jpg)
+
+**Test Coverage Results Per App**
+
+<details><summary>Home App</summary>
+
+<img src="media/docs/coverage-home.jpg">
+
+</details>
+
+<details><summary>Products App</summary>
+
+<img src="media/docs/coverage-products.jpg">
+
+</details>
+
+<details><summary>Bag App</summary>
+
+<img src="media/docs/coverage-bag.jpg">
+
+</details>
+
+<details><summary>Checkout App</summary>
+
+<img src="media/docs/coverage-checkout.jpg">
+
+</details>
+
+<details><summary>Profiles App</summary>
+
+<img src="media/docs/coverage-profiles.jpg">
+
+</details>
+
+<details><summary>Reviews App</summary>
+
+<img src="media/docs/coverage-reviews.jpg">
+
+</details>
+
+<details><summary>Wishlist App</summary>
+
+<img src="media/docs/coverage-wishlist.jpg">
+
+</details>

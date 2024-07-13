@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col text-center">
                 <h2 class="page-heading">Products</h2>
-                <img class="underline" src="{{ MEDIA_URL }}underline.webp">
+                <img class="underline" src="{{ MEDIA_URL }}underline.webp" alt="decorative underline">
             </div>
         </div>
 
@@ -184,7 +184,7 @@
 {% block postloadjs %}
     {{ block.super }}
     <!-- Return To Top Button JavaScript -->
-    <script type="text/javascript">
+    <script>
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
@@ -196,7 +196,7 @@
 	</script>
     
     <!-- Product Sort JavaScript -->
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);
@@ -219,7 +219,7 @@
         })
     </script>
 
-    <script type="text/javascript">    
+    <script>    
         $(document).ready(function() {
             // Code modified from https://www.youtube.com/watch?v=AZs4zggS7kA
             // Explicitly hide the toasts on page load

@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col text-center">
                     <h2 class="page-heading">My Profile</h2>
-                    <img class="underline" src="{{ MEDIA_URL }}underline.webp">
+                    <img class="underline" src="{{ MEDIA_URL }}underline.webp" alt="decorative underline">
                 </div>
             </div>
 
@@ -66,7 +66,7 @@
             <div class="row">
                 <div class="col-12 text-center mb-5">
                     <h2 class="page-heading">My Reviews</h2>
-                    <img class="underline" src="{{ MEDIA_URL }}underline.webp">
+                    <img class="underline" src="{{ MEDIA_URL }}underline.webp" alt="decorative underline">
                 </div>
                 {% if reviews %}
                     <div class="col-12 d-flex flex-wrap justify-content-around">
@@ -138,7 +138,7 @@
             <div class="row">
                 <div class="col-12 text-center my-5">
                     <h2 class="page-heading">My Wishlist</h2>
-                    <img class="underline" src="{{ MEDIA_URL }}underline.webp">
+                    <img class="underline" src="{{ MEDIA_URL }}underline.webp" alt="decorative underline">
                 </div>
                 {% if wishlist %}
                     <!-- Carousel display for small screens -->
@@ -312,7 +312,7 @@
 {% block postloadjs %}
     {{ block.super }}
     <!-- Profile Form JavaScript -->
-    <script type="text/javascript">
+    <script>
         let countrySelected = $('#id_default_country').val();
         if(!countrySelected) {
             $('#id_default_country').css('color', '#636c72');

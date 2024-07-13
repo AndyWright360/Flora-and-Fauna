@@ -3,10 +3,13 @@ from .models import Range, Product
 from reviews.models import Review
 from django.contrib.auth.models import User
 
+
 class TestProductsModels(TestCase):
 
     def setUp(self):
-        """ Creates test objects for Products app """
+        """
+        Creates test objects for Products app
+        """
 
         self.range_test = Range.objects.create(
             name="test_range",
@@ -37,60 +40,90 @@ class TestProductsModels(TestCase):
         )
 
     def test_range_string_method(self):
-        """ Tests the string method on the range model """
+        """
+        Tests the string method on the range model
+        """
         self.assertEqual(str(self.range_test), self.range_test.name)
 
     def test_get_friendly_name_method(self):
-        """ Test get_friendly_name() method on the range model """
-        self.assertEqual(str(self.range_test.get_friendly_name()), self.range_test.friendly_name)
+        """
+        Test get_friendly_name() method on the range model
+        """
+        self.assertEqual(str(
+            self.range_test.get_friendly_name()),
+            self.range_test.friendly_name)
 
     def test_product_string_method(self):
-        """ Tests the string method on the product model """
+        """
+        Tests the string method on the product model
+        """
         self.assertEqual(str(self.product_test), self.product_test.name)
-    
+
     def test_range_name(self):
-        """ Test the range name """
+        """
+        Test the range name
+        """
         self.assertEqual(self.range_test.name, 'test_range')
-    
+
     def test_range_friendly_name(self):
-        """ Test the range friendly name """
+        """
+        Test the range friendly name
+        """
         self.assertEqual(self.range_test.friendly_name, 'Test Range')
-    
+
     def test_product_name(self):
-        """ Test the product name """
+        """
+        Test the product name
+        """
         self.assertEqual(self.product_test.name, 'Test Product')
 
     def test_product_category(self):
-        """ Test the product category """
+        """
+        Test the product category
+        """
         self.assertEqual(self.product_test.category, 'Test Category')
 
     def test_product_description(self):
-        """ Test the product description """
-        self.assertEqual(self.product_test.description,'Test Description')
-    
+        """
+        Test the product description
+        """
+        self.assertEqual(self.product_test.description, 'Test Description')
+
     def test_product_ingredients(self):
-        """ Test the product ingredients """
-        self.assertEqual(self.product_test.ingredients,'Test Ingredients')
-    
+        """
+        Test the product ingredients
+        """
+        self.assertEqual(self.product_test.ingredients, 'Test Ingredients')
+
     def test_product_price(self):
-        """ Test the product price """
+        """
+        Test the product price
+        """
         self.assertEqual(self.product_test.price, 9.99)
 
     def test_product_size(self):
-        """ Test the product size """
+        """
+        Test the product size
+        """
         self.assertEqual(self.product_test.size, 'Test Size')
 
     def test_product_image(self):
-        """ Test the product image """
+        """
+        Test the product image
+        """
         self.assertEqual(self.product_test.image, 'test_image.jpg')
-    
+
     def test_average_rating_with_no_reviews(self):
-        """ Test average rating when there are no reviews """
+        """
+        Test average rating when there are no reviews
+        """
         avg_rating = self.product_test.average_rating()
         self.assertIsNone(avg_rating)
 
     def test_average_rating_with_reviews(self):
-        """ Test average rating when there are reviews """
+        """
+        Test average rating when there are reviews
+        """
 
         # Create reviews for the product
         Review.objects.create(

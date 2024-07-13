@@ -46,25 +46,29 @@ def all_products(request):
             category = request.GET['category']
             if category:
                 products = products.filter(category=category)
-        
+
         if 'range' in request.GET:
             range = request.GET['range']
             products = products.filter(range__name=range)
             range = Range.objects.filter(name=range)
 
         if 'q' in request.GET:
-                query = request.GET['q']
-                if not query:
-                    messages.error(request, "You didn't enter any search criteria!")
-                    return redirect(reverse('products'))
-                
-                queries = Q(name__icontains=query) | Q(description__icontains=query)
+            query = request.GET['q']
+            if not query:
+                messages.error(
+                    request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
+
+                queries = Q(
+                    name__icontains=query) | Q(description__icontains=query)
                 products = products.filter(queries)
 
     # Check if each product is in the user's wishlist
     user_wishlist = []
     if request.user.is_authenticated:
-        user_wishlist = list(WishlistItem.objects.filter(user=request.user).values_list('product_id', flat=True))
+        user_wishlist = list(
+            WishlistItem.objects.filter(
+                user=request.user).values_list('product_id', flat=True))
 
     current_sorting = f'{sort}_{direction}'
 
@@ -87,20 +91,22 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, id=product_id)
     reviews = Review.objects.filter(product=product)
-    other_products_in_range = Product.objects.filter(range=product.range).exclude(pk=product_id)
-    
+    other_products_in_range = Product.objects.filter(
+        range=product.range).exclude(pk=product_id)
+
     if request.user.is_authenticated:
-        product_in_wishlist = WishlistItem.objects.filter(product=product, user=request.user).exists()
+        product_in_wishlist = WishlistItem.objects.filter(
+            product=product, user=request.user).exists()
     else:
         product_in_wishlist = False
-    
+
     context = {
         'product': product,
         'reviews': reviews,
         'product_in_wishlist': product_in_wishlist,
         'other_products_in_range': other_products_in_range,
     }
-    
+
     return render(request, 'products/product_detail.html', context)
 
 
@@ -118,7 +124,9 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
 
@@ -145,7 +153,9 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')

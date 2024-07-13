@@ -46,7 +46,7 @@ class WishlistViewsTestCase(TestCase):
             reverse("add_to_wishlist"), {"id": self.product_test.id}
         )
         self.assertEqual(response.status_code, 200)
-    
+
     def test_remove_from_wishlist_url_status(self):
         """ Test add wishlist url status code """
         response = self.client.get(
@@ -60,7 +60,8 @@ class WishlistViewsTestCase(TestCase):
             reverse("add_to_wishlist"), {"id": self.product_test.id}
         )
         self.assertEqual(WishlistItem.objects.count(), 1)
-        self.assertEqual(WishlistItem.objects.first().product, self.product_test)
+        self.assertEqual(
+            WishlistItem.objects.first().product, self.product_test)
         self.assertEqual(WishlistItem.objects.first().user, self.user_test)
 
     def test_remove_from_wishlist(self):

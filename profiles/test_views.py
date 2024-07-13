@@ -39,7 +39,8 @@ class ProfileViewTests(TestCase):
 
     def test_profile_page(self):
         """
-        Test that the user profile page loads correctly and uses the correct template
+        Test that the user profile page loads
+        correctly and uses the correct template
         """
         self.client.login(username='TestUser', password='TestPassword')
         response = self.client.get(reverse('profile'))
@@ -48,9 +49,11 @@ class ProfileViewTests(TestCase):
 
     def test_order_history_page(self):
         """
-        Test that the order history page loads correctly and uses the correct template
+        Test that the order history page loads
+        correctly and uses the correct template
         """
         self.client.login(username='TestUser', password='TestPassword')
-        response = self.client.get(reverse('order_history', args=[self.order_test.order_number]))
+        response = self.client.get(
+            reverse('order_history', args=[self.order_test.order_number]))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'checkout/checkout_success.html')

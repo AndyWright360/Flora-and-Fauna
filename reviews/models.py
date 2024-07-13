@@ -12,8 +12,12 @@ class Review(models.Model):
         (5, '5 Stars'),
     )
 
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True, related_name='reviews',)
-    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name="reviews",)
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE,
+        null=True, blank=True, related_name='reviews',)
+    user = models.ForeignKey(
+        User, on_delete=models.SET_NULL,
+        null=True, blank=True, related_name="reviews",)
     created_on = models.DateField(auto_now_add=True, blank=False, null=False)
     title = models.CharField(max_length=50, blank=False, null=False)
     content = models.TextField(max_length=500)

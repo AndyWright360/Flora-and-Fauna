@@ -13,7 +13,8 @@ def add_to_wishlist(request):
 
     context = {}
 
-    wishlist_count = WishlistItem.objects.filter(product=product, user=request.user).count()
+    wishlist_count = WishlistItem.objects.filter(
+        product=product, user=request.user).count()
 
     if wishlist_count > 0:
         context = {
@@ -27,13 +28,15 @@ def add_to_wishlist(request):
         context = {
                 "bool": True
             }
-    
+
     return JsonResponse(context)
+
 
 @login_required()
 def remove_from_wishlist(request):
     product_id = request.GET.get('id')
-    wishlist_item = WishlistItem.objects.filter(user=request.user, product_id=product_id).first()
+    wishlist_item = WishlistItem.objects.filter(
+        user=request.user, product_id=product_id).first()
 
     if wishlist_item:
         wishlist_item.delete()
@@ -42,4 +45,3 @@ def remove_from_wishlist(request):
         context = {"bool": False}
 
     return JsonResponse(context)
-

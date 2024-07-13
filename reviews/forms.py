@@ -24,7 +24,8 @@ class ReviewForm(forms.ModelForm):
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
-        
+
         self.fields['rating'].label = 'Your Rating '
-        self.fields['rating'].widget = forms.RadioSelect(choices=Review.RATING_CHOICES)
+        self.fields['rating'].widget = forms.RadioSelect(
+            choices=Review.RATING_CHOICES)
         self.fields['rating'].initial = Review.RATING_CHOICES[0][0]

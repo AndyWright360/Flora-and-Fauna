@@ -44,46 +44,46 @@ class TestReviewModels(TestCase):
             content="Test Content",
             rating=5,
         )
-    
+
     def test_review_string_representation(self):
-        """ 
+        """
         Test the string representation of a review returns its title
         """
         review = Review(title='Test Title')
         self.assertEqual(str(review), 'Test Title')
-    
+
     def test_review_title(self):
-        """ 
+        """
         Test that the review title is set correctly
         """
         self.assertEqual(self.review_test.title, 'Test Title')
-    
+
     def test_review_content(self):
-        """ 
+        """
         Test that the review content is set correctly
         """
         self.assertEqual(self.review_test.content, 'Test Content')
-    
+
     def test_review_rating(self):
-        """ 
+        """
         Test that the review rating is set correctly
         """
         self.assertEqual(self.review_test.rating, 5)
-    
+
     def test_review_created_on(self):
-        """ 
+        """
         Test that the review created_on is set correctly
         """
         self.assertEqual(self.review_test.created_on, date(2010, 10, 10))
-    
+
     def test_review_product_relationship(self):
-        """ 
+        """
         Test that the review is associated with the correct product
         """
         self.assertEqual(self.review_test.product, self.product_test)
 
     def test_review_user_relationship(self):
-        """ 
+        """
         Test that the review is associated with the correct user
         """
         self.assertEqual(self.review_test.user, self.user_test)

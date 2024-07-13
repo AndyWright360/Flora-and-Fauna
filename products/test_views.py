@@ -64,13 +64,14 @@ class TestProductsViews(TestCase):
         response = self.client.get('/products/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
-    
+
     def test_product_detail_page_with_valid_product(self):
         """ Test product detail page with valid product ID """
-        response = self.client.get(reverse('product_detail', args=[self.product_test.id]))
+        response = self.client.get(
+            reverse('product_detail', args=[self.product_test.id]))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/product_detail.html')
-    
+
     def test_product_detail_page_with_invalid_product(self):
         """ Test product detail page with invalid product ID """
         response = self.client.get(reverse('product_detail', args=[999]))

@@ -11,4 +11,5 @@ class ReviewAdmin(admin.ModelAdmin):
     list_display = ('product', 'title', 'rating',
                     'created_on',)
 
+
 admin.site.register(Review, ReviewAdmin)

@@ -1,13 +1,16 @@
 from django.test import TestCase
 from .forms import UserProfileForm
 
+
 class TestUserProfileForm(TestCase):
     """
     Test cases for the UserProfileForm
     """
 
     def test_form_valid_with_empty_non_required_fields(self):
-        """Test that the UserProfileForm is valid with empty non-required fields"""
+        """
+        Test that the UserProfileForm is valid with empty non-required fields
+        """
         form = UserProfileForm(
             {
                 'default_phone_number': '',
@@ -23,7 +26,8 @@ class TestUserProfileForm(TestCase):
 
     def test_user_field_excluded_in_meta(self):
         """
-        Test that the 'user' field is excluded from the UserProfileForm Meta class
+        Test that the 'user' field is excluded from
+        the UserProfileForm Meta class
         """
         form = UserProfileForm()
         self.assertEqual(form.Meta.exclude, ('user',))

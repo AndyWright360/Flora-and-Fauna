@@ -9,14 +9,15 @@ class Range(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     def get_friendly_name(self):
         return self.friendly_name
 
 
 class Product(models.Model):
 
-    range = models.ForeignKey('Range', on_delete=models.SET_NULL, null=True, blank=True)
+    range = models.ForeignKey(
+        'Range', on_delete=models.SET_NULL, null=True, blank=True)
     name = models.CharField(max_length=254)
     category = models.CharField(max_length=254)
     description = models.TextField()
@@ -27,7 +28,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     def average_rating(self):
         reviews = self.reviews.all()
         if reviews.exists():

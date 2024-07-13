@@ -62,77 +62,94 @@ class TestReviewViews(TestCase):
         )
 
     def test_add_review_page_for_authorised_user(self):
-        """ 
+        """
         Test that the add review page is accessible for logged in users
         """
         self.client.force_login(self.user_test)
-        response = self.client.get(reverse('add_review', args=[self.product_test.id]))
+        response = self.client.get(
+            reverse('add_review', args=[self.product_test.id]))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'reviews/add_review.html')
 
     def test_add_review_page_for_logged_out_user_redirects_to_login(self):
-        """ 
+        """
         Test that the add review page redirects to login for logged out users
         """
-        response = self.client.get(reverse('add_review', args=[self.product_test.id]))
+        response = self.client.get(
+            reverse('add_review', args=[self.product_test.id]))
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, '/accounts/login/?next=%2Freviews%2Fadd_review%2F1/')
+        self.assertRedirects(
+            response, '/accounts/login/?next=%2Freviews%2Fadd_review%2F1/')
 
     def test_edit_review_page_for_authorised_user(self):
-        """ 
+        """
         Test that the edit review page is accessible for logged in users
         """
         self.client.force_login(self.user_test)
-        response = self.client.get(reverse('edit_review', args=[self.review_test1.id]))
+        response = self.client.get(
+            reverse('edit_review', args=[self.review_test1.id]))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'reviews/edit_review.html')
 
     def test_edit_review_page_for_logged_out_user_redirects_to_login(self):
-        """ 
+        """
         Test that the edit review page redirects to login for logged out users
         """
-        response = self.client.get(reverse('edit_review', args=[self.review_test1.id]))
+        response = self.client.get(
+            reverse('edit_review', args=[self.review_test1.id]))
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, '/accounts/login/?next=%2Freviews%2Fedit_review%2F1%2F')
+        self.assertRedirects(
+            response, '/accounts/login/?next=%2Freviews%2Fedit_review%2F1%2F')
 
-    def test_edit_review_page_for_unauthorised_user_redirects_to_product_details(self):
-        """ 
-        Test that the edit review page redirects to product details if the user is not the author of the review
+    def test_edit_review_page_redirects_unauthorised_user_correctly(self):
+        """
+        Test that the edit review page redirects to
+        product details if the user is not the author of the review
         """
         self.client.force_login(self.user_test)
-        response = self.client.get(reverse('edit_review', args=[self.review_test2.id]))
+        response = self.client.get(
+            reverse('edit_review', args=[self.review_test2.id]))
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, '/products/1/')
 
-    def test_edit_other_user_review_page_for_superuser_redirects_to_product_details(self):
-        """ 
-        Test that the edit review page redirects to product details if the user is a superuser and not the author of the review
+    def test_edit_review_page_redirects_superuser_correctly(self):
+        """
+        Test that the edit review page redirects to product details
+        if the user is a superuser and not the author of the review
         """
         self.client.force_login(self.superuser_test)
-        response = self.client.get(reverse('edit_review', args=[self.review_test1.id]))
+        response = self.client.get(
+            reverse('edit_review', args=[self.review_test1.id]))
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, '/products/1/')
 
     def test_delete_review_view_for_logged_out_user_redirects_to_login(self):
-        """ 
-        Test that the delete review page redirects to login for logged out users
         """
-        response = self.client.get(reverse('delete_review', args=[self.review_test1.id]))
+        Test that the delete review page redirects
+        to login for logged out users
+        """
+        response = self.client.get(
+            reverse('delete_review', args=[self.review_test1.id]))
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, '/accounts/login/?next=%2Freviews%2Fdelete_review%2F1%2F')
+        self.assertRedirects(
+            response,
+            '/accounts/login/?next=%2Freviews%2Fdelete_review%2F1%2F')
 
-    def test_delete_review_page_for_unauthorised_user_redirects_to_product_details(self):
-        """ 
-        Test that the delete review page redirects to product details if the user is not the author of the review
+    def test_delete_review_page_redirects_unauthorised_user_correctly(self):
+        """
+        Test that the delete review page redirects to product details
+        if the user is not the author of the review
         """
         self.client.force_login(self.user_test)
-        response = self.client.get(reverse('delete_review', args=[self.review_test2.id]))
+        response = self.client.get(
+            reverse('delete_review', args=[self.review_test2.id]))
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, '/products/1/')
-    
+
     def test_adding_a_product_review_updates_product_average_rating(self):
-        """ 
-        Test that the average rating for a product is updated when a review is added
+        """
+        Test that the average rating for a product
+        is updated when a review is added
         """
 
         # Create review for the product
@@ -148,8 +165,9 @@ class TestReviewViews(TestCase):
         self.assertEqual(self.product_test.average_rating(), 4)
 
     def test_editing_a_product_review_updates_product_average_rating(self):
-        """ 
-        Test that the average rating for a product is updated when a review is edited
+        """
+        Test that the average rating for a product
+        is updated when a review is edited
         """
         # Edit the review's rating
         self.review_test1.rating = 3
@@ -158,8 +176,9 @@ class TestReviewViews(TestCase):
         self.assertEqual(self.product_test.average_rating(), 3)
 
     def test_deleting_a_product_review_updates_product_average_rating(self):
-        """ 
-        Test that the average rating for a product is updated when a review is deleted
+        """
+        Test that the average rating for a product
+        is updated when a review is deleted
         """
         # Delete a review
         self.review_test2.delete()

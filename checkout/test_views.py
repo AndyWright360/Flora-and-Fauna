@@ -39,14 +39,16 @@ class TestCheckoutViews(TestCase):
         )
 
     def test_checkout_redirects_to_products_with_empty_bag(self):
-        """Test that the checkout page redirects to products when the bag is empty"""
-
+        """
+        Test that the checkout page redirects to products when the bag is empty
+        """
         response = self.client.get('/checkout/')
         self.assertRedirects(response, '/products/', status_code=302)
 
     def test_checkout_page_loads_with_bag_items(self):
-        """Test that the checkout page loads when the bag contains items"""
-
+        """
+        Test that the checkout page loads when the bag contains items
+        """
         session = self.client.session
         session['bag'] = {str(self.product_test.id): 1}
         session.save()

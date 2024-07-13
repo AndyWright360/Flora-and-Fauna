@@ -38,7 +38,8 @@ class TestBagViews(TestCase):
             )
 
         self.assertTrue('bag' in self.client.session)
-        self.assertEqual(self.client.session['bag'][str(self.product_test.id)], 1)
+        self.assertEqual(
+            self.client.session['bag'][str(self.product_test.id)], 1)
         self.assertRedirects(response, '/bag/')
 
     def test_remove_product_from_bag(self):
@@ -49,7 +50,8 @@ class TestBagViews(TestCase):
             )
 
         response = self.client.post(f'/bag/remove/{self.product_test.id}/')
-        self.assertFalse(str(self.product_test.id) in self.client.session['bag'])
+        self.assertFalse(
+            str(self.product_test.id) in self.client.session['bag'])
 
     def test_update_product_quantity_in_bag(self):
         """Test updating the quantity of a product in the bag"""
@@ -59,7 +61,8 @@ class TestBagViews(TestCase):
             )
 
         self.assertTrue('bag' in self.client.session)
-        self.assertEqual(self.client.session['bag'][str(self.product_test.id)], 1)
+        self.assertEqual(
+            self.client.session['bag'][str(self.product_test.id)], 1)
         self.assertRedirects(response, '/bag/')
 
         response = self.client.post(
@@ -68,5 +71,6 @@ class TestBagViews(TestCase):
             )
 
         self.assertTrue('bag' in self.client.session)
-        self.assertEqual(self.client.session['bag'][str(self.product_test.id)], 3)
+        self.assertEqual(
+            self.client.session['bag'][str(self.product_test.id)], 3)
         self.assertRedirects(response, '/bag/')

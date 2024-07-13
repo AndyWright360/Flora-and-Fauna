@@ -8,6 +8,7 @@ from products.models import Product
 from django.contrib.auth.models import User
 from .forms import ReviewForm
 
+
 @login_required()
 def add_review(request, product_id):
     """
@@ -32,13 +33,14 @@ def add_review(request, product_id):
             return redirect(reverse('product_detail', args=[product.id]))
     else:
         form = ReviewForm()
-        
+
     template = 'reviews/add_review.html'
     context = {
         'form': form,
         'product': product
         }
     return render(request, template, context)
+
 
 @login_required()
 def edit_review(request, review_id):
@@ -50,7 +52,8 @@ def edit_review(request, review_id):
     referer_url = request.META.get('HTTP_REFERER')
 
     if request.user != review.user:
-        messages.error(request, "You don't have authorisation to edit this review.")
+        messages.error(
+            request, "You don't have authorisation to edit this review.")
         if referer_url and '/reviews/' not in referer_url:
             return redirect(referer_url)
         else:
@@ -69,7 +72,7 @@ def edit_review(request, review_id):
                 return redirect(referer_url)
             else:
                 return redirect(reverse('product_detail', args=[product.id]))
-    
+
     else:
         form = ReviewForm(instance=review)
     template = 'reviews/edit_review.html'
@@ -79,6 +82,7 @@ def edit_review(request, review_id):
         'product': product
         }
     return render(request, template, context)
+
 
 @login_required()
 def delete_review(request, review_id):
@@ -91,7 +95,8 @@ def delete_review(request, review_id):
 
     if not request.user.is_superuser:
         if request.user != review.user:
-            messages.error(request, "You don't have authorisation to edit this review.")
+            messages.error(
+                request, "You don't have authorisation to edit this review.")
             if referer_url and '/reviews/' not in referer_url:
                 return redirect(referer_url)
             else:

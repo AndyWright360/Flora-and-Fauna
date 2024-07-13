@@ -878,7 +878,7 @@ Credit: Madannes https://jsfiddle.net/madannes/r3s1jx4y/
 #div_id_rating .form-check:not(:checked) > input {
     position: absolute;
     left: -9999px;
-    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
 }
 
 #div_id_rating .form-check:not(:checked) > label {

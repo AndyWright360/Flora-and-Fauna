@@ -183,16 +183,16 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <!-- Return To Top Button JavaScript -->
     <script>
+        // Return To Top Button JavaScript
 		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
+			window.scrollTo(0,0);
+		});
 
         // Initialise Tooltip
         $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
+            $('[data-toggle="tooltip"]').tooltip();
+        });
 	</script>
     
     <!-- Product Sort JavaScript -->
@@ -216,7 +216,7 @@
 
                 window.location.replace(currentUrl);
             }
-        })
+        });
     </script>
 
     <script>    
@@ -246,9 +246,9 @@
 
             // Code modified from https://www.youtube.com/watch?v=pdttUeJi7j8
             // Add/Remove Wishlist Item JavaScript
-            $(document).on("click", ".wishlist-btn", function(){
-                let product_id = $(this).attr("data-product-item")
-                let this_val = $(this)
+            $(document).on("click", ".wishlist-btn", function () {
+                let product_id = $(this).attr("data-product-item");
+                let this_val = $(this);
 
                 console.log("Product ID is ", product_id);
 
@@ -256,9 +256,9 @@
 
                 let url;
                 if (addedToWishlist) {
-                    url = "/wishlist/remove-from-wishlist/"
+                    url = "/wishlist/remove-from-wishlist/";
                 } else {
-                    url = "/wishlist/add-to-wishlist/"
+                    url = "/wishlist/add-to-wishlist/";
                 }
 
                 $.ajax({
@@ -267,10 +267,10 @@
                         "id": product_id
                     },
                     dataType: "json",
-                    beforeSend: function(){
-                        console.log("Updating Wishlist...")
+                    beforeSend: function () {
+                        console.log("Adding to Wishlist...");
                     },
-                    success: function(response){
+                    success: function (response) {
                         if (addedToWishlist) {
                             // If item is already in wishlist, remove it
                             this_val.html(`<i class="fa-regular fa-heart"></i>`);
@@ -281,9 +281,8 @@
                             showAddToast();
                         }
                     }
-                })
-
-            })
+                });
+            });
         });
     </script>
 {% endblock %}

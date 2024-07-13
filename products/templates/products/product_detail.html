@@ -98,11 +98,11 @@
                         </div>
 
                         <!-- Superuser Delete Modal -->
-                        <div class="modal fade" id="delete-modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="delete-modal{{ product.id }}" tabindex="-1" aria-labelledby="modal-label{{ product.id }}" aria-hidden="true">
                             <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel"><strong>{{ product.name }}</strong></h5>
+                                <h5 class="modal-title" id="modal-label{{ product.id }}"><strong>{{ product.name }}</strong></h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -247,9 +247,9 @@
                                     {% endif %}
                                     <div class="card-body d-flex flex-column justify-content-around">
                                         <p class="other-product-detail">{{ other_product.name }}</p>
-                                        <span class="product-info">
+                                        <div class="product-info">
                                             <p class="other-product-detail">£{{ other_product.price }}</p>
-                                        </span>
+                                        </div>
                                     </div>
                                     <div class="card-footer justify-content-between">
                                         <form action="{% url 'add_to_bag' other_product.id %}" method="POST">
@@ -299,9 +299,9 @@
                                 {% endif %}
                                 <div class="card-body d-flex flex-column justify-content-around">
                                     <p class="other-product-detail">{{ other_product.name }}</p>
-                                    <span class="product-info">
+                                    <div class="product-info">
                                         <p class="other-product-detail">£{{ other_product.price }}</p>
-                                    </span>
+                                    </div>
                                 </div>
                                 <div class="card-footer justify-content-between">
                                     <form action="{% url 'add_to_bag' other_product.id %}" method="POST">
@@ -354,9 +354,9 @@
                                 {% endif %}
                                 <div class="card-body d-flex flex-column justify-content-around">
                                     <p class="other-product-detail">{{ other_product.name }}</p>
-                                    <span class="product-info">
+                                    <div class="product-info">
                                         <p class="other-product-detail">£{{ other_product.price }}</p>
-                                    </span>
+                                    </div>
                                 </div>
                                 <div class="card-footer justify-content-between">
                                     <form action="{% url 'add_to_bag' other_product.id %}" method="POST">

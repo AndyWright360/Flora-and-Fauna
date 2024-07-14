@@ -297,3 +297,43 @@ I needed to make several adjustments to align my code with PEP8 standards. These
 
 ---
 
+### **WCAG Colour Contrast Checker**
+
+A significant effort was made to create a strong contrast in the website's colour scheme. When selecting the primary colours for the site, I ensured that the complementary colours used for the text would also maintain clarity to enhance the user experience.
+
+**Navbar**
+
+![Colour contrast results](media/docs/contrast-navbar.jpg)
+
+The chosen colour scheme serves as the primary theme for the navbar. A high contrast was selected to ensure users have maximum clarity when navigating the site and utilising the various product filtering features.
+
+**Buttons**
+
+![Colour contrast results](media/docs/contrast-green-btn.jpg)
+![Colour contrast results](media/docs/contrast-blue-btn.jpg)
+![Colour contrast results](media/docs/contrast-red-btn.jpg)
+
+The green contrast acts as one of the primary button colours for the site and as the main colour scheme throughout. The blue colour scheme serves as an alternative styling option, while the red button is used specifically for delete options in user reviews and modals.
+
+**Input Fields**
+
+![Colour contrast results](media/docs/contrast-input.jpg)
+
+The colour scheme for input fields was chosen for its high contrast to ensure readability and clarity when users input details on the site.
+
+**Product Range Links**
+
+![Colour contrast results](media/docs/contrast-aloe.jpg)
+![Colour contrast results](media/docs/contrast-honey.jpg)
+![Colour contrast results](media/docs/contrast-rose.jpg)
+![Colour contrast results](media/docs/contrast-willow.jpg)
+
+Each product range is represented by a colour associated with its key ingredient. I ensured the contrast was high enough to be legible while effectively communicating the desired colour scheme.
+
+**Footer**
+
+![Colour contrast results](media/docs/contrast-footer.jpg)
+
+The footer's colour scheme was selected to be distinct while maintaining consistency with the rest of the site. Similar to the navbar, a high contrast was prioritised to ensure it stands out clearly.
+
+---

@@ -59,9 +59,9 @@ def all_products(request):
                     request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
-                queries = Q(
-                    name__icontains=query) | Q(description__icontains=query)
-                products = products.filter(queries)
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(queries)
 
     # Check if each product is in the user's wishlist
     user_wishlist = []

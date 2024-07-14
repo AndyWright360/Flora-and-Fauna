@@ -22,6 +22,8 @@
                         <button class="default-btn blue-btn float-right">Update Information</button>
                     </form>
                 </div>
+
+                <!-- Order History -->
                 <div class="col-12 col-lg-6 mb-5">
                     <p>Order History</p>
                     <div class="order-history table-responsive">
@@ -39,7 +41,7 @@
                                 <tr>
                                     <td>
                                         <a href="{% url 'order_history' order.order_number %}"
-                                            title="{{ order.order_number }}">
+                                            class="underline-link" title="{{ order.order_number }}">
                                             {{ order.order_number|truncatechars:6 }}
                                         </a>
                                     </td>

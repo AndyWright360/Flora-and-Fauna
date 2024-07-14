@@ -35,8 +35,15 @@ def adjust_bag(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity_input = request.POST.get('quantity')
     bag = request.session.get('bag', {})
+
+    # Check if the quantity is empty or not a valid integer
+    if not quantity_input or not quantity_input.isdigit():
+        messages.error(request, "Invalid quantity. Please enter a valid number.")
+        return redirect(reverse('view_bag'))
+    
+    quantity = int(quantity_input)
 
     if quantity > 0:
         bag[item_id] = quantity

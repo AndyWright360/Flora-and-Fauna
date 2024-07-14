@@ -25,6 +25,10 @@ The goal of this approach is to deliver the highest quality website achievable w
 - [**Automated Testing**](#automated-testing)
   - [**Django Testing**](#django-testing)
   - [**Code Validation**](#code-validation)
+    - [**W3C HTML Validation**](#w3c-html-validation)
+    - [**W3C CSS Validation**](#w3c-css-validation)
+    - [**JSHint JavaScript Validation**](#jshint-javascript-validation)
+    - [**Python Validation**](#python-validation)
   - [**WCAG Colour Contrast Checker**](#wcag-colour-contrast-checker)
   - [**Lighthouse Testing**](#lighthouse-testing)
 - [**Manual Testing**](#manual-testing)
@@ -94,3 +98,202 @@ I aimed to follow a test-driven development (TDD) approach, writing automated te
 <img src="media/docs/coverage-wishlist.jpg">
 
 </details>
+
+---
+
+#### **W3C HTML Validation**
+
+[W3C](https://validator.w3.org/) was used to validate the HTML code.
+
+| Page | Results |
+| :--- | :--- |
+| index.html | ![HTML Validation Result]() |
+| products.html | ![HTML Validation Result]() |
+| product_detail.html | ![HTML Validation Result]() |
+| bag.html | ![HTML Validation Result]() |
+| checkout.html | ![HTML Validation Result]() |
+| checkout_success.html | ![HTML Validation Result]() |
+| profile.html | ![HTML Validation Result]() |
+| add_review.html | ![HTML Validation Result]() |
+| edit_review.html | ![HTML Validation Result]() |
+| add_product.html | ![HTML Validation Result]() |
+| edit_product.html | ![HTML Validation Result]() |
+
+I encountered several warnings while validating my HTML. These included missing `alt` tags for images, `<p>` elements nested within `<span>` elements, and duplicate `id` tags within the same document. Additionally, there were a few other minor issues that needed correction. Once these problems were addressed, all pages passed validation without any issues.
+
+#### **W3C CSS Validation**
+
+[W3C](https://jigsaw.w3.org/css-validator/) was used to validate the CSS code.
+
+| Page | Results |
+| :--- | :--- |
+| base.css | ![CSS Validation Result](media/docs/css-results.jpg) |
+| checkout.css | ![CSS Validation Result](media/docs/css-results.jpg) |
+
+![CSS validation warning](media/docs/css-warnings.jpg)
+
+The following warnings were flagged, all related to the use of vendor extensions, which I opted to disregard. I also replaced the deprecated `clip` property with the more commonly used `clip-path`.
+
+#### **JSHint JavaScript Validation**
+
+[JSHint](https://jshint.com/) was used to validate the JavaScript code.
+
+| Page | Results |
+| :--- | :--- |
+| Quantity Input Script | ![JavaScript Validation Result](media/docs/js-validation-qty-input.jpg) |
+| Update Bag Script | ![JavaScript Validation Result](media/docs/js-validation-update-bag.jpg) |
+| New Image Script | ![JavaScript Validation Result](media/docs/js-validation-new-image.jpg) |
+| Return To Top Button Script | ![JavaScript Validation Result](media/docs/js-validation-return-to-top-btn.jpg) |
+| Wishlist Toast Script | ![JavaScript Validation Result](media/docs/js-validation-wishlist-toast.jpg) |
+| Add/Remove Wishlist Item Script | ![JavaScript Validation Result](media/docs/js-validation-add-remove-wishlist.jpg) |
+| Product Rage Tooltip Script | ![JavaScript Validation Result](media/docs/js-validation-tooltip.jpg) |
+| Product Sort Script | ![JavaScript Validation Result](media/docs/js-validation-product-sorting.jpg) |
+| Profile Form Update Script | ![JavaScript Validation Result](media/docs/js-validation-profile-form.jpg) |
+| Product Review Rating Script | ![JavaScript Validation Result](media/docs/js-validation-rating.jpg) |
+| stripe_elements.js | ![JavaScript Validation Result](media/docs/js-validation-stripe-elements.jpg) |
+
+The only warnings found during JavaScript linting were missing semi-colons. After addressing these, all scripts passed without any issues
+
+#### **Python Validation**
+
+[Code Institute Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code.
+
+<details><summary>Main Directory</summary>
+
+| Page | Results |
+| :--- | :--- |
+| `Main` |
+| custom_storages.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| manage.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+
+</details>
+
+<details><summary>Project Directory</summary>
+
+| Page | Results |
+| :--- | :--- |
+| `Flora_and_Fauna` |
+| asgi.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| sttings.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| urls.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| wsgi.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+
+</details>
+
+<details><summary>Home App Directory</summary>
+
+| Page | Results |
+| :--- | :--- |
+| `Home` |
+| apps.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| urls.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+
+</details>
+
+<details><summary>Products App Directory</summary>
+
+| Page | Results |
+| :--- | :--- |
+| `Products` |
+| admin.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| apps.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| forms.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| models.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_forms.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_models.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| urls.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| widgets.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+
+</details>
+
+<details><summary>Bag App Directory</summary>
+
+| Page | Results |
+| :--- | :--- |
+| `Bag` |
+| bag_tools.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| apps.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| contexts.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| urls.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+
+</details>
+
+<details><summary>Checkout App Directory</summary>
+
+| Page | Results |
+| :--- | :--- |
+| `Checkout` |
+| admin.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| apps.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| forms.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| models.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| signals.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_forms.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_models.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| urls.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| webhook_handler.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| webhooks.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+
+</details>
+
+<details><summary>Profiles App Directory</summary>
+
+| Page | Results |
+| :--- | :--- |
+| `Profiles` |
+| apps.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| forms.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| models.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_forms.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_models.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| urls.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+
+</details>
+
+<details><summary>Reviews App Directory</summary>
+
+| Page | Results |
+| :--- | :--- |
+| `Reviews` |
+| admin.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| apps.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| forms.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| models.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_forms.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_models.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| urls.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+
+</details>
+
+<details><summary>Wishlist App Directory</summary>
+
+| Page | Results |
+| :--- | :--- |
+| `Wishlist` |
+| admin.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| apps.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| models.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_models.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| test_views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| urls.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+| views.py | ![Python Validation Result](media/docs/python-validation-results.jpg) |
+
+</details>
+
+<br>
+I needed to make several adjustments to align my code with PEP8 standards. These changes mainly involved reformatting, such as shortening line lengths and eliminating excess white space. Once these modifications were applied, all pages passed without error.
+
+---
+

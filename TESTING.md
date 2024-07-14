@@ -409,3 +409,29 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 | I want all admin controls to be simple to find and use. | Each product features `Edit` and `Delete` buttons for straightforward management. The option to add a product is accessible via the user icon in the fixed navbar, ensuring it's conveniently available from any page on the site. | ![User story results](media/docs/stories-admin-features.jpg) |
 
 ---
+
+### **Bugs & Fixes**
+
+**Carousel Button Bug**
+
+![Carousel Button Bug](media/docs/bug-carousel-button.jpg)
+
+I encountered this bug when I first viewed the site on my iPhone. It appears to be due to differences in how Safari and Chrome render certain properties. Specifically, the `ADD` button within the product carousel was displaying text vertically, which distorted the layout. I resolved this issue by changing the button’s display type to `flex` and explicitly setting both its height and width.
+
+**Logo Link Bug**
+
+![Logo Link Bug](media/docs/bug-logo-link.gif)
+
+Due to the navbar's design, the logo link became unclickable on medium screens. This problem occurred because the icons container for medium screen sizes was layered on top of the logo. Although the logo remained visible, users couldn't click it, which removed the link to the home page. To fix this, I added a `z-index` to the logo to ensure it was layered above the navigation icons.
+
+**Update Bag Bug**
+
+![Update Bag Bug](media/docs/bug-update-bag.gif)
+
+Since the quantity input field is an editable input, users could potentially remove the number and attempt to submit the form. This was not a problem on the product details page because the `ADD TO BAG` button serves as the form's submission. By marking the input field with the `required` attribute, the form is unable to be submitted without a valid quantity.
+
+However, on the Shopping Bag page, quantity updates are handled via JavaScript. This allowed users to delete the number input and attempt to update the quantity, which caused a server error when the backend received a null value instead of an integer.
+
+To fix this, I updated the `adjust_bag` view to check if the quantity input is valid. If not, the page reloads and displays a toast message to notify the user of the error.
+
+---

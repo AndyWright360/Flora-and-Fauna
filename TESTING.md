@@ -118,6 +118,9 @@ I aimed to follow a test-driven development (TDD) approach, writing automated te
 | edit_review.html | ![HTML Validation Result]() |
 | add_product.html | ![HTML Validation Result]() |
 | edit_product.html | ![HTML Validation Result]() |
+| signup.html | ![HTML Validation Result]() |
+| login.html | ![HTML Validation Result]() |
+| logout.html | ![HTML Validation Result]() |
 
 I encountered several warnings while validating my HTML. These included missing `alt` tags for images, `<p>` elements nested within `<span>` elements, and duplicate `id` tags within the same document. Additionally, there were a few other minor issues that needed correction. Once these problems were addressed, all pages passed validation without any issues.
 
@@ -335,5 +338,28 @@ Each product range is represented by a colour associated with its key ingredient
 ![Colour contrast results](media/docs/contrast-footer.jpg)
 
 The footer's colour scheme was selected to be distinct while maintaining consistency with the rest of the site. Similar to the navbar, a high contrast was prioritised to ensure it stands out clearly.
+
+---
+
+### **Lighthouse Testing**
+
+Lighthouse within Chrome Developer Tools was used to assess the website's performance, accessibility, adherence to best practices, and SEO.
+
+| Page | Desktop Results | Mobile Results |
+| :--- | :--- | :--- |
+| index.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| products.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| product_detail.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| bag.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| checkout.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| checkout_success.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| profile.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| add_review.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| edit_review.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| add_product.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| edit_product.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| signup.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| login.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| logout.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
 
 ---

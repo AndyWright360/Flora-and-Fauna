@@ -49,15 +49,11 @@ def edit_review(request, review_id):
     """
     review = get_object_or_404(Review, pk=review_id)
     product = review.product
-    referer_url = request.META.get('HTTP_REFERER')
 
     if request.user != review.user:
         messages.error(
             request, "You don't have authorisation to edit this review.")
-        if referer_url and '/reviews/' not in referer_url:
-            return redirect(referer_url)
-        else:
-            return redirect(reverse('product_detail', args=[product.id]))
+        return redirect(reverse('product_detail', args=[product.id]))
 
     if request.method == "POST":
         form = ReviewForm(request.POST, instance=review)
@@ -68,19 +64,16 @@ def edit_review(request, review_id):
             product.average_rating()
 
             messages.success(request, "Your review has been updated.")
-            if referer_url and '/reviews/' not in referer_url:
-                return redirect(referer_url)
-            else:
-                return redirect(reverse('product_detail', args=[product.id]))
-
+            return redirect(reverse('profile'))
     else:
         form = ReviewForm(instance=review)
+
     template = 'reviews/edit_review.html'
     context = {
         'form': form,
         'review': review,
         'product': product
-        }
+    }
     return render(request, template, context)
 
 
@@ -91,16 +84,11 @@ def delete_review(request, review_id):
     """
     review = get_object_or_404(Review, pk=review_id)
     product = review.product
-    referer_url = request.META.get('HTTP_REFERER')
 
-    if not request.user.is_superuser:
-        if request.user != review.user:
-            messages.error(
-                request, "You don't have authorisation to edit this review.")
-            if referer_url and '/reviews/' not in referer_url:
-                return redirect(referer_url)
-            else:
-                return redirect(reverse('product_detail', args=[product.id]))
+    if request.user != review.user:
+        messages.error(
+            request, "You don't have authorisation to edit this review.")
+        return redirect(reverse('product_detail', args=[product.id]))
 
     review.delete()
 
@@ -108,7 +96,4 @@ def delete_review(request, review_id):
     product.average_rating()
 
     messages.success(request, "Your review has been deleted.")
-    if referer_url and '/reviews/' not in referer_url:
-        return redirect(referer_url)
-    else:
-        return redirect(reverse('product_detail', args=[product.id]))
+    return redirect(reverse('profile'))

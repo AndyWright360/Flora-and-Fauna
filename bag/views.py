@@ -40,10 +40,17 @@ def adjust_bag(request, item_id):
 
     # Check if the quantity is empty or not a valid integer
     if not quantity_input or not quantity_input.isdigit():
-        messages.error(request, "Invalid quantity. Please enter a valid number.")
+        messages.error(
+            request, "Invalid quantity. Please enter a valid number.")
         return redirect(reverse('view_bag'))
-    
+
     quantity = int(quantity_input)
+
+    # Check if the quantity falls outside min/max range
+    if quantity < 0 or quantity > 99:
+        messages.error(
+            request, "Invalid quantity. Please enter a value between 0-99")
+        return redirect(reverse('view_bag'))
 
     if quantity > 0:
         bag[item_id] = quantity

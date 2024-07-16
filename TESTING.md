@@ -107,20 +107,20 @@ I aimed to follow a test-driven development (TDD) approach, writing automated te
 
 | Page | Results |
 | :--- | :--- |
-| index.html | ![HTML Validation Result]() |
-| products.html | ![HTML Validation Result]() |
-| product_detail.html | ![HTML Validation Result]() |
-| bag.html | ![HTML Validation Result]() |
-| checkout.html | ![HTML Validation Result]() |
-| checkout_success.html | ![HTML Validation Result]() |
-| profile.html | ![HTML Validation Result]() |
-| add_review.html | ![HTML Validation Result]() |
-| edit_review.html | ![HTML Validation Result]() |
-| add_product.html | ![HTML Validation Result]() |
-| edit_product.html | ![HTML Validation Result]() |
-| signup.html | ![HTML Validation Result]() |
-| login.html | ![HTML Validation Result]() |
-| logout.html | ![HTML Validation Result]() |
+| index.html | ![HTML Validation Result](media/docs/html-validation-index.jpg) |
+| products.html | ![HTML Validation Result](media/docs/html-validation-products.jpg) |
+| product_detail.html | ![HTML Validation Result](media/docs/html-validation-product-detail.jpg) |
+| bag.html | ![HTML Validation Result](media/docs/html-validation-bag.jpg) |
+| checkout.html | ![HTML Validation Result](media/docs/html-validation-checkout.jpg) |
+| checkout_success.html | ![HTML Validation Result](media/docs/html-validation-checkout-success.jpg) |
+| profile.html | ![HTML Validation Result](media/docs/html-validation-profile.jpg) |
+| add_review.html | ![HTML Validation Result](media/docs/html-validation-add-review.jpg) |
+| edit_review.html | ![HTML Validation Result](media/docs/html-validation-edit-review.jpg) |
+| add_product.html | ![HTML Validation Result](media/docs/html-validation-add-product.jpg) |
+| edit_product.html | ![HTML Validation Result](media/docs/html-validation-edit-product.jpg) |
+| signup.html | ![HTML Validation Result](media/docs/html-validation-signup.jpg) |
+| login.html | ![HTML Validation Result](media/docs/html-validation-login.jpg) |
+| logout.html | ![HTML Validation Result](media/docs/html-validation-logout.jpg) |
 
 I encountered several warnings while validating my HTML. These included missing `alt` tags for images, `<p>` elements nested within `<span>` elements, and duplicate `id` tags within the same document. Additionally, there were a few other minor issues that needed correction. Once these problems were addressed, all pages passed validation without any issues.
 

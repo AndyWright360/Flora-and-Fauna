@@ -387,7 +387,7 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 | I want to be able to add multiple products and quantities to my shopping bag. | On the product detail page, users can specify the quantity of a product they wish to add to their bag using the quantity input field. The bag can hold multiple different products, allowing users to select and add a variety of items according to their preferences. | ![User story results](media/docs/stories-quantity.jpg) |
 | I want to edit my shopping bag if I change my mind. | The shopping bag page enables users to adjust the quantity of items or remove them from their bag. Each item features `Update` and `Remove` buttons for these actions. | ![User story results](media/docs/stories-update-bag.jpg) |
 | I want to know what I will be charged for delivery. | Each time a user adds an item to their bag, a message displays the additional amount needed to qualify for free delivery. The bag page provides a detailed breakdown of the order cost, including the `Bag Total`, `Delivery Cost`, and `Grand Total`. This ensures the user is fully aware of the cost before proceeding to checkout.  | ![User story results](media/docs/stories-order-total.jpg) |
-| I want the option to purchase products without creating an account. | Users can purchase products without creating an account. However, creating an account offers additional features, such as a profile page to save contact details, the ability to submit product reviews, and the option to add products to a wishlist. | ![User story results](media/docs/stories-checkout.jpg) |
+| I want the option to purchase products without creating an account. | Users can purchase products without creating an account. However, creating an account offers additional features, such as a profile page to save contact details, the ability to submit product reviews, and the option to add products to a Wishlist. | ![User story results](media/docs/stories-checkout.jpg) |
 
 **Account Holder**
 
@@ -398,7 +398,7 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 | I want to update and save my personal information. | The form on the profile page allows users to update and save their delivery information. This information will prepopulate the checkout form during their next purchase, ensuring a faster and more convenient checkout process. | ![User story results](media/docs/stories-user-details.jpg) |
 | I want to leave reviews of products. | After creating an account, users can submit product reviews from the product details page. This allows them to share feedback and opinions about the product with other users. | ![User story results](media/docs/stories-add-review.jpg) |
 | I want to edit and delete my reviews. | A list of the user’s submitted reviews is displayed on their profile page. From there, the user can also edit or delete a review. | ![User story results](media/docs/stories-update-review.jpg) |
-| I want to add and remove products from my wishlist. | For logged-in users, each product card contains a wishlist button. This provides a quick and convenient way to add any product to their wishlist. A notification is displayed on screen to inform the user if a product has been added to or removed from their wishlist. The button icon also changes to a solid heart as a visual reminder of which products are currently in their wishlist. The products in the user’s wishlist are displayed on their profile page. | ![User story results](media/docs/stories-wishlist.jpg) |
+| I want to add and remove products from my Wishlist. | For logged-in users, each product card contains a Wishlist button. This provides a quick and convenient way to add any product to their Wishlist. A notification is displayed on screen to inform the user if a product has been added to or removed from their Wishlist. The button icon also changes to a solid heart as a visual reminder of which products are currently in their Wishlist. The products in the user’s Wishlist are displayed on their profile page. | ![User story results](media/docs/stories-wishlist.jpg) |
 
 **Administrator**
 
@@ -415,7 +415,7 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 Full testing was performed on the following devices:
 
 - Laptop:
-  - MSI Thin GF63 15 inch screen
+  - MSI Thin GF63 15-inch screen
 - Mobile Device:
   - iPhone XR
 
@@ -429,167 +429,139 @@ The following browsers were tested using each device:
 
 Friends and family also tested the website using a variety of devices. No issues were reported.
 
-| Feature | Expected Outcome | Testing Performed  | Pass/Fail |
+| Feature | Expected Outcome | Testing Performed | Pass/Fail |
 | :--- | :--- | :--- | :--- |
 | `Navbar` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
+| Max Width | Reaches maximum width at 1600px | View page using Chrome DevTools and expand width beyond 1600px |  |
+| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome DevTools and reduce width to 320px |  |
 | Logo Link | Clicking the logo navigates to the Home page | Click the logo |  |
 | Hover Effect | Navigation links and icons become bold when hovered over with mouse | Hover over the navigation links and icons |  |
-| Navigation Menus | Clicking the navigation links and `Account` icon will open the link options | Click on each navigation link and the `Account` icon  |  |
-| Navigation Menu Hover Effect | Hovering over a navigation link from the dropdown menu will highlight the option | Opened each navigation dropdown menu and overed over each option |  |
-| Seach Bar Focus | When focusing within the search bar the boarder triggers its focus state | Click inside the seach bar input |  |
+| Navigation Menus | Clicking the navigation links and `Account` icon opens the link options | Click each navigation link and the `Account` icon |  |
+| Navigation Menu Hover Effect | Hovering over a navigation link in the dropdown menu highlights the option | Open each navigation dropdown menu and hover over each option |  |
+| Search Bar Focus | When focusing within the search bar, the border triggers its focus state | Click inside the search bar input |  |
 | Search Icon Hover Effect | Hovering over the search bar button icon triggers its hover state | Hover the mouse over the search bar button icon |  |
 | Bag Total | The Bag icon displays the current bag total value | Add and remove products from the bag and check the displayed value is correct |  |
 | Navigation Links | Each navigation link loads the expected page when clicked | Click each navigation link to check the relevant page is loaded |  |
-| Search 'Empty Input' | A toast message will notify the user that they didn't enter any search criteria | Click the search button with an empty input |  |
-| Search 'No Results' | No products are displayed | Search for a key word not found in any product |  |
-| Search 'Results' | Only products relating to the search term will be displayed | Search for a key word that matches some products |  |
-| Side Nav Expands | When the side nav button is displayed, clicking it will reveal the navigation options | Click the side nav button |  |
+| Search 'Empty Input' | A toast message notifies the user that no search criteria were entered | Click the search button with an empty input |  |
+| Search 'No Results' | No products are displayed | Search for a keyword not found in any product |  |
+| Search 'Results' | Only products relating to the search term are displayed | Search for a keyword that matches some products |  |
+| Side Nav Expands | When the side nav button is displayed, clicking it reveals the navigation options | Click the side nav button |  |
 | Fixed Navbar | When scrolling down the page, the navbar remains fixed to the top of the screen | Scroll down the page |  |
 | `Footer` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
+| Max Width | Reaches maximum width at 1600px | View page using Chrome DevTools and expand width beyond 1600px |  |
+| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome DevTools and reduce width to 320px |  |
 | Hover Effect | Icons change colour when hovered over with mouse | Hover over the footer icons |  |
 | Navigation Links | Clicking the footer icons opens the relevant link in a new window | Click each footer icon |  |
 | `Home Page` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
+| Max Width | Reaches maximum width at 1600px | View page using Chrome DevTools and expand width beyond 1600px |  |
+| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome DevTools and reduce width to 320px |  |
 | Hover Effect | 'Explore Our Garden!' link becomes bold when hovered over with mouse | Hover over the navigation link |  |
 | Navigation Link | Clicking the 'Explore Our Garden!' link navigates to the products page | Click the navigation link |  |
 | `Products Page` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
+| Max Width | Reaches maximum width at 1600px | View page using Chrome DevTools and expand width beyond 1600px |  |
+| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome DevTools and reduce width to 320px |  |
 | Hover Effects | Hovering over buttons and navigation links triggers their hover state | Hover over buttons and navigation links |  |
 | Back To Top Button | Clicking the back to top button takes the user back to the top of the page | Scroll to the bottom of the page and click the button |  |
 | Range Link Tooltip | The tooltip message is displayed when hovering over product range links | Hover over product range links |  |
-| Range Link Navigation | Clicking the product range link displays all prodoucts from the range | Click each unique product range link option |  |
+| Range Link Navigation | Clicking the product range link displays all products from the range | Click each unique product range link option |  |
 | Add Product Button | Clicking the `ADD` button for a product adds a quantity of 1 to the bag | Click the `ADD` product button |  |
-| Update Bag Toast | Adding a priduct to the bag displays a confirmation toast message along with the current products in the bag | Add a product to the bag |  |
+| Update Bag Toast | Adding a product to the bag displays a confirmation toast message along with the current products in the bag | Add a product to the bag |  |
 | View Product Button | Clicking the `VIEW` button navigates to the product detail page for the corresponding product | Click the `VIEW` product button |  |
 | Product Sorting | Selecting an option from the product sort dropdown menu orders the displayed products according to the selection | Select each option from the product sorting dropdown menu |  |
 | Wishlist Button Displayed | The Wishlist button is only displayed for users that have created an account | View the page while signed out and again while signed in |  |
 | Wishlist Toast | A toast message is displayed when a product is added or removed from the Wishlist | Click the Wishlist button to add and remove a product |  |
-| Wishlist Button Display Change | When adding a product to the Wishlist the button icon alters to become a solid heart | Click the Wishlist button to add and remove a product |  |
+| Wishlist Button Display Change | When adding a product to the Wishlist, the button icon changes to a solid heart | Click the Wishlist button to add and remove a product |  |
 | Admin Features | The options to edit and delete products are only displayed for admin users | View the page while signed out and again while signed in as an admin |  |
 | Edit Product | Clicking the `Edit` button on a product navigates to the edit product page | Click the `Edit` button for a product |  |
 | Delete Modal | Clicking the `Delete` button for a product triggers the delete modal | Click the `Delete` button for a product |  |
-| Delete Modal 'Cancel' | Clicking the `NO` button in the delete modal will cancel the deletion | Click the `NO` button in the delete modal |  |
-| Delete Modal 'Confirm' | Clicking the `YES` button in the delete modal will delete the product | Click the `YES` button in the delete modal |  |
+| Delete Modal 'Cancel' | Clicking the `NO` button in the delete modal cancels the deletion | Click the `NO` button in the delete modal |  |
+| Delete Modal 'Confirm' | Clicking the `YES` button in the delete modal deletes the product | Click the `YES` button in the delete modal |  |
 | `Product Detail Page` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
+| Max Width | Reaches maximum width at 1600px | View page using Chrome DevTools and expand width beyond 1600px |  |
+| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome DevTools and reduce width to 320px |  |
 | Hover Effects | Hovering over buttons and navigation links triggers their hover state | Hover over buttons and navigation links |  |
 | Back To Top Button | Clicking the back to top button takes the user back to the top of the page | Scroll to the bottom of the page and click the button |  |
 | Range Link Navigation | Clicking the product range link navigates to the products page and displays all products in that range | Click the product range link |  |
 | Keep Shopping | Clicking the `KEEP SHOPPING` button navigates to the products page | Click the `KEEP SHOPPING` button |  |
 | Wishlist Button Displayed | The Wishlist button is only displayed for users that have created an account | View the page while signed out and again while signed in |  |
 | Wishlist Toast | A toast message is displayed when a product is added or removed from the Wishlist | Click the Wishlist button to add and remove a product |  |
-| Wishlist Button Display Change | When adding a product to the Wishlist the button icon alters to become a solid heart | Click the Wishlist button to add and remove a product |  |
-| Quantity Decrement Button 'Disable' | The quantity decrement button will disable when the input value reaches 1 | Reduce quantity input value to 1 |  |
-| Quantity Increment Button 'Disable' | The quantity increment button will disable when the input value reaches 99 | Increase quantity input value to 99 |  |
-| Quantity Input 'Required' | The quantity input will not allow users to submit without a value | Remove the quantity input value ant attempt to submit the form |  |
-| Quantity Input 'Min/Max Value' | The quantity input will not allow users to submit with a value outside the range of 1-99 | Attempt to submit the form with a value less than 1 and greater than 99 |  |
-| Add To Bag Button | When adding a valid quantity to the bag a toast message will confirm the action to the user and display the bag | Add a valid quantity of the product to the bag |  |
+| Wishlist Button Display Change | When adding a product to the Wishlist, the button icon changes to a solid heart | Click the Wishlist button to add and remove a product |  |
+| Quantity Decrement Button 'Disable' | The quantity decrement button disables when the input value reaches 1 | Reduce quantity input value to 1 |  |
+| Quantity Increment Button 'Disable' | The quantity increment button disables when the input value reaches 99 | Increase quantity input value to 99 |  |
+| Quantity Input 'Required' | The quantity input does not allow users to submit without a value | Remove the quantity input value and attempt to submit the form |  |
+| Quantity Input 'Min/Max Value' | The quantity input does not allow users to submit with a value outside the range of 1-99 | Attempt to submit the form with a value less than 1 or greater than 99 |  |
+| Add To Bag Button | Adding a valid quantity to the bag triggers a toast message to confirm the action and display the bag | Add a valid quantity of the product to the bag |  |
 | Add Review Button Displayed | The `ADD REVIEW` button is only displayed for users that have created an account | View the page while signed out and again while signed in |  |
-| Add Review Navigation | Clicking the `ADD REVIEW` button will navigate the user to the add review page for the product | Click the `ADD REVIEW` button |  |
-| Product Range Carousel | Clicking the carousel arrow buttons will scroll through the other range of products from the same range | Click the arrow button in the other products carousel |  |
-| Add Other Product  | Clicking the `ADD` button for a product displayed in the other products from this range section will add a quantity of 1 for that product  | Click the `ADD` button for another product in the range |  |
-| View Other Product  | Clicking the `VIEW` button for a product displayed in the other products from this range section will navigate to that products detail page | Click the `VIEW` button for another product in the range |  |
+| Add Review Navigation | Clicking the `ADD REVIEW` button navigates the user to the add review page for the product | Click the `ADD REVIEW` button |  |
+| Product Range Carousel | Clicking the carousel arrow buttons scrolls through the other range of products from the same range | Click the arrow button in the other products carousel |  |
+| Add Other Product | Clicking the `ADD` button for a product displayed in the other products from this range section adds a quantity of 1 for that product | Click the `ADD` button for another product in the range |  |
+| View Other Product | Clicking the `VIEW` button for a product displayed in the other products from this range section navigates to that product's detail page | Click the `VIEW` button for another product in the range |  |
 | `Bag Page` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
+| Max Width | Reaches maximum width at 1600px | View page using Chrome DevTools and expand width beyond 1600px |  |
+| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome DevTools and reduce width to 320px |  |
 | Hover Effects | Hovering over buttons and navigation links triggers their hover state | Hover over buttons and navigation links |  |
-| Empty Bag | Opening the bag page without any items in your bag displays a message that the bag is empty | Go to the bag page without any items in the bag |  |
-| Update Bag | Adjusting the quantity in the bag and clicking the `Update` button will trigger a toast message and amend the quantity | Adjust the quantity of a product and click the `Update` button |  |
-| Remove Item | Clicking the `Remove` button will trigger a toast message and remove the product from the bag | Click the `Remove` button for a product |  |
-| Remove Item by Updating Quantity | Updating the quantity of an item to 0 will remove the item from the bag | Alter the quantity of an item to 0 and click the `Update` button |  |
-| Prevent Empty Quantity Update | Removing the quantity input value and attempting to update the bag will trigger an error message notifying the user | Remove the qunatity input value and attempt to update the bag item |  |
-| Prevent Quantity Value Outside 0-99 | Attempting to update a bag item with a value outside the range of 0-99 will trigger an error message | Add a quantity value less than 0 and greater than 99 and attempt to update the bag |  |
-| Grand Total | The grand total is calculated based on the sum of the bag total and delivery cost  | Alter the value of the bag items and check the grand total is calculated correctly |  |
-| Keep Shopping | Clicking the `KEEP SHOPPING` button navigates to the products page | Click the `KEEP SHOPPING` button |  |
-| Secure Checkout | Clicking the `SECURE CHECKOUT` button navigates to the checkout page | Click the `SECURE CHECKOUT` button |  |
+| Back To Top Button | Clicking the back to top button takes the user back to the top of the page | Scroll to the bottom of the page and click the button |  |
+| Product Links | Clicking the product title or image navigates to the product detail page | Click each product title and image |  |
+| Quantity Decrement Button 'Disable' | The quantity decrement button disables when the input value reaches 1 | Reduce quantity input value to 1 |  |
+| Quantity Increment Button 'Disable' | The quantity increment button disables when the input value reaches 99 | Increase quantity input value to 99 |  |
+| Quantity Input 'Required' | The quantity input does not allow users to submit without a value | Remove the quantity input value and attempt to submit the form |  |
+| Quantity Input 'Min/Max Value' | The quantity input does not allow users to submit with a value outside the range of 1-99 | Attempt to submit the form with a value less than 1 or greater than 99 |  |
+| Update Button | Clicking the `UPDATE` button updates the bag total to reflect the input quantity | Add/remove a quantity and click the `UPDATE` button |  |
+| Update Toast | Updating the bag displays a confirmation toast message and the updated total | Add/remove a quantity and click the `UPDATE` button |  |
+| Remove Product | Clicking the `REMOVE` button removes the product from the bag | Click the `REMOVE` button for a product in the bag |  |
+| Checkout Button | Clicking the `CHECKOUT` button navigates to the checkout page | Click the `CHECKOUT` button |  |
+| `Wishlist Page` |
+| Max Width | Reaches maximum width at 1600px | View page using Chrome DevTools and expand width beyond 1600px |  |
+| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome DevTools and reduce width to 320px |  |
+| Hover Effects | Hovering over buttons and navigation links triggers their hover state | Hover over buttons and navigation links |  |
+| Back To Top Button | Clicking the back to top button takes the user back to the top of the page | Scroll to the bottom of the page and click the button |  |
+| Add Product | Clicking the `ADD` button for a product in the Wishlist adds a quantity of 1 to the bag | Click the `ADD` button for a product in the Wishlist |  |
+| View Product | Clicking the `VIEW` button for a product in the Wishlist navigates to the product detail page | Click the `VIEW` button for a product in the Wishlist |  |
+| Remove Product | Clicking the `REMOVE` button removes the product from the Wishlist | Click the `REMOVE` button for a product in the Wishlist |  |
 | `Checkout Page` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
+| Max Width | Reaches maximum width at 1600px | View page using Chrome DevTools and expand width beyond 1600px |  |
+| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome DevTools and reduce width to 320px |  |
 | Hover Effects | Hovering over buttons and navigation links triggers their hover state | Hover over buttons and navigation links |  |
-| Adjust Bag Button | Clicking the `ADJUST BAG` button navigates to the bag page | Click the `ADJUST BAG` button |  |
-| Grand Total | The grand total is calculated based on the sum of the bag total and delivery cost  | Check that the value of the grand total matches that of the bag page |  |
-| Form 'Required Fields' | All required input fields are marked with a '*' and the form can't be submitted without filling out all these fields | Attempt to submit the form without filling out in the required fields |  |
-| Form 'Validation' | The inputs are validated before allowing the form to be submitted | Attempt to submit the form with invalid details |  |
-| Save Delivery Info | Signed in users can save their delivery info by selecting the checkbox, this data is viewable on their profile page | Select the checkbox after inputting delivery info and check it's saved on the profile page |  |
-| `Checkout Success Page` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
+| Back To Top Button | Clicking the back to top button takes the user back to the top of the page | Scroll to the bottom of the page and click the button |  |
+| Back To Bag Button | Clicking the `BACK TO BAG` button navigates back to the bag page | Click the `BACK TO BAG` button |  |
+| Checkout Toast | An error toast message displays when trying to checkout with an empty bag | Checkout with an empty bag |  |
+| Quantity Decrement Button 'Disable' | The quantity decrement button disables when the input value reaches 1 | Reduce quantity input value to 1 |  |
+| Quantity Increment Button 'Disable' | The quantity increment button disables when the input value reaches 99 | Increase quantity input value to 99 |  |
+| Quantity Input 'Required' | The quantity input does not allow users to submit without a value | Remove the quantity input value and attempt to submit the form |  |
+| Quantity Input 'Min/Max Value' | The quantity input does not allow users to submit with a value outside the range of 1-99 | Attempt to submit the form with a value less than 1 or greater than 99 |  |
+| Update Button | Clicking the `UPDATE` button updates the bag total to reflect the input quantity | Add/remove a quantity and click the `UPDATE` button |  |
+| Update Toast | Updating the bag displays a confirmation toast message and the updated total | Add/remove a quantity and click the `UPDATE` button |  |
+| Remove Product | Clicking the `REMOVE` button removes the product from the bag | Click the `REMOVE` button for a product in the bag |  |
+| Total Update | Removing a product updates the bag total | Click the `REMOVE` button for a product in the bag |  |
+| Product Links | Clicking the product title or image navigates to the product detail page | Click each product title and image |  |
+| Bag Summary | All required information is displayed in the order summary | View the summary order section |  |
+| Payment Method | All required payment methods are displayed | View the payment method section |  |
+| Delivery Option | All delivery options are displayed | View the delivery method section |  |
+| Invalid Card | An error toast message displays when using invalid card details | Attempt to checkout using invalid card details |  |
+| Confirm Order Button | Clicking the `CONFIRM ORDER` button confirms the order and navigates to the order summary page | Click the `CONFIRM ORDER` button |  |
+| Order Confirmation Toast | An error toast message displays when there is an issue confirming the order | Submit the order with missing details |  |
+| `Review Page` |
+| Max Width | Reaches maximum width at 1600px | View page using Chrome DevTools and expand width beyond 1600px |  |
+| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome DevTools and reduce width to 320px |  |
 | Hover Effects | Hovering over buttons and navigation links triggers their hover state | Hover over buttons and navigation links |  |
-| Adjust Bag Button | Clicking the `ADJUST BAG` button navigates to the bag page | Click the `ADJUST BAG` button |  |
-| Keep Shopping | Clicking the `KEEP SHOPPING` button navigates to the products page | Click the `KEEP SHOPPING` button |  |
-| `Profile Page` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
-| Authentication | Users attempting to access this page without being signed in will be redirected to the login page | Attempt to access the page via url when logged out |  |
+| Back To Top Button | Clicking the back to top button takes the user back to the top of the page | Scroll to the bottom of the page and click the button |  |
+| Add Review Button | Clicking the `ADD REVIEW` button navigates to the add review page | Click the `ADD REVIEW` button |  |
+| Edit Review Button | Clicking the `EDIT` button navigates to the edit review page | Click the `EDIT` button |  |
+| Delete Review Button | Clicking the `DELETE` button triggers the delete modal | Click the `DELETE` button |  |
+| Delete Modal 'Cancel' | Clicking the `NO` button in the delete modal cancels the deletion | Click the `NO` button in the delete modal |  |
+| Delete Modal 'Confirm' | Clicking the `YES` button in the delete modal deletes the review | Click the `YES` button in the delete modal |  |
+| Review Details | The review displays the correct username, date, rating, and review content | View all reviews |  |
+| Review Toast | A toast message is displayed when a review is successfully added, updated, or deleted | Add, update, and delete a review |  |
+| `Add/Edit Review Page` |
+| Max Width | Reaches maximum width at 1600px | View page using Chrome DevTools and expand width beyond 1600px |  |
+| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome DevTools and reduce width to 320px |  |
 | Hover Effects | Hovering over buttons and navigation links triggers their hover state | Hover over buttons and navigation links |  |
-| Saved Delivery Info | If saved from a previous order the users delivery info will be displayed | Place an order for checkout and save the delivery details |  |
-| Update Delivery Info | Users can update their delivery info by altering inputs and clicking the `UPDATE INFORMATION` button | Alter the delivery information and click the `UPDATE INFORMATION` button |  |
-| Order History | Full order details can by viewed by selecting an order number link from the order history list | Click an order number from an order in the order history |  |
-| Edit Review | Clicking the `EDIT` button on a review navigates to the edit review page | Click the `EDIT` button for a review |  |
-| Delete Modal | Clicking the `DELETE` button for a review triggers the delete modal | Click the `DELETE` button for a review |  |
-| Delete Modal 'Cancel' | Clicking the `NO` button in the delete modal will cancel the deletion | Click the `NO` button in the delete modal |  |
-| Delete Modal 'Confirm' | Clicking the `YES` button in the delete modal will delete the review | Click the `YES` button in the delete modal |  |
-| Wishlist Carousel | Clicking the carousel arrow buttons will scroll through products in the users Wishlist | Click the arrow button in the Wishlist carousel |  |
-| Add Wishlist Product  | Clicking the `ADD` button for a product displayed in the Wishlist section will add a quantity of 1 for that product  | Click the `ADD` button for a Wishlist product |  |
-| View Wishlist Product  | Clicking the `VIEW` button for a product displayed in the Wishlist section will navigate to that products detail page | Click the `VIEW` button for a product in the Wishlist |  |
-| `Add Review Page` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
-| Authentication | Users attempting to access this page without being signed in will be redirected to the login page | Attempt to access the page via url when logged out |  |
-| Hover Effects | Hovering over buttons and navigation links triggers their hover state | Hover over buttons and navigation links |  |
-| Form 'Required Fields' | All required input fields are marked with a '*' and the form can't be submitted without filling out all these fields | Attempt to submit the form without filling out in the required fields |  |
-| Form 'Validation' | The inputs are validated before allowing the form to be submitted | Attempt to submit the form with invalid details |  |
-| Rating System | When a user clicks a star, all the previous stars are also highlighted | Click each star to check they display correctly |  |
-| Cancel Button | Clicking the `CANCEL` button redirects the user back to the relevant product detail page | Click the `CANCEL` button |  |
-| Submit Button | If the input fields are valid the `SUBMIT` button will redirect the user back to the relavant product detail page | Submit the form with valid details |  |
-| `Edit Review Page` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
-| Authentication | Users attempting to access this page without being signed in will be redirected to the login page | Attempt to access the page via url when logged out |  |
-| Hover Effects | Hovering over buttons and navigation links triggers their hover state | Hover over buttons and navigation links |  |
-| Form 'Required Fields' | All required input fields are marked with a '*' and the form can't be submitted without filling out all these fields | Attempt to submit the form without filling out in the required fields |  |
-| Form 'Validation' | The inputs are validated before allowing the form to be submitted | Attempt to submit the form with invalid details |  |
-| Rating System | When a user clicks a star, all the previous stars are also highlighted | Click each star to check they display correctly |  |
-| Cancel Button | Clicking the `CANCEL` button redirects the user back to their profile page | Click the `CANCEL` button |  |
-| Submit Button | If the input fields are valid the `SUBMIT` button will redirect the user back to their profile page | Submit the form with valid details |  |
-| `Add Product Page` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
-| Authentication | Users attempting to access this page without being signed in will be redirected to the login page | Attempt to access the page via url when logged out |  |
-| Authorisation | Users attempting to access this page without admin permissions will be notified that that're unable to access the page via a toast message | Attempt to access the page via url when logged in as a user without admin privelages |  |
-| Hover Effects | Hovering over buttons and navigation links triggers their hover state | Hover over buttons and navigation links |  |
-| Form 'Required Fields' | All required input fields are marked with a '*' and the form can't be submitted without filling out all these fields | Attempt to submit the form without filling out in the required fields |  |
-| Form 'Validation' | The inputs are validated before allowing the form to be submitted | Attempt to submit the form with invalid details |  |
-| Select Image Button | When selecting an image file for the product a message will display the file name selcted | Select an image file for the priduct |  |
-| Cancel Button | Clicking the `CANCEL` button redirects the user back to the products page | Click the `CANCEL` button |  |
-| Submit Button | If the input fields are valid the `SUBMIT` button will redirect the user back products page | Submit the form with valid details |  |
-| `Sign Up Page` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
-| Hover Effects | Hovering over buttons and navigation links triggers their hover state | Hover over buttons and navigation links |  |
-| Form 'Required Fields' | All input fields are required, preventing the form from being submitted without filling out all fields | Attempt to submit the form without filling out in the required fields |  |
-| Form 'Validation' | The inputs are validated before allowing the form to be submitted | Attempt to submit the form with invalid details |  |
-| Back To Login Button | Clicking the `BACK TO LOGIN` button will redirect the user to the sign in page | Click the `BACK TO LOGIN` button |  |
-| `Sign In Page` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
-| Hover Effects | Hovering over buttons and navigation links triggers their hover state | Hover over buttons and navigation links |  |
-| Form 'Required Fields' | All input fields are required, preventing the form from being submitted without filling out all fields | Attempt to submit the form without filling out in the required fields |  |
-| Check Username/Password | If either the username or password is incorrect the user will be unable to login | Attempt to login with invalid details |  |
-| Home Button | Clicking the `HOME` button will redirect the user to the home page | Click the `HOME` button |  |
-| `Logout` |
-| Max Width | Reaches maximum width at 1600px | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | All elements can be reduced to a screen width of 320px without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
-| Hover Effects | Hovering over buttons and navigation links triggers their hover state | Hover over buttons and navigation links |  |
-| Cancel Button | Clicking the `CANCEL` button will redirect the user to the home page | Click the `CANCEL` button |  |
-| Sign Out Button | Clicking the `SIGN OUT` will loredirect the user to the home page and notify them of being successfully logged out | Logout by clicking the `SIGN OUT` button |  |
+| Back To Top Button | Clicking the back to top button takes the user back to the top of the page | Scroll to the bottom of the page and click the button |  |
+| Form Validation | Required fields are displayed in the form | View the add/edit review form |  |
+| Star Rating | Selecting a star rating triggers the selection | Click each star rating |  |
+| Invalid Form | An error message is displayed when submitting with missing details | Submit the form with missing details |  |
+| Cancel Button | Clicking the `CANCEL` button navigates to the review page | Click the `CANCEL` button |  |
+| Review Toast | A toast message is displayed when a review is successfully added or updated | Add and update a review |  |
 
 ---
 

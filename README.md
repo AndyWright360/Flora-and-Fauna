@@ -4,7 +4,7 @@
 
 ## **Welcome to Flora & Fauna: Organic Skincare** <!-- omit in toc -->
 
-Embued with the nourishment of nature, our mission at Flora & Fauna is to offer the finest organic ingredients across our entire product range. Our collection of serums, creams, and elixirs will transform your skincare routine into a botanical sanctuary. Explore our garden and discover the perfect blend of nature's best for your skin.
+Imbued with the nourishment of nature, our mission at Flora & Fauna is to offer the finest organic ingredients across our entire product range. Our collection of serums, creams, and elixirs will transform your skincare routine into a botanical sanctuary. Explore our garden and discover the perfect blend of nature's best for your skin.
 
 This project was created as part of the Code Institute Level 5 Diploma in Web Application Development course.
 
@@ -113,7 +113,7 @@ From a visual perspective, the design of the website is intended to evoke the be
 3. I want to update and save my personal information.
 4. I want to leave reviews of products.
 5. I want to edit and delete my reviews.
-6. I want to add and remove products from my wishlist.
+6. I want to add and remove products from my Wishlist.
 
 **As An Administrator:**
 
@@ -207,7 +207,7 @@ Wireframes were created using Balsamiq to cover desktop, tablet, and mobile scre
 
 A relational database schema was implemented using PostgreSQL to support the e-commerce functionalities of the Flora & Fauna website. The primary tables are UserProfile, Order, OrderLineItem, Product, Range, Review, and WishlistItem.
 
-These tables are interconnected to enable the management of user profiles, orders, order items, product categories, user reviews, and wishlists. This relational approach maintains reliable data, providing a smooth and consistent user experience across the site.
+These tables are interconnected to enable the management of user profiles, orders, order items, product categories, user reviews, and Wishlist's. This relational approach maintains reliable data, providing a smooth and consistent user experience across the site.
 
 #### **UserProfile**
 
@@ -235,7 +235,7 @@ The Review model allows users to leave reviews for products. It includes a forei
 
 #### **WishlistItem**
 
-The WishlistItem model enables users to add products to their wishlist. It has foreign key relationships with both the `User` and `Product` models, allowing users to save products they are interested in. The `unique_together` constraint ensures that each product can be added to a user's wishlist only once.
+The WishlistItem model enables users to add products to their Wishlist. It has foreign key relationships with both the `User` and `Product` models, allowing users to save products they are interested in. The `unique_together` constraint ensures that each product can be added to a user's Wishlist only once.
 
 ---
 
@@ -429,7 +429,7 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 
 - **View Button:** The `VIEW` button navigates users to the product detail page, displaying more information about the given product.
 
-- **Wishlist Button:** Logged-in users can conveniently curate a list of their favourite products with the wishlist button. Once selected, the icon changes to a solid heart, and a notification message is displayed.
+- **Wishlist Button:** Logged-in users can conveniently curate a list of their favourite products with the Wishlist button. Once selected, the icon changes to a solid heart, and a notification message is displayed.
 
 - **Edit/Delete Button:** Superusers have the option to edit or delete products, providing a convenient method of product management.
 
@@ -549,7 +549,7 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 
 - **Delete Modal:** If the customer opts to delete a review, a modal is displayed to confirm this action as an additional security step.
 
-- **Wishlist:** A carousel of the customer's selected wishlist items can be browsed on this page. Each item contains an `ADD` and `VIEW` button for convenience.
+- **Wishlist:** A carousel of the customer's selected Wishlist items can be browsed on this page. Each item contains an `ADD` and `VIEW` button for convenience.
 
 ### **Add/Edit Review Page**
 
@@ -593,7 +593,7 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 
 - **Discontinued Products:** Admin users can delete products from the database, which is crucial functionality. However, this currently removes the product from the order history of any customer who previously purchased it, leading to inaccurate order records. While this is not a significant issue for the context of this project, it would be problematic if the site were used as a business. To address this, I plan to implement a feature allowing admin users to mark products as discontinued. This will remove the product from the website but retain it in the database, ensuring accurate order history for customers.
 
-- **Wishlist Expansion:** I aim to expand the wishlist functionality, allowing users to create multiple lists for better organisation. Users will be able to name, modify, and delete lists, enhancing the feature's usability.
+- **Wishlist Expansion:** I aim to expand the Wishlist functionality, allowing users to create multiple lists for better organisation. Users will be able to name, modify, and delete lists, enhancing the feature's usability.
 
 - **Deals & Offers:** I plan to add functionality for admin users to apply discounts and deals to products easily. This will integrate with a newsletter system to inform subscribed customers about new offers
 
@@ -625,7 +625,7 @@ The WishlistItem model enables users to add products to their wishlist. It has f
 - **GitHub:** A platform for version control, serving as the repository for the project's code.
 - **Heroku:** A cloud platform that enables the deployment of web applications.
 - **Pixlr:** An online photo editing tool used for image modifications, including colour adjustments and resizing.
-- **Balsamiq:** A wireframing tool used during the design phase to create mockups of the project.
+- **Balsamiq:** A wireframing tool used during the design phase to create mock-ups of the project.
 - **XnConvert:** Image processing software used to convert image files to WebP format.
 - **TinyPNG:** An online tool used to compress image files.
 - **ScreenToGif:** A screen recording tool used to capture screen recordings as GIF files.
@@ -662,7 +662,7 @@ This project uses AWS for storing media and static files.
 2. Search for **S3** and click to create a new bucket.
 3. Name the bucket (preferably matching your Heroku app name) and select the closest region.
 4. Uncheck **Block all public access** and acknowledge that the bucket will be public.
-5. Enable **ACLs** from the **Object Ownership** section, and select **Bucket owner preferred**.
+5. Enable **ACLs** from the **Object Ownership** section and select **Bucket owner preferred**.
 6. Go to the **Properties** tab, enable **Static website hosting**, enter `index.html` and `error.html` in their respective fields, and click **Save**.
 7. Navigate to the **Permissions** tab and paste the following CORS configuration:
 
@@ -700,7 +700,7 @@ This project uses AWS for storing media and static files.
     ```
 
 10. Click **Add Statement** and **Generate Policy**.
-11. Copy the entire policy, and paste it into the Bucket Policy Editor. Add `/*` to the end of the Resource key, and click **Save**.
+11. Copy the entire policy and paste it into the Bucket Policy Editor. Add `/*` to the end of the Resource key and click **Save**.
 12. In the **Access Control List (ACL)** section, click **Edit**, enable **List** for **Everyone (public access)**, and accept the warning box. If the **Edit** button is disabled, ensure ACLs are enabled in the **Object Ownership** section.
 
 #### Set Up IAM
@@ -878,9 +878,9 @@ For a detailed overview of all tests performed, please see the [TESTING.md](TEST
 
 ### **Code Used**
 
-- The Bootstrap 5 Toasts tutorial by [Sonar Systems](https://www.youtube.com/watch?v=AZs4zggS7kA) provided valuable insights into implementing toast messages for adding and removing products from the wishlist.
+- The Bootstrap 5 Toasts tutorial by [Sonar Systems](https://www.youtube.com/watch?v=AZs4zggS7kA) provided valuable insights into implementing toast messages for adding and removing products from the Wishlist.
 
-- The Add/Remove Wishlist Items using AJAX guide by [Desphixs](https://www.youtube.com/watch?v=pdttUeJi7j8) helped me implement wishlist functionality without having to reload the webpage.
+- The Add/Remove Wishlist Items using AJAX guide by [Desphixs](https://www.youtube.com/watch?v=pdttUeJi7j8) helped me implement Wishlist functionality without having to reload the webpage.
 
 - The Star Rating System by [Madannes](https://jsfiddle.net/madannes/r3s1jx4y/) helped me to modify radio inputs into a star rating system using CSS.
 

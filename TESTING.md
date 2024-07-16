@@ -347,20 +347,20 @@ Lighthouse within Chrome Developer Tools was used to assess the website's perfor
 
 | Page | Desktop Results | Mobile Results |
 | :--- | :--- | :--- |
-| index.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
-| products.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
-| product_detail.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
-| bag.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
-| checkout.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
-| checkout_success.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
-| profile.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
-| add_review.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
-| edit_review.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
-| add_product.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
-| edit_product.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
-| signup.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
-| login.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
-| logout.html | ![Lighthouse desktop results]() | ![Lighthouse mobile results]() |
+| index.html | ![Lighthouse desktop results](media/docs/lighthouse-home-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-home-mob.jpg) |
+| products.html | ![Lighthouse desktop results](media/docs/lighthouse-products-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-products-mob.jpg) |
+| product_detail.html | ![Lighthouse desktop results](media/docs/lighthouse-product-detail-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-product-detail-mob.jpg) |
+| bag.html | ![Lighthouse desktop results](media/docs/lighthouse-bag-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-bag-mob.jpg) |
+| checkout.html | ![Lighthouse desktop results](media/docs/lighthouse-checkout-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-checkout-mob.jpg) |
+| checkout_success.html | ![Lighthouse desktop results](media/docs/lighthouse-checkout-success-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-checkout-success-mob.jpg) |
+| profile.html | ![Lighthouse desktop results](media/docs/lighthouse-profile-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-profile-mob.jpg) |
+| add_review.html | ![Lighthouse desktop results](media/docs/lighthouse-add-review-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-add-review-mob.jpg) |
+| edit_review.html | ![Lighthouse desktop results](media/docs/lighthouse-edit-review-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-edit-review-mob.jpg) |
+| add_product.html | ![Lighthouse desktop results](media/docs/lighthouse-add-product-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-add-product-mob.jpg) |
+| edit_product.html | ![Lighthouse desktop results](media/docs/lighthouse-edit-product-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-edit-product-mob.jpg) |
+| signup.html | ![Lighthouse desktop results](media/docs/lighthouse-signup-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-signup-mob.jpg) |
+| login.html | ![Lighthouse desktop results](media/docs/lighthouse-login-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-login-mob.jpg) |
+| logout.html | ![Lighthouse desktop results](media/docs/lighthouse-logout-dt.jpg) | ![Lighthouse mobile results](media/docs/lighthouse-logout-mob.jpg) |
 
 ---
 

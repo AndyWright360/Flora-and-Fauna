@@ -868,6 +868,12 @@ To clone this project, please follow the steps below:
 
 ---
 
+## **Testing**
+
+For a detailed overview of all tests performed, please see the [TESTING.md](TESTING.md) file.
+
+---
+
 ## **Credits**
 
 ### **Code Used**
@@ -886,11 +892,13 @@ The product descriptions and ingredient lists were generated with the assistance
 
 ### **Images**
 
-- Company Logo from [Pngtree](https://pngtree.com/freepng/watercolor-wreath-with-green-leaf-circle-frame_5290430.html)
+- Company logo from [Pngtree](https://pngtree.com/freepng/watercolor-wreath-with-green-leaf-circle-frame_5290430.html)
 
 - Heading underline from [Pngtree](https://pngtree.com/freepng/elegant-green-line-border_8053695.html)
 
-- No Product Image from [Freepik](https://www.freepik.com/free-vector/flat-design-no-photo-sign_22631620.htm#&position=0&from_view=user&uuid=ac8a2e42-92fd-472c-97dd-7d97dc715683)
+- No product image from [Freepik](https://www.freepik.com/free-vector/flat-design-no-photo-sign_22631620.htm#&position=0&from_view=user&uuid=ac8a2e42-92fd-472c-97dd-7d97dc715683)
+
+- Body background image from [Freepik](https://www.freepik.com/free-vector/vector-flower-seamless-pattern-background-elegant-texture-backgrounds-classical-luxury-old-fashioned-floral-ornament-seamless-texture-wallpapers-textile-wrapping_1283318.htm)
 
 - All product images and the hero image were AI generated using Microsoft Copilot.
 

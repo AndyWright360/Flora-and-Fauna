@@ -23,7 +23,7 @@
                         {% csrf_token %}
                         {{ form|crispy }}
                         <div class="d-flex flex-wrap justify-content-center justify-content-md-end mt-3">
-                            <a class="default-btn green-btn mx-2 mt-3" href="{% url 'product_detail' product.id %}">Cancel</a>
+                            <a class="default-btn green-btn mx-2 mt-3" href="{% url 'profile' %}">Cancel</a>
                             <button class="default-btn blue-btn mx-2 mt-3" type="submit">Submit</button>
                         </div>
                     </form>

@@ -141,6 +141,10 @@ a:hover {
     z-index: 2050;
 }
 
+.modal {
+    z-index: 3050;
+}
+
 .header-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

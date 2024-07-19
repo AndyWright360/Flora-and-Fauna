@@ -448,10 +448,10 @@ Friends and family also tested the website using a variety of devices. No issues
 | Side Nav Expansion | Clicking the side nav button should expand and reveal navigation options | Click the side nav button | Pass |
 | Fixed Navbar | When scrolling down the page, ensure the navbar remains fixed at the top of the screen | Scroll down the page | Pass |
 | `Footer` |
-| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px |  |
-| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px |  |
-| Hover Effect | Icons should change colour when hovered over | Hover over the footer icons |  |
-| Navigation Links | Clicking footer icons should open the respective link in a new window | Click each footer icon |  |
+| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px | Pass |
+| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px | Pass |
+| Hover Effect | Icons should change colour when hovered over | Hover over the footer icons | Pass |
+| Navigation Links | Clicking footer icons should open the respective link in a new window | Click each footer icon | Pass |
 | `Home Page` |
 | Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px |  |
 | Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px |  |

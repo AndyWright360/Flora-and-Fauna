@@ -477,25 +477,25 @@ Friends and family also tested the website using a variety of devices. No issues
 | Delete Modal 'Cancel' | Clicking the 'NO' button in the delete modal should cancel the deletion | Click the 'NO' button in the delete modal | Pass |
 | Delete Modal 'Confirm' | Clicking the 'YES' button in the delete modal should delete the product | Click the 'YES' button in the delete modal | Pass |
 | `Product Detail Page` |
-| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px |  |
-| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px |  |
-| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links |  |
-| Back To Top Button | Clicking the 'Back to Top' button should scroll the user back to the top of the page | Scroll to the bottom of the page and click the button |  |
-| Range Link Navigation | Clicking a product range link should navigate to the products page and display all products in that range | Click the product range link |  |
-| Keep Shopping | Clicking the 'KEEP SHOPPING' button should navigate to the products page | Click the 'KEEP SHOPPING' button |  |
-| Wishlist Button Displayed | The Wishlist button should only be displayed for users who have created an account | View the page while signed out and again while signed in |  |
-| Wishlist Toast | A toast message should appear when a product is added or removed from the Wishlist | Click the Wishlist button to add and remove a product |  |
-| Wishlist Button Display Change | When adding a product to the Wishlist, the button icon should change to a solid heart | Click the Wishlist button to add and remove a product |  |
-| Quantity Decrement Button 'Disable' | The quantity decrement button should disable when the input value reaches 1 | Reduce quantity input value to 1 |  |
-| Quantity Increment Button 'Disable' | The quantity increment button should disable when the input value reaches 99 | Increase quantity input value to 99 |  |
-| Quantity Input 'Required' | The quantity input should not allow users to submit without a value | Remove the quantity input value and attempt to submit the form |  |
-| Quantity Input 'Min/Max Value' | The quantity input should not allow users to submit with a value outside the range of 1-99 | Attempt to submit the form with a value less than 1 and greater than 99 |  |
-| Add To Bag Button | When adding a valid quantity to the bag, a toast message should confirm the action to the user and display the bag | Add a valid quantity of the product to the bag |  |
-| Add Review Button Displayed | The 'ADD REVIEW' button should only be displayed for users who have created an account | View the page while signed out and again while signed in |  |
-| Add Review Navigation | Clicking the 'ADD REVIEW' button should navigate the user to the add review page for the product | Click the 'ADD REVIEW' button |  |
-| Product Range Carousel | Clicking the carousel arrow buttons should scroll through other products from the same range | Click the arrow button in the other products carousel |  |
-| Add Other Product | Clicking the 'ADD' button for a product displayed in the 'Other Products from this Range' section should add a quantity of 1 for that product | Click the 'ADD' button for another product in the range |  |
-| View Other Product | Clicking the 'VIEW' button for a product displayed in the 'Other Products from this Range' section should navigate to that product's detail page | Click the 'VIEW' button for another product in the range |  |
+| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px | Pass |
+| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px | Pass |
+| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links | Pass |
+| Back To Top Button | Clicking the 'Back to Top' button should scroll the user back to the top of the page | Scroll to the bottom of the page and click the button | Pass |
+| Range Link Navigation | Clicking a product range link should navigate to the products page and display all products in that range | Click the product range link | Pass |
+| Keep Shopping | Clicking the 'KEEP SHOPPING' button should navigate to the products page | Click the 'KEEP SHOPPING' button | Pass |
+| Wishlist Button Displayed | The Wishlist button should only be displayed for users who have created an account | View the page while signed out and again while signed in | Pass |
+| Wishlist Toast | A toast message should appear when a product is added or removed from the Wishlist | Click the Wishlist button to add and remove a product | Pass |
+| Wishlist Button Display Change | When adding a product to the Wishlist, the button icon should change to a solid heart | Click the Wishlist button to add and remove a product | Pass |
+| Quantity Decrement Button 'Disable' | The quantity decrement button should disable when the input value reaches 1 | Reduce quantity input value to 1 | Pass |
+| Quantity Increment Button 'Disable' | The quantity increment button should disable when the input value reaches 99 | Increase quantity input value to 99 | Pass |
+| Quantity Input 'Required' | The quantity input should not allow users to submit without a value | Remove the quantity input value and attempt to submit the form | Pass |
+| Quantity Input 'Min/Max Value' | The quantity input should not allow users to submit with a value outside the range of 1-99 | Attempt to submit the form with a value less than 1 and greater than 99 | Pass |
+| Add To Bag Button | When adding a valid quantity to the bag, a toast message should confirm the action to the user and display the bag | Add a valid quantity of the product to the bag | Pass |
+| Add Review Button Displayed | The 'ADD REVIEW' button should only be displayed for users who have created an account | View the page while signed out and again while signed in | Pass |
+| Add Review Navigation | Clicking the 'ADD REVIEW' button should navigate the user to the add review page for the product | Click the 'ADD REVIEW' button | Pass |
+| Product Range Carousel | Clicking the carousel arrow buttons should scroll through other products from the same range | Click the arrow button in the other products carousel | Pass |
+| Add Other Product | Clicking the 'ADD' button for a product displayed in the 'Other Products from this Range' section should add a quantity of 1 for that product | Click the 'ADD' button for another product in the range | Pass |
+| View Other Product | Clicking the 'VIEW' button for a product displayed in the 'Other Products from this Range' section should navigate to that product's detail page | Click the 'VIEW' button for another product in the range | Pass |
 | `Bag Page` |
 | Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px |  |
 | Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px |  |

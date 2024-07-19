@@ -432,21 +432,21 @@ Friends and family also tested the website using a variety of devices. No issues
 | Feature | Expected Outcome | Testing Performed  | Pass/Fail |
 | :--- | :--- | :--- | :--- |
 | `Navbar` |
-| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px |  |
-| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px |  |
-| Logo Link | Clicking the logo should navigate to the Home page | Click the logo |  |
-| Hover Effect | Navigation links and icons should become bold when hovered over | Hover over the navigation links and icons |  |
-| Navigation Menus | Verify clicking navigation links and the 'Account' icon opens respective options | Click on each navigation link and the 'Account' icon |  |
-| Navigation Menu Hover Effect | Ensure hovering over a navigation link highlights the option | Open each navigation dropdown menu and hover over each option |  |
-| Search Bar Focus | The search bar border should indicate focus when clicked inside | Click inside the search bar input |  |
-| Search Icon Hover Effect | Hovering over the search bar button icon should trigger its hover state | Hover the mouse over the search bar button icon |  |
-| Bag Total | The Bag icon should display the correct current total value when products are added or removed | Add and remove products from the bag and verify the displayed value |  |
-| Navigation Links | Ensure each navigation link correctly loads its respective page | Click each navigation link to verify the relevant page loads |  |
-| Search 'Empty Input' | A toast message should notify the user when attempting to search without entering any criteria | Click the search button with an empty input |  |
-| Search 'No Results' | No products should be displayed when searching for a keyword that doesn't match any product | Search for a keyword not found in any product |  |
-| Search 'Results' | Only products matching the search term should be displayed | Search for a keyword that matches some products |  |
-| Side Nav Expansion | Clicking the side nav button should expand and reveal navigation options | Click the side nav button |  |
-| Fixed Navbar | When scrolling down the page, ensure the navbar remains fixed at the top of the screen | Scroll down the page |  |
+| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px | Pass |
+| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px | Pass |
+| Logo Link | Clicking the logo should navigate to the Home page | Click the logo | Pass |
+| Hover Effect | Navigation links and icons should become bold when hovered over | Hover over the navigation links and icons | Pass |
+| Navigation Menus | Verify clicking navigation links and the 'Account' icon opens respective options | Click on each navigation link and the 'Account' icon | Pass |
+| Navigation Menu Hover Effect | Ensure hovering over a navigation link highlights the option | Open each navigation dropdown menu and hover over each option | Pass |
+| Search Bar Focus | The search bar border should indicate focus when clicked inside | Click inside the search bar input | Pass |
+| Search Icon Hover Effect | Hovering over the search bar button icon should trigger its hover state | Hover the mouse over the search bar button icon | Pass |
+| Bag Total | The Bag icon should display the correct current total value when products are added or removed | Add and remove products from the bag and verify the displayed value | Pass |
+| Navigation Links | Ensure each navigation link correctly loads its respective page | Click each navigation link to verify the relevant page loads | Pass |
+| Search 'Empty Input' | A toast message should notify the user when attempting to search without entering any criteria | Click the search button with an empty input | Pass |
+| Search 'No Results' | No products should be displayed when searching for a keyword that doesn't match any product | Search for a keyword not found in any product | Pass |
+| Search 'Results' | Only products matching the search term should be displayed | Search for a keyword that matches some products | Pass |
+| Side Nav Expansion | Clicking the side nav button should expand and reveal navigation options | Click the side nav button | Pass |
+| Fixed Navbar | When scrolling down the page, ensure the navbar remains fixed at the top of the screen | Scroll down the page | Pass |
 | `Footer` |
 | Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px |  |
 | Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px |  |

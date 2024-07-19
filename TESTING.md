@@ -458,24 +458,24 @@ Friends and family also tested the website using a variety of devices. No issues
 | Hover Effect | 'Explore Our Garden!' link should change style when hovered over | Hover over the 'Explore Our Garden!' link | Pass |
 | Navigation Link | Clicking the 'Explore Our Garden!' link should navigate to the products page | Click the 'Explore Our Garden!' link | Pass |
 | `Products Page` |
-| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px |  |
-| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px |  |
-| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links |  |
-| Back To Top Button | Clicking the 'Back to Top' button should scroll the user back to the top of the page | Scroll to the bottom of the page and click the button |  |
-| Range Link Tooltip | The tooltip message should appear when hovering over product range links | Hover over product range links |  |
-| Range Link Navigation | Clicking a product range link should display all products from that range | Click each unique product range link option |  |
-| Add Product Button | Clicking the 'ADD' button for a product should add a quantity of 1 to the bag | Click the 'ADD' product button |  |
-| Update Bag Toast | Adding a product to the bag should display a confirmation toast message along with the current products in the bag | Add a product to the bag |  |
-| View Product Button | Clicking the 'VIEW' button should navigate to the product detail page for that product | Click the 'VIEW' product button |  |
-| Product Sorting | Selecting an option from the product sort dropdown menu should order the displayed products accordingly | Select each option from the product sorting dropdown menu |  |
-| Wishlist Button Displayed | The Wishlist button should only be displayed for users who have created an account | View the page while signed out and again while signed in |  |
-| Wishlist Toast | A toast message should appear when a product is added or removed from the Wishlist | Click the Wishlist button to add and remove a product |  |
-| Wishlist Button Display Change | When adding a product to the Wishlist, the button icon should change to a solid heart | Click the Wishlist button to add and remove a product |  |
-| Admin Features | The options to edit and delete products should only be displayed for admin users | View the page while signed out and again while signed in as an admin |  |
-| Edit Product | Clicking the 'Edit' button for a product should navigate to the edit product page | Click the 'Edit' button for a product |  |
-| Delete Modal | Clicking the 'Delete' button for a product should trigger the delete modal | Click the 'Delete' button for a product |  |
-| Delete Modal 'Cancel' | Clicking the 'NO' button in the delete modal should cancel the deletion | Click the 'NO' button in the delete modal |  |
-| Delete Modal 'Confirm' | Clicking the 'YES' button in the delete modal should delete the product | Click the 'YES' button in the delete modal |  |
+| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px | Pass |
+| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px | Pass |
+| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links | Pass |
+| Back To Top Button | Clicking the 'Back to Top' button should scroll the user back to the top of the page | Scroll to the bottom of the page and click the button | Pass |
+| Range Link Tooltip | The tooltip message should appear when hovering over product range links | Hover over product range links | Pass |
+| Range Link Navigation | Clicking a product range link should display all products from that range | Click each unique product range link option | Pass |
+| Add Product Button | Clicking the 'ADD' button for a product should add a quantity of 1 to the bag | Click the 'ADD' product button | Pass |
+| Update Bag Toast | Adding a product to the bag should display a confirmation toast message along with the current products in the bag | Add a product to the bag | Pass |
+| View Product Button | Clicking the 'VIEW' button should navigate to the product detail page for that product | Click the 'VIEW' product button | Pass |
+| Product Sorting | Selecting an option from the product sort dropdown menu should order the displayed products accordingly | Select each option from the product sorting dropdown menu | Pass |
+| Wishlist Button Displayed | The Wishlist button should only be displayed for users who have created an account | View the page while signed out and again while signed in | Pass |
+| Wishlist Toast | A toast message should appear when a product is added or removed from the Wishlist | Click the Wishlist button to add and remove a product | Pass |
+| Wishlist Button Display Change | When adding a product to the Wishlist, the button icon should change to a solid heart | Click the Wishlist button to add and remove a product | Pass |
+| Admin Features | The options to edit and delete products should only be displayed for admin users | View the page while signed out and again while signed in as an admin | Pass |
+| Edit Product | Clicking the 'Edit' button for a product should navigate to the edit product page | Click the 'Edit' button for a product | Pass |
+| Delete Modal | Clicking the 'Delete' button for a product should trigger the delete modal | Click the 'Delete' button for a product | Pass |
+| Delete Modal 'Cancel' | Clicking the 'NO' button in the delete modal should cancel the deletion | Click the 'NO' button in the delete modal | Pass |
+| Delete Modal 'Confirm' | Clicking the 'YES' button in the delete modal should delete the product | Click the 'YES' button in the delete modal | Pass |
 | `Product Detail Page` |
 | Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px |  |
 | Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px |  |

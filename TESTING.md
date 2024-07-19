@@ -497,18 +497,18 @@ Friends and family also tested the website using a variety of devices. No issues
 | Add Other Product | Clicking the 'ADD' button for a product displayed in the 'Other Products from this Range' section should add a quantity of 1 for that product | Click the 'ADD' button for another product in the range | Pass |
 | View Other Product | Clicking the 'VIEW' button for a product displayed in the 'Other Products from this Range' section should navigate to that product's detail page | Click the 'VIEW' button for another product in the range | Pass |
 | `Bag Page` |
-| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px |  |
-| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px |  |
-| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links |  |
-| Empty Bag | Opening the bag page without any items should display a message indicating that the bag is empty | Go to the bag page without any items in the bag |  |
-| Update Bag | Adjusting the quantity of an item and clicking the `Update` button should trigger a toast message and update the quantity | Adjust the quantity of a product and click the `Update` button |  |
-| Remove Item | Clicking the `Remove` button should trigger a toast message and remove the product from the bag | Click the `Remove` button for a product |  |
-| Remove Item by Updating Quantity | Setting the quantity of an item to 0 and clicking the `Update` button should remove the item from the bag | Set the quantity of an item to 0 and click the `Update` button |  |
-| Prevent Empty Quantity Update | Removing the quantity input value and attempting to update the bag should trigger an error message notifying the user | Remove the quantity input value and attempt to update the bag item |  |
-| Prevent Quantity Value Outside 0-99 | Attempting to update a bag item with a quantity value outside the range of 0-99 should trigger an error message | Add a quantity value less than 0 and greater than 99 and attempt to update the bag |  |
-| Grand Total | The grand total should be calculated based on the sum of the bag total and delivery cost | Alter the value of the bag items and check that the grand total is calculated correctly |  |
-| Keep Shopping | Clicking the `KEEP SHOPPING` button should navigate to the products page | Click the `KEEP SHOPPING` button |  |
-| Secure Checkout | Clicking the `SECURE CHECKOUT` button should navigate to the checkout page | Click the `SECURE CHECKOUT` button |  |
+| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px | Pass |
+| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px | Pass |
+| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links | Pass |
+| Empty Bag | Opening the bag page without any items should display a message indicating that the bag is empty | Go to the bag page without any items in the bag | Pass |
+| Update Bag | Adjusting the quantity of an item and clicking the `Update` button should trigger a toast message and update the quantity | Adjust the quantity of a product and click the `Update` button | Pass |
+| Remove Item | Clicking the `Remove` button should trigger a toast message and remove the product from the bag | Click the `Remove` button for a product | Pass |
+| Remove Item by Updating Quantity | Setting the quantity of an item to 0 and clicking the `Update` button should remove the item from the bag | Set the quantity of an item to 0 and click the `Update` button | Pass |
+| Prevent Empty Quantity Update | Removing the quantity input value and attempting to update the bag should trigger an error message notifying the user | Remove the quantity input value and attempt to update the bag item | Pass |
+| Prevent Quantity Value Outside 0-99 | Attempting to update a bag item with a quantity value outside the range of 0-99 should trigger an error message | Add a quantity value less than 0 and greater than 99 and attempt to update the bag | Pass |
+| Grand Total | The grand total should be calculated based on the sum of the bag total and delivery cost | Alter the value of the bag items and check that the grand total is calculated correctly | Pass |
+| Keep Shopping | Clicking the `KEEP SHOPPING` button should navigate to the products page | Click the `KEEP SHOPPING` button | Pass |
+| Secure Checkout | Clicking the `SECURE CHECKOUT` button should navigate to the checkout page | Click the `SECURE CHECKOUT` button | Pass |
 | `Checkout Page` |
 | Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px |  |
 | Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px |  |

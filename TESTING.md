@@ -524,20 +524,20 @@ Friends and family also tested the website using a variety of devices. No issues
 | Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links | Pass |
 | Keep Shopping | Clicking the `KEEP SHOPPING` button should navigate to the products page | Click the `KEEP SHOPPING` button | Pass |
 | `Profile Page` |
-| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
-| Authentication | Users attempting to access this page without being signed in will be redirected to the login page | Attempt to access the page via URL when logged out |  |
-| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links |  |
-| Saved Delivery Info | If saved from a previous order, the user's delivery info will be displayed | Place an order for checkout and save the delivery details |  |
-| Update Delivery Info | Users can update their delivery info by altering inputs and clicking the `UPDATE INFORMATION` button | Alter the delivery information and click the `UPDATE INFORMATION` button |  |
-| Order History | Full order details can be viewed by selecting an order number link from the order history list | Click an order number from the order history |  |
-| Edit Review | Clicking the `EDIT` button on a review navigates to the edit review page | Click the `EDIT` button for a review |  |
-| Delete Modal | Clicking the `DELETE` button for a review triggers the delete modal | Click the `DELETE` button for a review |  |
-| Delete Modal 'Cancel' | Clicking the `NO` button in the delete modal will cancel the deletion | Click the `NO` button in the delete modal |  |
-| Delete Modal 'Confirm' | Clicking the `YES` button in the delete modal will delete the review | Click the `YES` button in the delete modal |  |
-| Wishlist Carousel | Clicking the carousel arrow buttons will scroll through products in the user's Wishlist | Click the arrow button in the Wishlist carousel |  |
-| Add Wishlist Product | Clicking the `ADD` button for a product displayed in the Wishlist section will add a quantity of 1 for that product | Click the `ADD` button for a Wishlist product |  |
-| View Wishlist Product | Clicking the `VIEW` button for a product displayed in the Wishlist section will navigate to that product's detail page | Click the `VIEW` button for a product in the Wishlist |  |
+| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand width beyond 1600px | Pass |
+| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce width to 320px | Pass |
+| Authentication | Users attempting to access this page without being signed in will be redirected to the login page | Attempt to access the page via URL when logged out | Pass |
+| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links | Pass |
+| Saved Delivery Info | If saved from a previous order, the user's delivery info will be displayed | Place an order for checkout and save the delivery details | Pass |
+| Update Delivery Info | Users can update their delivery info by altering inputs and clicking the `UPDATE INFORMATION` button | Alter the delivery information and click the `UPDATE INFORMATION` button | Pass |
+| Order History | Full order details can be viewed by selecting an order number link from the order history list | Click an order number from the order history | Pass |
+| Edit Review | Clicking the `EDIT` button on a review navigates to the edit review page | Click the `EDIT` button for a review | Pass |
+| Delete Modal | Clicking the `DELETE` button for a review triggers the delete modal | Click the `DELETE` button for a review | Pass |
+| Delete Modal 'Cancel' | Clicking the `NO` button in the delete modal will cancel the deletion | Click the `NO` button in the delete modal | Pass |
+| Delete Modal 'Confirm' | Clicking the `YES` button in the delete modal will delete the review | Click the `YES` button in the delete modal | Pass |
+| Wishlist Carousel | Clicking the carousel arrow buttons will scroll through products in the user's Wishlist | Click the arrow button in the Wishlist carousel | Pass |
+| Add Wishlist Product | Clicking the `ADD` button for a product displayed in the Wishlist section will add a quantity of 1 for that product | Click the `ADD` button for a Wishlist product | Pass |
+| View Wishlist Product | Clicking the `VIEW` button for a product displayed in the Wishlist section will navigate to that product's detail page | Click the `VIEW` button for a product in the Wishlist | Pass |
 | `Add Review Page` |
 | Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand width beyond 1600px |  |
 | Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |

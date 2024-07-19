@@ -549,15 +549,15 @@ Friends and family also tested the website using a variety of devices. No issues
 | Cancel Button | Clicking the `CANCEL` button redirects the user back to the relevant product detail page | Click the `CANCEL` button | Pass |
 | Submit Button | If the input fields are valid, the `SUBMIT` button will redirect the user back to the relevant product detail page | Submit the form with valid details | Pass |
 | `Edit Review Page` |
-| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
-| Authentication | Users attempting to access this page without being signed in will be redirected to the login page | Attempt to access the page via URL when logged out |  |
-| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links |  |
-| Form 'Required Fields' | All required input fields are marked with a '*' and the form can't be submitted without filling out all these fields | Attempt to submit the form without filling out the required fields |  |
-| Form 'Validation' | The inputs are validated before allowing the form to be submitted | Attempt to submit the form with invalid details |  |
-| Rating System | When a user clicks a star, all previous stars are also highlighted | Click each star to ensure they display correctly |  |
-| Cancel Button | Clicking the `CANCEL` button redirects the user back to their profile page | Click the `CANCEL` button |  |
-| Submit Button | If the input fields are valid, the `SUBMIT` button will redirect the user back to their profile page | Submit the form with valid details |  |
+| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand width beyond 1600px | Pass |
+| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce width to 320px | Pass |
+| Authentication | Users attempting to access this page without being signed in will be redirected to the login page | Attempt to access the page via URL when logged out | Pass |
+| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links | Pass |
+| Form 'Required Fields' | All required input fields are marked with a '*' and the form can't be submitted without filling out all these fields | Attempt to submit the form without filling out the required fields | Pass |
+| Form 'Validation' | The inputs are validated before allowing the form to be submitted | Attempt to submit the form with invalid details | Pass |
+| Rating System | When a user clicks a star, all previous stars are also highlighted | Click each star to ensure they display correctly | Pass |
+| Cancel Button | Clicking the `CANCEL` button redirects the user back to their profile page | Click the `CANCEL` button | Pass |
+| Submit Button | If the input fields are valid, the `SUBMIT` button will redirect the user back to their profile page | Submit the form with valid details | Pass |
 | `Add Product Page` |
 | Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand width beyond 1600px |  |
 | Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |

@@ -595,11 +595,11 @@ Friends and family also tested the website using a variety of devices. No issues
 | Check Username/Password | Incorrect username or password will prevent user from logging in | Attempt to login with invalid details | Pass |
 | Home Button | Clicking the `HOME` button redirects the user to the home page | Click the `HOME` button | Pass |
 | `Logout` |
-| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
-| Hover Effects | Buttons and navigation links should change appearance when hovered over | Hover over buttons and navigation links |  |
-| Cancel Button | Clicking the `CANCEL` button redirects the user to the home page | Click the `CANCEL` button |  |
-| Sign Out Button | Clicking the `SIGN OUT` button redirects the user to the home page and displays a confirmation of successful logout | Click the `SIGN OUT` button to log out |  |
+| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand width beyond 1600px | Pass |
+| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce width to 320px | Pass |
+| Hover Effects | Buttons and navigation links should change appearance when hovered over | Hover over buttons and navigation links | Pass |
+| Cancel Button | Clicking the `CANCEL` button redirects the user to the home page | Click the `CANCEL` button | Pass |
+| Sign Out Button | Clicking the `SIGN OUT` button redirects the user to the home page and displays a confirmation of successful logout | Click the `SIGN OUT` button to log out | Pass |
 
 ---
 

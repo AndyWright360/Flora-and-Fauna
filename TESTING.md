@@ -519,11 +519,10 @@ Friends and family also tested the website using a variety of devices. No issues
 | Form 'Validation' | Inputs are validated before allowing the form to be submitted | Attempt to submit the form with invalid details | Pass |
 | Save Delivery Info | Signed-in users can save their delivery info by selecting the checkbox; this data is viewable on their profile page | Select the checkbox after inputting delivery info and check it's saved on the profile page | Pass |
 | `Checkout Success Page` |
-| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px |  |
-| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px |  |
-| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links |  |
-| Adjust Bag Button | Clicking the `ADJUST BAG` button should navigate to the bag page | Click the `ADJUST BAG` button |  |
-| Keep Shopping | Clicking the `KEEP SHOPPING` button should navigate to the products page | Click the `KEEP SHOPPING` button |  |
+| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px | Pass |
+| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px | Pass |
+| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links | Pass |
+| Keep Shopping | Clicking the `KEEP SHOPPING` button should navigate to the products page | Click the `KEEP SHOPPING` button | Pass |
 | `Profile Page` |
 | Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand width beyond 1600px |  |
 | Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |

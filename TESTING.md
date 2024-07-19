@@ -453,10 +453,10 @@ Friends and family also tested the website using a variety of devices. No issues
 | Hover Effect | Icons should change colour when hovered over | Hover over the footer icons | Pass |
 | Navigation Links | Clicking footer icons should open the respective link in a new window | Click each footer icon | Pass |
 | `Home Page` |
-| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px |  |
-| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px |  |
-| Hover Effect | 'Explore Our Garden!' link should change style when hovered over | Hover over the 'Explore Our Garden!' link |  |
-| Navigation Link | Clicking the 'Explore Our Garden!' link should navigate to the products page | Click the 'Explore Our Garden!' link |  |
+| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px | Pass |
+| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px | Pass |
+| Hover Effect | 'Explore Our Garden!' link should change style when hovered over | Hover over the 'Explore Our Garden!' link | Pass |
+| Navigation Link | Clicking the 'Explore Our Garden!' link should navigate to the products page | Click the 'Explore Our Garden!' link | Pass |
 | `Products Page` |
 | Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand the width beyond 1600px |  |
 | Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce the width to 320px |  |

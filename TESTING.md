@@ -581,12 +581,12 @@ Friends and family also tested the website using a variety of devices. No issues
 | Cancel Button | Clicking the `CANCEL` button redirects the user back to the products page | Click the `CANCEL` button | Pass |
 | Submit Button | If the input fields are valid, the `SUBMIT` button will redirect the user back to the products page | Submit the form with valid details | Pass |
 | `Sign Up Page` |
-| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand width beyond 1600px |  |
-| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
-| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links |  |
-| Form 'Required Fields' | All input fields are mandatory, preventing form submission without completing all fields | Attempt to submit the form without filling out the required fields |  |
-| Form 'Validation' | Inputs are validated before allowing form submission | Attempt to submit the form with invalid details |  |
-| Back To Login Button | Clicking the `BACK TO LOGIN` button redirects the user to the sign-in page | Click the `BACK TO LOGIN` button |  |
+| Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand width beyond 1600px | Pass |
+| Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce width to 320px | Pass |
+| Hover Effects | Hovering over buttons and navigation links should trigger their hover state | Hover over buttons and navigation links | Pass |
+| Form 'Required Fields' | All input fields are mandatory, preventing form submission without completing all fields | Attempt to submit the form without filling out the required fields | Pass |
+| Form 'Validation' | Inputs are validated before allowing form submission | Attempt to submit the form with invalid details | Pass |
+| Back To Login Button | Clicking the `BACK TO LOGIN` button redirects the user to the sign-in page | Click the `BACK TO LOGIN` button | Pass |
 | `Sign In Page` |
 | Max Width | Ensure elements display correctly up to 1600px width | View page using Chrome Dev Tools and expand width beyond 1600px |  |
 | Min Width | Verify all elements adjust properly to 320px width without distortion | View page using Chrome Dev Tools and reduce width to 320px |  |
